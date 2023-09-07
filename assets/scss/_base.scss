@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: aria;
+  background-color: white;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* "neue" HTML5 Elemente */
+header,
+main,
+section,
+nav,
+aside,
+article,
+footer,
+figure,
+figcaption {
+  display: block;
+  padding: 0;
+}

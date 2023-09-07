@@ -1,0 +1,215 @@
+/* base */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poor Story", sans-serif;
+  color: rgb(39, 39, 39);
+  background-color: white;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* "neue" HTML5 Elemente */
+header,
+main,
+section,
+nav,
+aside,
+article,
+footer,
+figure,
+figcaption {
+  display: block;
+  padding: 0;
+}
+
+main,
+aside {
+  display: flex;
+  justify-content: space-around;
+  padding: 5rem 20vw;
+  align-items: flex-end;
+}
+
+main {
+  height: 580px;
+  align-items: flex-start;
+}
+main div.bck {
+  background-color: rgb(255, 196, 0);
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+main figure:nth-child(odd) {
+  align-self: flex-end;
+}
+
+aside {
+  align-content: center;
+  gap: 3rem;
+  align-items: flex-start;
+}
+aside > div {
+  flex-basis: 50%;
+  flex-grow: 1;
+}
+aside > div:nth-child(1n+2) {
+  flex-basis: 25%;
+  flex-grow: 1;
+}
+
+@font-face {
+  font-family: "Poor Story";
+  src: url("../fonts/PoorStory-Regular.woff2") format("woff2"), url("../fonts/PoorStory-Regular.woff") format("woff"), url("../fonts/PoorStory-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+input {
+  padding: 0.5rem 0.8rem;
+  margin-top: 1rem;
+  outline: none;
+  border: 1px solid #e6b000;
+}
+input[type=text] {
+  background-color: #ededed;
+}
+input[type=text]:focus {
+  background-color: #ffe280;
+}
+input[type=submit] {
+  background-color: rgb(255, 196, 0);
+  color: rgb(39, 39, 39);
+  cursor: pointer;
+  transform: translateX(-5px);
+  transition: all 0.3s ease-in-out;
+}
+input[type=submit]:hover {
+  background-color: #e6b000;
+}
+
+figure {
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+figure:hover {
+  scale: 1.1;
+}
+figure img {
+  width: 200px;
+  height: auto;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+figure figcaption {
+  position: absolute;
+  bottom: -50px;
+  text-align: center;
+  right: 0;
+  left: 0;
+  padding: 1.2rem 0;
+  background-color: rgb(255, 196, 0);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+figure:hover figcaption {
+  bottom: 0;
+  visibility: visible;
+  opacity: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Courier New", Courier, monospace;
+}
+h3 {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: rgb(255, 196, 0);
+  border-bottom: 2px dotted rgb(255, 196, 0);
+  padding-bottom: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 1600px) {
+  figure img {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  main {
+    min-height: 460px;
+    padding: 5rem 9vw;
+  }
+  main div.bck {
+    height: 250px;
+  }
+  aside {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1000px) {
+  main {
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 2rem;
+  }
+  figure {
+    display: flex;
+    justify-content: center;
+    flex-basis: 45%;
+    flex-grow: 1;
+    align-self: center !important;
+  }
+  figcaption {
+    width: 200px;
+    margin: auto;
+  }
+  main {
+    margin-bottom: 7rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  figure {
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+  }
+  figure img {
+    width: 250px;
+  }
+  figcaption {
+    margin: auto;
+    width: 250px;
+  }
+  main {
+    height: fit-content;
+    margin-bottom: 0;
+  }
+  aside {
+    padding: 2rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

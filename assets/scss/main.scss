@@ -1,0 +1,31 @@
+@import 'variables';
+@import 'base';
+@import 'container';
+@import 'fonts';
+@import 'forms';
+@import 'img';
+@import 'typo';
+@import 'responsive';
+
+// .galerie {
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   gap: 2rem;
+//   justify-content: center;
+//   align-items: center;
+//   width: 100%;
+//   padding: 5rem;
+//   img {
+//     width: 12rem;
+//     height: 20rem;
+//     object-fit: cover;
+//     object-position: 50% 50%;
+//     border-radius: 1.5rem;
+//     transition: scale 250ms ease-in-out;
+//     vertical-align: bottom;
+//     &:hover {
+//       scale: 1.1;
+//     }
+//   }
+// }
