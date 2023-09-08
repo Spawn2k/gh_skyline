@@ -1,0 +1,32 @@
+// @font-face {
+//   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+//   font-family: 'Travel';
+//   font-style: normal;
+//   font-weight: 500;
+//   src: local(''), url('/assets/fonts/Travel/Travel.ttf') format('ttf'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+// }
+// @font-face {
+//   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+//   font-family: 'Travel';
+//   font-style: normal;
+//   font-weight: 500;
+//   src: local(''), url('/assets/fonts/Travel/Travel.otf') format('otf'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+// }
+
+@font-face {
+  font-family: 'Travel';
+  src: url('../fonts/Travel/Travel.eot');
+  src: url('../fonts/Travel/Travel.eot') format('embedded-opentype'),
+    url('../fonts/Travel/Travel.ttf') format('truetype'), url('../fonts/Travel/Travel.otf') format('otf'),
+    url('../fonts/Travel/Travel.woff2') format('woff2'), url('../fonts/Travel/Travel.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Samosa';
+  src: url('../fonts/Samosa/SamosaDemoRegular.eot');
+  src: url('../fonts/Samosa/SamosaDemoRegular.eot') format('embedded-opentype'),
+    url('../fonts/Samosa/SamosaDemoRegular.ttf') format('truetype'),
+    url('../fonts/Samosa/SamosaDemoRegular.otf') format('otf'),
+    url('../fonts/Samosa/SamosaDemoRegular.woff2') format('woff2'),
+    url('../fonts/Samosa/SamosaDemoRegular.woff') format('woff');
+}

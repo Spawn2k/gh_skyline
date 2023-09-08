@@ -1,4 +1,13 @@
-/* base */
+@font-face {
+  font-family: "Travel";
+  src: url("../fonts/Travel/Travel.eot");
+  src: url("../fonts/Travel/Travel.eot") format("embedded-opentype"), url("../fonts/Travel/Travel.ttf") format("truetype"), url("../fonts/Travel/Travel.otf") format("otf"), url("../fonts/Travel/Travel.woff2") format("woff2"), url("../fonts/Travel/Travel.woff") format("woff");
+}
+@font-face {
+  font-family: "Samosa";
+  src: url("../fonts/Samosa/SamosaDemoRegular.eot");
+  src: url("../fonts/Samosa/SamosaDemoRegular.eot") format("embedded-opentype"), url("../fonts/Samosa/SamosaDemoRegular.ttf") format("truetype"), url("../fonts/Samosa/SamosaDemoRegular.otf") format("otf"), url("../fonts/Samosa/SamosaDemoRegular.woff2") format("woff2"), url("../fonts/Samosa/SamosaDemoRegular.woff") format("woff");
+}
 * {
   margin: 0;
   box-sizing: border-box;
@@ -10,11 +19,11 @@ html {
 }
 
 body {
-  font-family: "Poor Story", sans-serif;
-  color: rgb(39, 39, 39);
+  font-size: aria;
   background-color: white;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.6;
+  height: 7000px;
 }
 
 ul {
@@ -36,180 +45,218 @@ figcaption {
   padding: 0;
 }
 
-main,
-aside {
+header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+header a {
+  color: white;
+  text-decoration: none;
+}
+header .m-nav {
   display: flex;
-  justify-content: space-around;
-  padding: 5rem 20vw;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #001b2c;
+  color: white;
+  font-size: 1.5rem;
+  transform: translate(0, -50px);
+  animation: navBar 1s forwards;
+  animation-delay: 300ms;
+  opacity: 0;
+  font-family: travel;
+}
+header .m-nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .m-nav ul li {
+  margin-right: 1rem;
+}
+header .headline {
+  display: flex;
+  padding: 4rem 3rem;
+  justify-content: space-between;
+}
+header .headline h1 {
+  margin-left: 8rem;
+  margin-top: 8rem;
+  font-size: 6rem;
+  font-family: "Samosa";
+  color: #242424;
+  text-shadow: 2px 2px 3px rgba(0, 27, 44, 0.6);
+}
+header .headline h1 p:first-child {
+  margin-bottom: 2rem;
+}
+header .headline h1 p:last-child {
+  margin-left: 7rem;
+}
+header > .headline > div {
+  display: flex;
+  justify-content: end;
+}
+header > .headline > div .header-pic:first-child img {
+  margin-left: 11rem;
+  object-position: var(--cordX, 20%) 50%;
+  animation: picOne 1.3s forwards;
+  transform: translate(-20px, 50px);
+  opacity: 0;
+  animation-delay: 300ms;
+}
+header > .headline > div .header-pic:last-child img {
+  object-position: var(--cordX) 50%;
+  animation: picTwo 1.3s forwards;
+  transform: translate(20px, -50px);
+  opacity: 0;
+  animation-delay: 300ms;
+}
+header > .headline > div .header-pic {
+  width: 450px;
+  height: 600px;
+}
+header > .headline > div .header-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 200ms linear;
+  clip-path: polygon(52.511% 99.853%, 0.229% 99.853%, 40.982% 4.303%, 40.982% 4.303%, 41.347% 3.576%, 41.795% 2.906%, 42.318% 2.297%, 42.91% 1.755%, 43.563% 1.283%, 44.27% 0.886%, 45.023% 0.57%, 45.816% 0.338%, 46.64% 0.195%, 47.489% 0.147%, 99.771% 0.147%, 59.018% 95.697%, 59.018% 95.697%, 58.653% 96.424%, 58.205% 97.094%, 57.682% 97.703%, 57.09% 98.245%, 56.437% 98.717%, 55.73% 99.114%, 54.977% 99.43%, 54.184% 99.662%, 53.36% 99.805%, 52.511% 99.853%);
 }
 
-main {
-  height: 580px;
-  align-items: flex-start;
+@keyframes picOne {
+  0% {
+    transform: translate(-20px, 50px);
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
 }
-main div.bck {
-  background-color: rgb(255, 196, 0);
-  height: 300px;
-  width: 100%;
+@keyframes picTwo {
+  0% {
+    transform: translate(20px, -50px);
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+@keyframes navBar {
+  0% {
+    opacity: 0;
+    transform: translate(0, -50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0px);
+  }
+}
+.sec-travel-list {
+  background-color: #001b2c;
+  padding: 2rem 0 9rem 0;
+}
+.sec-travel-list h2 {
+  text-align: center;
+  color: rgb(241, 241, 241);
+  margin-bottom: 4rem;
+  font-size: 4rem;
+  font-family: Samosa;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 79rem;
+  margin: auto;
+}
+.cards:hover .card {
+  background: radial-gradient(150rem circle at var(--xPos) var(--yPos), #00fff1, transparent 15%);
+}
+.cards .card {
+  width: 25rem;
+  height: 18rem;
+  background: radial-gradient(150rem circle at 0 0, rgba(0, 255, 241, 0), transparent 0%);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 150ms ease-in-out;
+  z-index: 1;
+}
+.cards .card:hover {
+  scale: 0.97;
+}
+.cards .card .card-content {
+  background-color: #13131c;
+  border-radius: inherit;
+  transition: all 250ms;
+  height: calc(100% - 0.1rem);
+  width: calc(100% - 0.1rem);
+  position: relative;
+  backdrop-filter: blur(9px);
+  transition: all 150ms ease-in-out;
+  overflow: hidden;
+}
+.cards .card .card-content::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  z-index: -1;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(9px);
+  border-radius: inherit;
+  z-index: 1;
+  transition: all 150ms ease-in-out;
 }
-main figure:nth-child(odd) {
-  align-self: flex-end;
-}
-
-aside {
-  align-content: center;
-  gap: 3rem;
-  align-items: flex-start;
-}
-aside > div {
-  flex-basis: 50%;
-  flex-grow: 1;
-}
-aside > div:nth-child(1n+2) {
-  flex-basis: 25%;
-  flex-grow: 1;
-}
-
-@font-face {
-  font-family: "Poor Story";
-  src: url("../fonts/PoorStory-Regular.woff2") format("woff2"), url("../fonts/PoorStory-Regular.woff") format("woff"), url("../fonts/PoorStory-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-input {
-  padding: 0.5rem 0.8rem;
-  margin-top: 1rem;
-  outline: none;
-  border: 1px solid #e6b000;
-}
-input[type=text] {
-  background-color: #ededed;
-}
-input[type=text]:focus {
-  background-color: #ffe280;
-}
-input[type=submit] {
-  background-color: rgb(255, 196, 0);
-  color: rgb(39, 39, 39);
-  cursor: pointer;
-  transform: translateX(-5px);
-  transition: all 0.3s ease-in-out;
-}
-input[type=submit]:hover {
-  background-color: #e6b000;
-}
-
-figure {
-  overflow: hidden;
-  position: relative;
-  transition: all 0.3s ease-in-out;
-}
-figure:hover {
-  scale: 1.1;
-}
-figure img {
-  width: 200px;
-  height: auto;
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
-  object-fit: cover;
-  object-position: 50% 50%;
-}
-figure figcaption {
+.cards .card .card-content::after {
+  content: "Lorem";
   position: absolute;
-  bottom: -50px;
-  text-align: center;
-  right: 0;
-  left: 0;
-  padding: 1.2rem 0;
-  background-color: rgb(255, 196, 0);
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
-  opacity: 0;
-}
-figure:hover figcaption {
   bottom: 0;
-  visibility: visible;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translate(0rem, 2rem);
+  transition: all 250ms ease-in-out;
+  color: #001b2c;
+  font-size: 2rem;
+  font-family: travel;
+}
+.cards .card .card-content:hover::before,
+.cards .card .card-content :focus::before {
+  backdrop-filter: blur(0px);
+}
+.cards .card .card-content:hover::after,
+.cards .card .card-content :focus::after {
+  transform: translate(0rem, 0rem);
   opacity: 1;
 }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Courier New", Courier, monospace;
-}
-h3 {
-  font-weight: bold;
-  font-size: 1.8rem;
-  color: rgb(255, 196, 0);
-  border-bottom: 2px dotted rgb(255, 196, 0);
-  padding-bottom: 0.8rem;
-  margin-bottom: 2rem;
-}
-
-@media screen and (min-width: 1600px) {
-  figure img {
-    width: 250px;
-  }
-}
-@media screen and (max-width: 1400px) {
-  main {
-    min-height: 460px;
-    padding: 5rem 9vw;
-  }
-  main div.bck {
-    height: 250px;
-  }
-  aside {
-    flex-wrap: wrap;
-  }
-}
-@media screen and (max-width: 1000px) {
-  main {
-    flex-wrap: wrap;
-    align-items: stretch;
-    gap: 2rem;
-  }
-  figure {
-    display: flex;
-    justify-content: center;
-    flex-basis: 45%;
-    flex-grow: 1;
-    align-self: center !important;
-  }
-  figcaption {
-    width: 200px;
-    margin: auto;
-  }
-  main {
-    margin-bottom: 7rem;
-  }
-}
-@media screen and (max-width: 600px) {
-  figure {
-    display: flex;
-    justify-content: center;
-    flex-basis: 100%;
-  }
-  figure img {
-    width: 250px;
-  }
-  figcaption {
-    margin: auto;
-    width: 250px;
-  }
-  main {
-    height: fit-content;
-    margin-bottom: 0;
-  }
-  aside {
-    padding: 2rem;
-  }
+.cards .card .card-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  backdrop-filter: blur(9px);
 }
 
 /*# sourceMappingURL=main.css.map */

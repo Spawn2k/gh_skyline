@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'SamosaDemoRegular';
+  src: url(./SamosaDemoRegular.eot);
+  src: url(./SamosaDemoRegular.eot?#iefix) format('embedded-opentype'),
+       url(./SamosaDemoRegular.ttf) format('truetype'),
+       url(./SamosaDemoRegular.otf) format('otf'),
+       url(./SamosaDemoRegular.woff2) format('woff2'),
+       url(./SamosaDemoRegular.woff) format('woff');
+}
