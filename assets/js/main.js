@@ -5,7 +5,7 @@
   const DOM = {};
   DOM.imgEls = document.querySelectorAll('.header-pic img');
   DOM.headerEl = document.querySelector('header');
-  console.log(DOM);
+  // console.log(DOM);
   let xValue = 0;
   let yValue = 0;
 
@@ -28,7 +28,6 @@
     xValue = clientX - window.innerWidth / 2;
     // yValue = clientY - window.innerHeight / 2;
 
-    console.log(xValue);
     DOM.imgEls.forEach((img, idx) => {
       moveImageBackground(img, max, -35);
       if (idx === 1) {
