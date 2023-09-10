@@ -7,26 +7,49 @@
     width: 79rem;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(10, 7.9rem);
-    grid-template-rows: repeat(8, 7rem);
+    grid-template-columns: repeat(50, 1.58rem);
+    grid-template-rows: repeat(32, 1.75rem);
     div:nth-child(1) {
-      grid-column: 1 / 3;
-      grid-row: 1 / 8;
+      grid-column: 1 / 13;
+      grid-row: 1 / 33;
       background-image: url('../img/geisha-3.jpg');
       background-repeat: no-repeat;
       background-size: 800px;
-      background-position: 55% var(--yCord, 10%);
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        // object-position: -110px 0px;
-        object-position: -110px var(--yCord, 0px);
-        background-attachment: scroll;
-      }
+      background-position: 60% var(--yCord, 10%);
+      border-radius: $borderRadius;
+    }
+    div:nth-child(2) {
+      grid-column: 14 / 51;
+      grid-row: 1 / 30;
+      background-image: url('../img/sec-3-cherry.jpg');
+      background-repeat: no-repeat;
+      background-size: 1800px;
+      // background-position: 10% 20%;
+      background-position: 10% var(--yCord);
+      border-radius: $borderRadius;
+    }
+    p {
+      background-color: white;
+      grid-column: 18 / 47;
+      grid-row: 28 / 33;
+      padding: 1rem;
+      border-radius: $borderRadius;
     }
   }
 }
 
 // <a href="https://de.freepik.com/fotos-kostenlos/asiatische-frau-die-traditionellen-japanischen-kimono-im-herbstpark-traegt-kyoto-in-japan_10695562.htm#page=3&query=geisha%20japan&position=17&from_view=search&track=ais">Bild von tawatchai07</a> auf Freepik
+
+//Photo by Ryutaro Tsukata: https://www.pexels.com/photo/blooming-sakura-trees-and-canal-with-sailing-boat-in-park-5220030/
+
+//Photo by Nguyen Hung: https://www.pexels.com/photo/japanese-woman-in-a-kimono-at-cherry-blossom-season-11746332/
+
+//Photo by Akira Deng: https://www.pexels.com/photo/blooming-sakura-trees-in-wonderful-park-4107432/
+
+//Photo by Tiểu Bảo Trương: https://www.pexels.com/photo/positive-asian-woman-with-branches-of-tree-with-flowers-7392337/
+
+//<a href="https://www.freepik.com/free-photo/cherry-blossom-rows-along-meguro-river-tokyo-japan_10824557.htm#query=japan%20cherry%20blossom&position=8&from_view=search&track=ais">Image by tawatchai07</a> on Freepik
+
+//<a href="https://www.freepik.com/free-photo/cherry-blossoms-fuji-mountain-spring-sunrise-shizuoka-japan_10824295.htm#query=japan%20cherry%20blossom&position=23&from_view=search&track=ais">Image by tawatchai07</a> on Freepik
+
+//<a href="https://www.freepik.com/free-photo/rows-beautiful-pink-flowers-trees_13180947.htm#page=3&query=japan%20cherry%20blossom&position=32&from_view=search&track=ais">Image by tawatchai07</a> on Freepik

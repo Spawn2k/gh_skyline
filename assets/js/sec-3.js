@@ -3,7 +3,8 @@
 (() => {
   // === DOM & VARS =======
   const DOM = {};
-  DOM.imgEl = document.querySelector('.sec-3-img');
+  DOM.imgGeishaEl = document.querySelector('.sec-3-img-geisha');
+  DOM.imgCherry = document.querySelector('.sec-3-img-cherry');
   DOM.sec3El = document.querySelector('.sec-3');
   console.log(DOM);
   // === INIT =============
@@ -19,7 +20,8 @@
     // console.log(offset);
     if (top >= offset && top < offset + height) {
       const percent = (top - offset) / 10;
-      DOM.imgEl.style.setProperty('--yCord', `${10 + percent * 0.5}%`);
+      DOM.imgGeishaEl.style.setProperty('--yCord', `${10 + percent * 0.5}%`);
+      DOM.imgCherry.style.setProperty('--yCord', `${percent * 0.3}%`);
       console.log(percent);
     }
   };
