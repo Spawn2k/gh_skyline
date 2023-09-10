@@ -444,5 +444,33 @@ header > .headline > div .header-pic img {
 }
 @keyframes nightTwo {}
 @keyframes nightThree {}
+.sec-3 {
+  background-color: #001b2c;
+  padding: 8rem 0;
+}
+.sec-3 .content-wraper {
+  font-family: travel;
+  font-size: 1.2rem;
+  width: 79rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(10, 7.9rem);
+  grid-template-rows: repeat(8, 7rem);
+}
+.sec-3 .content-wraper div:nth-child(1) {
+  grid-column: 1/3;
+  grid-row: 1/8;
+  background-image: url("../img/geisha-3.jpg");
+  background-repeat: no-repeat;
+  background-size: 800px;
+  background-position: 55% var(--yCord, 10%);
+}
+.sec-3 .content-wraper div:nth-child(1) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: -110px var(--yCord, 0px);
+  background-attachment: scroll;
+}
 
 /*# sourceMappingURL=main.css.map */
