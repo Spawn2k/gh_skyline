@@ -50,7 +50,7 @@
   };
 
   const moveImageBackground = (img, percent, offset = 0) => {
-    console.log(percent);
+    // console.log(percent);
     img.style.setProperty('--cordX', `${percent + offset}%`);
     // img.animate(
     //   {

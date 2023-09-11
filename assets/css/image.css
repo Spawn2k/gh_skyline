@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "Travel";
+  src: url("../fonts/Travel/Travel.eot");
+  src: url("../fonts/Travel/Travel.eot") format("embedded-opentype"), url("../fonts/Travel/Travel.ttf") format("truetype"), url("../fonts/Travel/Travel.otf") format("otf"), url("../fonts/Travel/Travel.woff2") format("woff2"), url("../fonts/Travel/Travel.woff") format("woff");
+}
+@font-face {
+  font-family: "Samosa";
+  src: url("../fonts/Samosa/SamosaDemoRegular.eot");
+  src: url("../fonts/Samosa/SamosaDemoRegular.eot") format("embedded-opentype"), url("../fonts/Samosa/SamosaDemoRegular.ttf") format("truetype"), url("../fonts/Samosa/SamosaDemoRegular.otf") format("otf"), url("../fonts/Samosa/SamosaDemoRegular.woff2") format("woff2"), url("../fonts/Samosa/SamosaDemoRegular.woff") format("woff");
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: aria;
+  background-color: white;
+  font-size: 1rem;
+  line-height: 1.6;
+  height: 7000px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* "neue" HTML5 Elemente */
+header,
+main,
+section,
+nav,
+aside,
+article,
+footer,
+figure,
+figcaption {
+  display: block;
+  padding: 0;
+}
+
+#three-container {
+  height: 49rem;
+  width: 79rem;
+  position: relative;
+  margin: 0 auto;
+}
+#three-container canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*# sourceMappingURL=image.css.map */
