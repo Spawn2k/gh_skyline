@@ -7,7 +7,7 @@
   DOM.imgTriggerEl = document.querySelector('.img-trigger');
   DOM.pEls = document.querySelectorAll('.sec-2-info');
 
-  console.log(DOM);
+  // console.log(DOM);
   // === INIT =============
   const init = () => {
     // DOM.imgContainerEls.forEach((img) => {
