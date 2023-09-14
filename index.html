@@ -6,9 +6,17 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/card.js" defer></script>
+    <script src="assets/js/sec-1.js" defer></script>
     <script src="assets/js/sec-2.js" defer></script>
     <script src="assets/js/sec-3.js" defer></script>
     <script src="assets/js/sec-4.js" defer></script>
+    <script src="assets/js/sec-5.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <title>Japan</title>
   </head>
   <body>
@@ -79,8 +87,8 @@
           <div>
             <img src="assets/img/pic1.1.jpg" alt="" width="200" />
           </div>
-          <div><img src="assets/img/pic1.webp" alt="" width="200" /></div>
-          <div><img src="assets/img/pic1-2.webp" alt="" width="200" /></div>
+          <div><img class="sec-1-img-mini" src="assets/img/pic1.webp" alt="" width="200" /></div>
+          <div><img class="sec-1-img-mini" src="assets/img/pic1-2.webp" alt="" width="200" /></div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat numquam quo optio quod eligendi aliquam.
             Consequuntur voluptas, autem placeat officia laboriosam magni odio laudantium, quia voluptatibus sint eos,
@@ -129,8 +137,7 @@
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repudiandae corrupti mollitia totam, qui,
             enim tempora expedita non assumenda rem facere deserunt laudantium sint adipisci dicta! Iure dolore neque
-            alias vero voluptatibus possimus, quam sint ipsum ducimus suscipit temporibus in accusantium atque ipsam
-            praesentium earum, nihil tempora obcaecati modi minima?
+            alias vero voluptatibus possimus, quam sint ipsum ducimus
           </p>
         </div>
       </section>
@@ -154,6 +161,78 @@
             <img src="assets/img/tokyo.webp" alt="" width="300" />
           </div>
         </div>
+      </section>
+
+      <section class="sec-5">
+        <div class="content-wraper">
+          <div class="card">
+            <div class="sec-5-img">
+              <!-- <img src="assets/img/samurai-1.jpg" width="200" alt="" /> -->
+            </div>
+            <div class="sec-5-img">
+              <!-- <img src="assets/img/samurai-1.jpg" width="200" alt="" /> -->
+            </div>
+            <div class="sec-5-img">
+              <!-- <img src="assets/img/samurai-1.jpg" width="200" alt="" /> -->
+            </div>
+            <div class="sec-5-img">
+              <!-- <img src="assets/img/samurai-1.jpg" width="200" alt="" /> -->
+            </div>
+            <div class="sec-5-img">
+              <!-- <img src="assets/img/samurai-2.jpg" width="200" alt="" /> -->
+            </div>
+            <div class="sec-5-img-sub-pic sec-5-fade-in">
+              <!-- <img src="assets/img/samurai-1.jpg" width="200" alt="" /> -->
+            </div>
+            <div class="sec-5-img-sub-pic sec-5-fade-in">
+              <!-- <img src="assets/img/samurai-1.jpg" width="200" alt="" /> -->
+            </div>
+            <div class="sec-5-info sec-5-fade-in">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio sint ipsam reprehenderit nam hic omnis
+                officiis corrupti voluptates id rerum? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio
+                sint ipsam reprehenderit nam hic omnis officiis corrupti voluptates id rerum?
+              </p>
+            </div>
+            <div>
+              <p class="morph">
+                <span class="jap">
+                  <span class="words bushido-jap">道</span>
+                  <span class="words bushido-jap">武</span>
+                  <span class="words bushido-jap">士</span>
+                </span>
+                <span class="words bushido-eng">B</span>
+                <span class="words bushido-eng">U</span>
+                <span class="words bushido-eng">S</span>
+                <span class="words bushido-eng">H</span>
+                <span class="words bushido-eng">I</span>
+                <span class="words bushido-eng">D</span>
+                <span class="words bushido-eng">O</span>
+              </p>
+            </div>
+            <div>
+              <p class="morph">
+                <span class="bushido-eng">Weg</span><span class="bushido-eng">Des</span>
+                <span class="bushido-eng">Krieges</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <svg id="filters">
+          <defs>
+            <filter id="morph">
+              <feColorMatrix
+                in="SourceGraphic"
+                type="matrix"
+                values="
+                      1 0 0 0 0
+                      0 1 0 0 0
+                      0 0 1 0 0
+                      0 0 0 255 -140"
+              />
+            </filter>
+          </defs>
+        </svg>
       </section>
     </main>
   </body>

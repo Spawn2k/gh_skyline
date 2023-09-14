@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morph</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- <script src="assets/js/morph.js" defer></script> -->
+  </head>
+  <body>
+    <div class="morph">
+      <span class="words show" id="current">New</span>
+      <span class="words" id="next">Current</span>
+    </div>
+
+    <button>Click</button>
+
+    <svg id="filters">
+      <defs>
+        <filter id="morph">
+          <feColorMatrix
+            in="SourceGraphic"
+            type="matrix"
+            values="
+                  1 0 0 0 0
+                  0 1 0 0 0
+                  0 0 1 0 0
+                  0 0 0 255 -140"
+          />
+        </filter>
+      </defs>
+    </svg>
+  </body>
+</html>

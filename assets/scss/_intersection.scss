@@ -1,0 +1,32 @@
+body {
+  // $second: #0c1016;
+  background-color: #0c1016;
+}
+
+.element {
+  display: flex;
+  width: 35rem;
+  height: 35rem;
+  &.first {
+    background-color: $prime;
+  }
+
+  &.second {
+    margin: 50rem 0 0 0;
+    background-color: white;
+  }
+
+  &.animation {
+    animation: spin 1s;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

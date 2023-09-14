@@ -1,0 +1,280 @@
+.sec-5 {
+  background-color: $mainColor;
+  padding: 8rem 0;
+  width: 100%;
+  height: 100%;
+
+  #filters {
+    position: absolute;
+    top: 0;
+    z-index: -1000;
+    left: -100%;
+    opacity: 0;
+  }
+  .content-wraper {
+    // scroll-snap-align: start;
+    width: 79rem;
+    // height: 56rem;
+    margin: auto;
+    position: relative;
+    height: 100%;
+    &:hover {
+      // .bushido-eng {
+      //   animation: new 400ms forwards;
+      // }
+
+      // .bushido-jap {
+      //   animation: old 3000ms forwards;
+      // }
+    }
+    .card {
+      display: grid;
+      position: sticky;
+      top: 0rem;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: repeat(7, 7rem);
+
+      div.sec-5-img:nth-child(even) {
+        &.active {
+          animation: mainPicRight 500ms ease-in-out forwards;
+        }
+      }
+      div.sec-5-img:nth-child(odd) {
+        &.active {
+          animation: mainPicLeft 500ms ease-in-out forwards;
+        }
+      }
+
+      div:nth-of-type(1) {
+        background-image: url('../img/samurai-1.jpg');
+        background-repeat: no-repeat;
+        background-position: 0 -172px;
+        background-size: cover;
+        grid-column: 1 / 8;
+        grid-row: 1 / 2;
+        transform: translateX(-150px);
+        opacity: 0;
+        filter: blur(5px);
+        border-radius: $borderRadius $borderRadius 0 0;
+      }
+      div:nth-of-type(2) {
+        grid-column: 1 / 8;
+        grid-row: 2 / 3;
+        background-image: url('../img/samurai-1.jpg');
+        background-repeat: no-repeat;
+        background-position: 0 -284px;
+        background-size: cover;
+        transform: translateX(150px);
+        opacity: 0;
+        filter: blur(5px);
+      }
+      div:nth-of-type(3) {
+        grid-column: 1 / 8;
+        grid-row: 3 / 4;
+        background-image: url('../img/samurai-1.jpg');
+        background-repeat: no-repeat;
+        background-position: 0 -396px;
+        background-size: cover;
+        transform: translateX(-150px);
+        opacity: 0;
+      }
+      div:nth-of-type(4) {
+        grid-column: 1 / 8;
+        grid-row: 4 / 5;
+        background-image: url('../img/samurai-1.jpg');
+        background-repeat: no-repeat;
+        background-position: 0 -508px;
+        background-size: cover;
+        transform: translateX(150px);
+        opacity: 0;
+      }
+      div:nth-of-type(5) {
+        grid-column: 1 / 8;
+        grid-row: 5 / 6;
+        background-image: url('../img/samurai-1.jpg');
+        background-repeat: no-repeat;
+        background-position: 0 -620px;
+        background-size: cover;
+        transform: translateX(-150px);
+        opacity: 0;
+      }
+      div:nth-of-type(6) {
+        grid-column: 1/ 3;
+        grid-row: 6 / 8;
+        background-image: url('../img/samurai-3.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        background-size: cover;
+        margin: 1.5rem 1.5rem 0 0;
+        // transform: translateX(150px);
+        opacity: 0;
+      }
+      div:nth-of-type(7) {
+        grid-column: 3 / 5;
+        grid-row: 6 / 8;
+        background-image: url('../img/samurai-2.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        margin: 1.5rem 1.5rem 0 0;
+        border-radius: $borderRadius;
+        // transform: translateX(-150px);
+        opacity: 0;
+      }
+      div:nth-of-type(8) {
+        grid-column: 5 / 8;
+        grid-row: 6 / 8;
+        background-color: white;
+        border-radius: $borderRadius;
+        margin: 1.5rem 0rem 0 0;
+        opacity: 0;
+
+        p {
+          padding: 1.5rem;
+          font-size: $textFontSize;
+          font-family: travel;
+        }
+      }
+      div:nth-of-type(9) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 6;
+        // background-color: white;
+        border-radius: $borderRadius;
+        margin: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(50px);
+
+        p.morph {
+          font-family: 'Noto Sans JP';
+          width: 100%;
+          height: 100%;
+          font-size: 4rem;
+          padding: 1.5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          // gap: 3rem;
+          font-weight: 700;
+          line-height: 4.4rem;
+          filter: url(#morph) blur(0.5px);
+          position: relative;
+          // color: #c20000;
+          color: rgb(52 250 255);
+
+          .jap {
+            position: absolute;
+            top: 100%;
+            height: 100%;
+            top: 0px;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 6rem;
+            font-size: 5rem;
+            opacity: 0;
+            transition: all 300ms;
+            .bushido-jap {
+              // animation: new 400ms forwards;
+              &.hide {
+                animation: old 1000ms forwards;
+              }
+            }
+          }
+
+          .bushido-eng {
+            opacity: 0;
+
+            &.show {
+              animation: new 300ms forwards;
+            }
+          }
+        }
+      }
+      div:nth-of-type(10) {
+        grid-column: 7 / 8;
+        grid-row: 1 / 6;
+        // background-color: white;
+        border-radius: $borderRadius;
+        margin: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p.morph {
+          font-family: 'Noto Sans JP';
+          font-size: 3rem;
+          padding: 1.5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 4.5rem;
+          font-weight: 700;
+          filter: url(#morph) blur(0.5px);
+          .bushido-eng {
+            color: $ciBlue;
+            opacity: 0;
+            &.show {
+              animation: new 300ms forwards;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes new {
+  0% {
+    filter: blur(100px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes old {
+  0% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  100% {
+    filter: blur(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes mainPicLeft {
+  0% {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-150px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0px);
+  }
+}
+@keyframes mainPicRight {
+  0% {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(150px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0px);
+  }
+}
