@@ -8,13 +8,16 @@
   DOM.btnEls = document.querySelectorAll('.sec-6 button');
   DOM.mainImgEl = document.querySelector('.sec-6-main-img');
   DOM.modalEl = document.querySelector('.modal');
+  DOM.btnForwards = document.querySelector('[data-btn="forwards"]');
+  DOM.btnBackwards = document.querySelector('[data-btn="backwards"]');
+
   let mouseDownCord = 0;
   // console.log(DOM);
   // === INIT =============
   const init = () => {
-    window.addEventListener('mousedown', onMouseDown);
-    window.addEventListener('mousemove', onMouseMove);
-    window.addEventListener('mouseup', onMouseUp);
+    DOM.modalEl.addEventListener('mousedown', onMouseDown);
+    DOM.modalEl.addEventListener('mousemove', onMouseMove);
+    DOM.modalEl.addEventListener('mouseup', onMouseUp);
     DOM.btnEls.forEach((btn) => {
       btn.addEventListener('click', onClickBtn);
     });
@@ -32,7 +35,6 @@
   };
 
   const onMouseMove = (e) => {
-    // console.log(mouseDownCord);
     if (DOM.imgContainerEl.dataset.mouseDownAt === '0') return;
 
     const mouseDelta = parseFloat(DOM.imgContainerEl.dataset.mouseDownAt) - e.clientX;
@@ -51,6 +53,18 @@
     DOM.imgContainerEl.dataset.percentage = nextPercentage;
 
     moveContainer(nextPercentage);
+
+    if (nextPercentage === 0) {
+      DOM.btnBackwards.disabled = true;
+    } else if (nextPercentage < 0) {
+      DOM.btnBackwards.disabled = false;
+    }
+
+    if (nextPercentage <= -100) {
+      DOM.btnForwards.disabled = true;
+    } else if (nextPercentage > -100) {
+      DOM.btnForwards.disabled = false;
+    }
   };
 
   const onMouseUp = (e) => {
@@ -59,30 +73,69 @@
   };
 
   const onClickBtn = (e) => {
-    let prevPercentage = Number(DOM.imgContainerEl.dataset.prevPercentage);
+    let prevPercentage = Math.ceil(Number(DOM.imgContainerEl.dataset.prevPercentage));
     const btnDataset = e.currentTarget.dataset.btn;
-    if (btnDataset === 'forwards') {
-      if (Number(prevPercentage) <= -100) return;
+    const btnBackwards = document.querySelector('[data-btn="backwards"]');
+    const btnForwards = document.querySelector('[data-btn="forwards"]');
+    let offset = 0;
 
-      moveContainer(prevPercentage, -25);
+    if (btnDataset === 'forwards') {
+      offset = -25;
+
+      if (Number(prevPercentage) <= -100) {
+        e.currentTarget.disabled = true;
+        return;
+      }
+
+      if (prevPercentage + offset < -100) {
+        const newOffset = -100 - prevPercentage;
+        offset = newOffset;
+      }
+
+      btnBackwards.disabled = false;
+      moveContainer(prevPercentage, offset);
 
       DOM.imgEls.forEach((img) => {
-        moveImage(img, prevPercentage, -25);
+        moveImage(img, prevPercentage, offset);
       });
-      DOM.imgContainerEl.dataset.prevPercentage = +Number(prevPercentage - 25);
-      DOM.imgContainerEl.dataset.percentage = +Number(prevPercentage - 25);
+      DOM.imgContainerEl.dataset.prevPercentage = +Number(prevPercentage + offset);
+      DOM.imgContainerEl.dataset.percentage = +Number(prevPercentage + offset);
+      prevPercentage = Math.ceil(Number(DOM.imgContainerEl.dataset.prevPercentage));
+      if (Number(prevPercentage) <= -100) {
+        e.currentTarget.disabled = true;
+        return;
+      }
     }
 
     if (btnDataset === 'backwards') {
-      if (prevPercentage >= 0) return;
-      moveContainer(prevPercentage, 25);
+      offset = 25;
+
+      if (prevPercentage >= 0) {
+        e.currentTarget.disabled = true;
+        return;
+      }
+
+      if (prevPercentage + offset > 0) {
+        const newOffset = prevPercentage + offset;
+        offset -= newOffset;
+      }
+
+      btnForwards.disabled = false;
+
+      moveContainer(prevPercentage, offset);
 
       DOM.imgEls.forEach((img) => {
-        moveImage(img, prevPercentage, 25);
+        moveImage(img, prevPercentage, offset);
       });
 
-      DOM.imgContainerEl.dataset.prevPercentage = +Number(prevPercentage + 25);
-      DOM.imgContainerEl.dataset.percentage = +Number(prevPercentage + 25);
+      DOM.imgContainerEl.dataset.prevPercentage = +Number(prevPercentage + offset);
+      DOM.imgContainerEl.dataset.percentage = +Number(prevPercentage + offset);
+      prevPercentage = Math.ceil(Number(DOM.imgContainerEl.dataset.prevPercentage));
+
+      if (prevPercentage >= 0) {
+        e.currentTarget.disabled = true;
+        return;
+      }
     }
   };
 
@@ -90,7 +143,7 @@
     if (mouseDownCord !== e.clientX) {
       return;
     }
-    const imgSrc = e.currentTarget.src.replace('http://127.0.0.1:5501/', '');
+    const imgSrc = e.currentTarget;
     DOM.mainImgEl.src = imgSrc;
     DOM.modalEl.classList.add('hide');
     setTimeout(() => {
@@ -100,25 +153,20 @@
 
   const onClickImgModal = (e) => {
     // e.stopPropagation();
-    console.log('click');
+    let percentage = Number(DOM.imgContainerEl.dataset.percentage);
+    if (percentage <= 0) {
+      DOM.btnBackwards.disabled = true;
+    }
+    if (percentage >= 100) {
+      DOM.btnForwards.disabled = true;
+    }
+
     DOM.modalEl.classList.remove('hide');
     DOM.modalEl.style.zIndex = '0';
     setTimeout(() => {
       DOM.modalEl.style.display = 'initial';
       DOM.modalEl.classList.add('show');
     }, 300);
-    // DOM.modalEl.classList.add('show');
-    // DOM.modalEl.animate(
-    //   {
-    //     opacity: 1,
-    //     zIndex: 0,
-    //   },
-    //   {
-    //     duration: 300,
-    //     fill: 'forwards',
-    //     easing: 'ease-in-out',
-    //   }
-    // );
   };
 
   // === XHR/FETCH ========
