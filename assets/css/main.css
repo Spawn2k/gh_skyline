@@ -804,5 +804,79 @@ header > .headline > div .header-pic img {
     transform: translateX(0px);
   }
 }
+.sec-6 {
+  background-color: #001b2c;
+  padding: 8rem 0;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.sec-6 .content-wraper {
+  width: 79rem;
+  margin: auto;
+  position: relative;
+  height: 100%;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.sec-6 .content-wraper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sec-6 .modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  transition: all 300ms ease-in-out;
+}
+.sec-6 .modal.hide {
+  opacity: 0;
+}
+.sec-6 .modal .show {
+  display: initial;
+  opacity: 1;
+}
+.sec-6 .modal .control-slider {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 3rem;
+  z-index: 1;
+}
+.sec-6 .modal .control-slider button {
+  margin-bottom: 12rem;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.image-track {
+  display: flex;
+  gap: 4vmin;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(0%, -50%);
+  z-index: 3;
+}
+.image-track .image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: 100% 50%;
+}
 
 /*# sourceMappingURL=main.css.map */
