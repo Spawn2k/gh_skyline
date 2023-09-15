@@ -143,7 +143,7 @@
     if (mouseDownCord !== e.clientX) {
       return;
     }
-    const imgSrc = e.currentTarget;
+    const imgSrc = e.currentTarget.src.replace('http://127.0.0.1:5501/', '');
     DOM.mainImgEl.src = imgSrc;
     DOM.modalEl.classList.add('hide');
     setTimeout(() => {
