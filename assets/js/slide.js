@@ -10,9 +10,16 @@
   DOM.modalEl = document.querySelector('.modal');
   DOM.btnForwards = document.querySelector('[data-btn="forwards"]');
   DOM.btnBackwards = document.querySelector('[data-btn="backwards"]');
+  DOM.h2el = document.querySelector('.sec-6 h2')
+  DOM.contentWraperEl = document.querySelector('.sec-6 .content-wraper')
+  DOM.escapeBtnEl = document.querySelector('.escape')
 
+  const ACTIVE_COLOR = '#00fff1';
+  const DEACTIVE_ACTIVE_COLOR = '#239993';
+  
+  console.log(DOM)
   let mouseDownCord = 0;
-  // console.log(DOM);
+
   // === INIT =============
   const init = () => {
     DOM.modalEl.addEventListener('mousedown', onMouseDown);
@@ -25,6 +32,8 @@
       img.addEventListener('click', onClickImg);
     });
     DOM.mainImgEl.addEventListener('click', onClickImgModal);
+
+    DOM.escapeBtnEl.addEventListener('click', onClickEscapeBtn)
   };
 
   // === EVENTHANDLER =====
@@ -36,7 +45,7 @@
 
   const onMouseMove = (e) => {
     if (DOM.imgContainerEl.dataset.mouseDownAt === '0') return;
-
+ 
     const mouseDelta = parseFloat(DOM.imgContainerEl.dataset.mouseDownAt) - e.clientX;
 
     const maxDelta = window.innerWidth / 2;
@@ -54,17 +63,8 @@
 
     moveContainer(nextPercentage);
 
-    if (nextPercentage === 0) {
-      DOM.btnBackwards.disabled = true;
-    } else if (nextPercentage < 0) {
-      DOM.btnBackwards.disabled = false;
-    }
+    toggleControllBtn(nextPercentage)
 
-    if (nextPercentage <= -100) {
-      DOM.btnForwards.disabled = true;
-    } else if (nextPercentage > -100) {
-      DOM.btnForwards.disabled = false;
-    }
   };
 
   const onMouseUp = (e) => {
@@ -81,61 +81,42 @@
 
     if (btnDataset === 'forwards') {
       offset = -25;
-
-      if (Number(prevPercentage) <= -100) {
-        e.currentTarget.disabled = true;
-        return;
-      }
-
+      DOM.btnBackwards.querySelector('i').style.color = '#00fff1'
       if (prevPercentage + offset < -100) {
         const newOffset = -100 - prevPercentage;
         offset = newOffset;
       }
 
-      btnBackwards.disabled = false;
       moveContainer(prevPercentage, offset);
 
       DOM.imgEls.forEach((img) => {
         moveImage(img, prevPercentage, offset);
       });
-      DOM.imgContainerEl.dataset.prevPercentage = +Number(prevPercentage + offset);
-      DOM.imgContainerEl.dataset.percentage = +Number(prevPercentage + offset);
+
+
+      setPercent(prevPercentage, offset)
       prevPercentage = Math.ceil(Number(DOM.imgContainerEl.dataset.prevPercentage));
-      if (Number(prevPercentage) <= -100) {
-        e.currentTarget.disabled = true;
-        return;
-      }
+      toggleControllBtn(prevPercentage)
+     
     }
 
     if (btnDataset === 'backwards') {
       offset = 25;
-
-      if (prevPercentage >= 0) {
-        e.currentTarget.disabled = true;
-        return;
-      }
-
       if (prevPercentage + offset > 0) {
         const newOffset = prevPercentage + offset;
         offset -= newOffset;
       }
 
-      btnForwards.disabled = false;
-
       moveContainer(prevPercentage, offset);
 
       DOM.imgEls.forEach((img) => {
         moveImage(img, prevPercentage, offset);
       });
 
-      DOM.imgContainerEl.dataset.prevPercentage = +Number(prevPercentage + offset);
-      DOM.imgContainerEl.dataset.percentage = +Number(prevPercentage + offset);
+      setPercent(prevPercentage, offset)
       prevPercentage = Math.ceil(Number(DOM.imgContainerEl.dataset.prevPercentage));
-
-      if (prevPercentage >= 0) {
-        e.currentTarget.disabled = true;
-        return;
-      }
+      toggleControllBtn(prevPercentage)
+    
     }
   };
 
@@ -144,30 +125,34 @@
       return;
     }
     const imgSrc = e.currentTarget.src.replace('http://127.0.0.1:5501/', '');
-    DOM.mainImgEl.src = imgSrc;
-    DOM.modalEl.classList.add('hide');
+    const imgTitle = e.currentTarget.dataset.title;
+
     setTimeout(() => {
-      DOM.modalEl.style.display = 'none';
-    }, 300);
+      DOM.contentWraperEl.classList.add('show')
+      
+    },300)
+
+    DOM.mainImgEl.src = imgSrc;
+    DOM.h2el.textContent = imgTitle;
+    DOM.modalEl.classList.add('hide');
   };
 
   const onClickImgModal = (e) => {
-    // e.stopPropagation();
     let percentage = Number(DOM.imgContainerEl.dataset.percentage);
-    if (percentage <= 0) {
-      DOM.btnBackwards.disabled = true;
-    }
-    if (percentage >= 100) {
-      DOM.btnForwards.disabled = true;
-    }
+
+    toggleControllBtn(percentage)
 
     DOM.modalEl.classList.remove('hide');
-    DOM.modalEl.style.zIndex = '0';
-    setTimeout(() => {
-      DOM.modalEl.style.display = 'initial';
-      DOM.modalEl.classList.add('show');
-    }, 300);
+    DOM.contentWraperEl.classList.remove('show')
   };
+
+  const onClickEscapeBtn = (e) => {
+    DOM.modalEl.classList.add('hide');
+    setTimeout(() => {
+      DOM.contentWraperEl.classList.add('show')
+      
+    },300)
+  }
 
   // === XHR/FETCH ========
 
@@ -194,6 +179,34 @@
       { duration: 1200, fill: 'forwards' }
     );
   };
+
+  const toggleControllBtn = (percent) => {
+
+    const forwardSvg = DOM.btnForwards.querySelector('i');
+    const backwardsSvg = DOM.btnBackwards.querySelector('i');
+
+
+    if(percent === 0) {
+      DOM.btnBackwards.disable = true;
+      backwardsSvg.style.color = DEACTIVE_ACTIVE_COLOR;
+    } else {
+      DOM.btnBackwards.disable = false;
+      backwardsSvg.style.color = ACTIVE_COLOR;
+    }
+
+    if(percent === -100) {
+      DOM.btnForwards.disable = true;
+      forwardSvg.style.color = DEACTIVE_ACTIVE_COLOR;
+    } else {
+      DOM.btnForwards.disable = false;
+      forwardSvg.style.color = ACTIVE_COLOR;
+    }
+  }
+
+  const setPercent = (percent, offset) => {
+    DOM.imgContainerEl.dataset.prevPercentage = +Number(percent + offset);
+    DOM.imgContainerEl.dataset.percentage = +Number(percent + offset);
+  }
 
   init();
 })();

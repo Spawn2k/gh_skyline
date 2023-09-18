@@ -5,7 +5,7 @@
   const DOM = {};
   DOM.imgEls = document.querySelectorAll('.sec-4 .card img');
   DOM.textEl = document.querySelector('.sec-4-city-text');
-  console.log(DOM);
+  // console.log(DOM);
   // === INIT =============
   const init = () => {
     DOM.imgEls.forEach((img) => img.addEventListener('click', onClickImg));

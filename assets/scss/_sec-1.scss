@@ -1,6 +1,13 @@
 .sec-1 {
   background-color: $mainColor;
   width: 100%;
+  h2 {
+    text-align: center;
+    color: $ciBlue;
+    font-size: 4rem;
+    font-family: Samosa;
+    padding-bottom: $topicPaddingBottom;
+  }
   > div {
     position: relative;
     z-index: 2;

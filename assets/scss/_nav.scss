@@ -38,8 +38,8 @@ header {
       margin-top: 8rem;
       font-size: 6rem;
       font-family: 'Samosa';
-      color: #242424;
-      text-shadow: 2px 2px 3px rgba($mainColor, 0.6);
+      color: $mainColor;
+      // text-shadow: 2px 2px 3px rgba($mainColor, 0.6);
       p:first-child {
         margin-bottom: 2rem;
       }

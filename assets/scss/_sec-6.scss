@@ -2,44 +2,71 @@
   background-color: $mainColor;
   padding: 8rem 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: relative;
   overflow: hidden;
+
+
+  h2 {
+    text-align: center;
+    color: $ciBlue;
+    font-size: 4rem;
+    font-family: Samosa;
+    padding-bottom: $topicPaddingBottom;
+  }
   .content-wraper {
     width: 79rem;
     // height: 56rem;
     margin: auto;
     position: relative;
-    height: 100%;
+    height: 42rem;
     border-radius: $borderRadius;
     overflow: hidden;
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      cursor: pointer;
+    }
+
+    &.show {
+      z-index: 10;
     }
   }
 
   .modal {
     position: absolute;
-    top: 0;
+    top: 0px;
     left: 0;
     height: 100%;
     width: 100%;
     background-color: rgba($color: #000000, $alpha: 0.5);
     backdrop-filter: blur(5px);
 
-    transition: all 300ms ease-in-out;
+    transition: all $sec6ModalTiming ease-in-out;
+    // transform: scale(.2);
+    opacity: 1;
+    // z-index: 10;
+
+    .image-track {
+      .image {
+        border-radius: $borderRadius;
+        cursor: pointer;
+
+      }
+    }
 
     &.hide {
       // display: none;
+     transition: all $sec6ModalTiming ease-in-out;
+
       opacity: 0;
+      // z-index: -10;
+    // transform: scale(1);
+
     }
 
-    .show {
-      display: initial;
-      opacity: 1;
-    }
+
     .control-slider {
       height: 100%;
       width: 100%;
@@ -51,14 +78,51 @@
       align-items: flex-end;
       gap: 3rem;
       z-index: 1;
+      display: flex;
+
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+      }
+
       button {
-        margin-bottom: 12rem;
+        margin-bottom: 17rem;
         -webkit-user-select: none;
         -webkit-touch-callout: none;
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
+        cursor: pointer;
+
+        &.escape {
+          padding: 0;
+          border: none;
+          background-color: transparent;
+          
+          svg {
+            width: 3rem;
+            height: 3rem;
+            font-size: 4rem;
+            fill: rgb(52, 250, 255);
+          
+          }
+        }
+
+        &[data-btn="backwards"], &[data-btn="forwards"]{
+          padding: 0;
+          border: none;
+          background-color: transparent;
+          i {
+            font-size: 2rem;
+            color: rgb(52, 250, 255);;
+          }
+        }
       }
     }
   }
 }
+
+
+

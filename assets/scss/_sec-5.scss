@@ -4,6 +4,14 @@
   width: 100%;
   height: 100%;
 
+  h2 {
+    text-align: center;
+    color: $ciBlue;
+    font-family: Samosa;
+    font-size: $topicFontSize;
+    padding-bottom: $topicPaddingBottom;
+  }
+
   #filters {
     position: absolute;
     top: 0;
@@ -12,21 +20,11 @@
     opacity: 0;
   }
   .content-wraper {
-    // scroll-snap-align: start;
     width: 79rem;
-    // height: 56rem;
     margin: auto;
     position: relative;
     height: 100%;
-    &:hover {
-      // .bushido-eng {
-      //   animation: new 400ms forwards;
-      // }
 
-      // .bushido-jap {
-      //   animation: old 3000ms forwards;
-      // }
-    }
     .card {
       display: grid;
       position: sticky;
@@ -104,7 +102,7 @@
         background-image: url('../img/samurai-3.jpg');
         background-repeat: no-repeat;
         background-position: center center;
-
+        border-radius: $borderRadius;
         background-size: cover;
         margin: 1.5rem 1.5rem 0 0;
         // transform: translateX(150px);
@@ -189,6 +187,10 @@
           }
 
           .bushido-eng {
+            font-family: Samosa;
+            font-size: 3rem;
+            // font-style: bold;
+            font-weight: 700;
             opacity: 0;
 
             &.show {
@@ -209,6 +211,7 @@
 
         p.morph {
           font-family: 'Noto Sans JP';
+          
           font-size: 3rem;
           padding: 1.5rem;
           display: flex;
@@ -219,6 +222,8 @@
           font-weight: 700;
           filter: url(#morph) blur(0.5px);
           .bushido-eng {
+            font-family: Samosa;
+            font-size: 3rem;
             color: $ciBlue;
             opacity: 0;
             &.show {

@@ -98,8 +98,7 @@ header .headline h1 {
   margin-top: 8rem;
   font-size: 6rem;
   font-family: "Samosa";
-  color: #242424;
-  text-shadow: 2px 2px 3px rgba(0, 27, 44, 0.6);
+  color: #001b2c;
 }
 header .headline h1 p:first-child {
   margin-bottom: 2rem;
@@ -180,15 +179,22 @@ header > .headline > div .header-pic img {
 }
 .sec-travel-list h2 {
   text-align: center;
-  color: rgb(241, 241, 241);
-  margin-bottom: 4rem;
+  color: #00fff1;
   font-size: 4rem;
   font-family: Samosa;
+  padding-bottom: 2rem;
 }
 
 .sec-1 {
   background-color: #001b2c;
   width: 100%;
+}
+.sec-1 h2 {
+  text-align: center;
+  color: #00fff1;
+  font-size: 4rem;
+  font-family: Samosa;
+  padding-bottom: 2rem;
 }
 .sec-1 > div {
   position: relative;
@@ -342,6 +348,13 @@ header > .headline > div .header-pic img {
   background-color: #001b2c;
   padding: 8rem 0;
 }
+.sec-2 h2 {
+  text-align: center;
+  color: #00fff1;
+  font-size: 4rem;
+  font-family: Samosa;
+  padding-bottom: 2rem;
+}
 .sec-2 > div {
   font-family: travel;
   font-size: 1.2rem;
@@ -411,6 +424,7 @@ header > .headline > div .header-pic img {
   opacity: 0;
   transition: 250ms ease-in-out;
   transition-delay: 250ms;
+  font-size: 1.5rem;
 }
 .sec-2 > div p:nth-of-type(1).active {
   opacity: 1;
@@ -425,6 +439,7 @@ header > .headline > div .header-pic img {
   opacity: 0;
   transition: 250ms ease-in-out;
   transition-delay: 350ms;
+  font-size: 1.5rem;
 }
 .sec-2 > div p:nth-of-type(2).active {
   opacity: 1;
@@ -439,6 +454,7 @@ header > .headline > div .header-pic img {
   opacity: 0;
   transition: 250ms ease-in-out;
   transition-delay: 450ms;
+  font-size: 1.5rem;
 }
 .sec-2 > div p:nth-of-type(3).active {
   opacity: 1;
@@ -454,6 +470,13 @@ header > .headline > div .header-pic img {
 .sec-3 {
   background-color: #001b2c;
   padding: 8rem 0;
+}
+.sec-3 h2 {
+  text-align: center;
+  color: #00fff1;
+  font-family: Samosa;
+  font-size: 4rem;
+  padding-bottom: 2rem;
 }
 .sec-3 .content-wraper {
   font-family: travel;
@@ -476,7 +499,7 @@ header > .headline > div .header-pic img {
 .sec-3 .content-wraper div:nth-child(2) {
   grid-column: 14/51;
   grid-row: 1/30;
-  background-image: url("../img/cherry-blossoms-fuji-mountain-spring-sunrise-shizuoka-japan.jpg");
+  background-image: url("../img/sec-3.webp");
   background-repeat: no-repeat;
   background-size: 1800px;
   background-position: 10% var(--yCord);
@@ -531,6 +554,8 @@ header > .headline > div .header-pic img {
   align-items: center;
   font-size: 4rem;
   transition: all 350ms ease-in-out;
+  color: #00fff1;
+  font-family: Samosa;
 }
 .sec-4 .content-wraper .card p.hide {
   animation: hide 350ms forwards ease-in-out;
@@ -566,6 +591,13 @@ header > .headline > div .header-pic img {
   padding: 8rem 0;
   width: 100%;
   height: 100%;
+}
+.sec-5 h2 {
+  text-align: center;
+  color: #00fff1;
+  font-family: Samosa;
+  font-size: 4rem;
+  padding-bottom: 2rem;
 }
 .sec-5 #filters {
   position: absolute;
@@ -652,6 +684,7 @@ header > .headline > div .header-pic img {
   background-image: url("../img/samurai-3.jpg");
   background-repeat: no-repeat;
   background-position: center center;
+  border-radius: 7px;
   background-size: cover;
   margin: 1.5rem 1.5rem 0 0;
   opacity: 0;
@@ -726,6 +759,9 @@ header > .headline > div .header-pic img {
   animation: old 1000ms forwards;
 }
 .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .bushido-eng {
+  font-family: Samosa;
+  font-size: 3rem;
+  font-weight: 700;
   opacity: 0;
 }
 .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .bushido-eng.show {
@@ -753,6 +789,8 @@ header > .headline > div .header-pic img {
   filter: url(#morph) blur(0.5px);
 }
 .sec-5 .content-wraper .card div:nth-of-type(10) p.morph .bushido-eng {
+  font-family: Samosa;
+  font-size: 3rem;
   color: #00fff1;
   opacity: 0;
 }
@@ -808,15 +846,22 @@ header > .headline > div .header-pic img {
   background-color: #001b2c;
   padding: 8rem 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: relative;
   overflow: hidden;
+}
+.sec-6 h2 {
+  text-align: center;
+  color: #00fff1;
+  font-size: 4rem;
+  font-family: Samosa;
+  padding-bottom: 2rem;
 }
 .sec-6 .content-wraper {
   width: 79rem;
   margin: auto;
   position: relative;
-  height: 100%;
+  height: 42rem;
   border-radius: 7px;
   overflow: hidden;
 }
@@ -824,23 +869,29 @@ header > .headline > div .header-pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: pointer;
+}
+.sec-6 .content-wraper.show {
+  z-index: 10;
 }
 .sec-6 .modal {
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 0;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
-  transition: all 300ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  opacity: 1;
+}
+.sec-6 .modal .image-track .image {
+  border-radius: 7px;
+  cursor: pointer;
 }
 .sec-6 .modal.hide {
+  transition: all 250ms ease-in-out;
   opacity: 0;
-}
-.sec-6 .modal .show {
-  display: initial;
-  opacity: 1;
 }
 .sec-6 .modal .control-slider {
   height: 100%;
@@ -853,21 +904,49 @@ header > .headline > div .header-pic img {
   align-items: flex-end;
   gap: 3rem;
   z-index: 1;
+  display: flex;
+}
+.sec-6 .modal .control-slider > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
 }
 .sec-6 .modal .control-slider button {
-  margin-bottom: 12rem;
+  margin-bottom: 17rem;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
+}
+.sec-6 .modal .control-slider button.escape {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.sec-6 .modal .control-slider button.escape svg {
+  width: 3rem;
+  height: 3rem;
+  font-size: 4rem;
+  fill: rgb(52, 250, 255);
+}
+.sec-6 .modal .control-slider button[data-btn=backwards], .sec-6 .modal .control-slider button[data-btn=forwards] {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.sec-6 .modal .control-slider button[data-btn=backwards] i, .sec-6 .modal .control-slider button[data-btn=forwards] i {
+  font-size: 2rem;
+  color: rgb(52, 250, 255);
 }
 
 .image-track {
   display: flex;
   gap: 4vmin;
   position: absolute;
-  top: 35%;
+  top: 37%;
   left: 50%;
   transform: translate(0%, -50%);
   z-index: 3;

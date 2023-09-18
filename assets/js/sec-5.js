@@ -11,7 +11,7 @@
   DOM.bushidoEngTextEls = document.querySelectorAll('.bushido-eng');
   DOM.bushidoJapTextEls = document.querySelectorAll('.bushido-jap');
 
-  console.log(DOM);
+  // console.log(DOM);
 
   // === INIT =============
   const init = () => {

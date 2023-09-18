@@ -1,6 +1,13 @@
 .sec-2 {
   background-color: $mainColor;
   padding: 8rem 0;
+  h2 {
+    text-align: center;
+    color: $ciBlue;
+    font-size: 4rem;
+    font-family: Samosa;
+    padding-bottom: $topicPaddingBottom;
+  }
   > div {
     font-family: travel;
     font-size: 1.2rem;
@@ -62,25 +69,6 @@
         animation-delay: 150ms;
       }
     }
-    // div:nth-child(4) {
-    //   grid-column: 7 / 10;
-    //   grid-row: 4 / 9;
-    //   img {
-    //     width: 100%;
-    //     height: 100%;
-    //     object-fit: cover;
-    //   }
-    // }
-    // div:nth-child(4) {
-    //   grid-column: 4 / 7;
-    //   grid-row: 4 / 9;
-    //   img {
-    //     width: 100%;
-    //     height: 100%;
-    //     object-fit: cover;
-    //   }
-    // }
-
     p:nth-of-type(1) {
       grid-column: 4 / 6;
       grid-row: 5 / 7;
@@ -91,6 +79,7 @@
       opacity: 0;
       transition: $sec2infoTimeing ease-in-out;
       transition-delay: 250ms;
+      font-size: $textFontSize;
       &.active {
         opacity: 1;
       }
@@ -105,7 +94,7 @@
       opacity: 0;
       transition: $sec2infoTimeing ease-in-out;
       transition-delay: 350ms;
-
+      font-size: $textFontSize;
       &.active {
         opacity: 1;
       }
@@ -120,7 +109,7 @@
       opacity: 0;
       transition: $sec2infoTimeing ease-in-out;
       transition-delay: 450ms;
-
+      font-size: $textFontSize;
       &.active {
         opacity: 1;
       }

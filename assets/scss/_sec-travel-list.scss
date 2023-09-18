@@ -4,9 +4,9 @@
   padding: 2rem 0 9rem 0;
   h2 {
     text-align: center;
-    color: rgb(241, 241, 241);
-    margin-bottom: 4rem;
+    color: $ciBlue;
     font-size: 4rem;
     font-family: Samosa;
+    padding-bottom: $topicPaddingBottom;
   }
 }

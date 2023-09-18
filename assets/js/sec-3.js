@@ -29,8 +29,8 @@
     getScrollDirection();
     if (top >= offset && top < offset + height) {
       const percent = (top - offset) / 10;
-      DOM.imgGeishaEl.style.setProperty('--yCord', `${10 + percent * 0.7}%`);
-      DOM.imgCherry.style.setProperty('--yCord', `${percent * 0.3}%`);
+      DOM.imgGeishaEl.style.setProperty('--yCord', `${10 + percent * 0.5}%`);
+      DOM.imgCherry.style.setProperty('--yCord', `${percent * 0.4}%`);
     }
 
     DOM.sec4ImgEls.forEach((img, idx) => {

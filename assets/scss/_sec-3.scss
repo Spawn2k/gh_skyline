@@ -1,6 +1,14 @@
 .sec-3 {
   background-color: $mainColor;
   padding: 8rem 0;
+
+  h2 {
+    text-align: center;
+    color: $ciBlue;
+    font-family: Samosa;
+    font-size: $topicFontSize;
+    padding-bottom: $topicPaddingBottom;
+  }
   .content-wraper {
     font-family: travel;
     font-size: 1.2rem;
@@ -21,7 +29,7 @@
     div:nth-child(2) {
       grid-column: 14 / 51;
       grid-row: 1 / 30;
-      background-image: url('../img/cherry-blossoms-fuji-mountain-spring-sunrise-shizuoka-japan.jpg');
+      background-image: url('../img/sec-3.webp');
       background-repeat: no-repeat;
       background-size: 1800px;
       // background-position: 10% 20%;
