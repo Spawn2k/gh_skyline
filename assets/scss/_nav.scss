@@ -47,7 +47,7 @@ header {
       width: 25rem;
       height: 33rem;
       opacity: 0;
-      animation: geisha 700ms 450ms forwards;
+      animation: geisha 700ms 650ms forwards;
     }
 
     h1 {
@@ -73,7 +73,7 @@ header {
         opacity: 0;
         filter: blur(3px);
         transform: translateX(-50px);
-        animation-delay: 300ms;
+        animation-delay: 550ms;
 
       }
     }
@@ -85,16 +85,18 @@ header {
 
     .header-pic:first-child img {
       margin-left: 11rem;
-      object-position: var(--cordX, 20%) 50%;
+      // object-position: var(--cordX, 20%) 50%;
       animation: picOne 1.3s forwards;
       transform: translate(-20px, 50px);
       opacity: 0;
-      // object-position: 50% 50%;
+      object-position: 25% 50%;
       animation-delay: 300ms;
     }
 
     .header-pic:last-child img {
-      object-position: var(--cordX) 50%;
+      // object-position: var(--cordX) 50%;
+      object-position: 83% 50%;
+
       animation: picTwo 1.3s forwards;
       transform: translate(20px, -50px);
       opacity: 0;
