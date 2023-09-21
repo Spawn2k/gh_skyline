@@ -1,0 +1,435 @@
+@media (max-width: 1320px) {
+  .sec-2 {
+    > div {
+      width: 79vw;
+
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 4.9rem 4.9rem 4.9rem 4.9rem 4.9rem 4.9rem 4.9rem 4.9rem 4.9rem 4.9rem;
+      div:nth-child(1) {
+        grid-column: 1 / 5;
+        grid-row: 1 / 6;
+        // border: 0.5px solid $ciBlue;
+        border-radius: 9px;
+        overflow: hidden;
+        transform: translate(150px, 0);
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        &.active {
+          animation: reset $sec2PicTiming forwards;
+          animation-timing-function: ease-out;
+        }
+      }
+      div:nth-child(2) {
+        grid-column: 7 / 10;
+        grid-row: 1 / 7;
+        border-radius: 9px;
+        overflow: hidden;
+        transform: translate(-150px, 0);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        &.active {
+          animation: reset $sec2PicTiming forwards;
+          animation-timing-function: ease-out;
+          animation-delay: 150ms;
+        }
+      }
+      div:nth-child(3) {
+        grid-column: 1 / 6;
+        grid-row: 7 / 11;
+        border-radius: 9px;
+        overflow: hidden;
+        transform: translate(300px, -80px);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        &.active {
+          animation: reset $sec2PicTiming forwards;
+          animation-timing-function: ease-out;
+          animation-delay: 150ms;
+        }
+      }
+      p:nth-of-type(1) {
+        grid-column: 4 / 6;
+        grid-row: 5 / 7;
+        background-color: white;
+        padding: 1rem;
+        border-radius: $borderRadius;
+        transform: translate(70px, -40px);
+        opacity: 0;
+        transition: $sec2infoTimeing ease-in-out;
+        transition-delay: 250ms;
+        font-size: $textFontSize;
+        &.active {
+          opacity: 1;
+        }
+      }
+      p:nth-of-type(2) {
+        grid-column: 6 / 8;
+        grid-row: 2 / 4;
+        background-color: white;
+        padding: 1rem;
+        border-radius: $borderRadius;
+        transform: translateX(-70px);
+        opacity: 0;
+        transition: $sec2infoTimeing ease-in-out;
+        transition-delay: 350ms;
+        font-size: $textFontSize;
+        &.active {
+          opacity: 1;
+        }
+      }
+      p:nth-of-type(3) {
+        grid-column: 5 / 10;
+        grid-row: 8 / 10;
+        background-color: white;
+        padding: 1rem;
+        border-radius: $borderRadius;
+        transform: translateX(0px);
+        opacity: 0;
+        transition: $sec2infoTimeing ease-in-out;
+        transition-delay: 450ms;
+        font-size: $textFontSize;
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1160px) {
+  .sec-2 {
+    > div {
+      width: 79vw;
+      gap: 1.5rem;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 4.9rem 4.9rem 4.9rem 4.9rem 4.9rem 4.9rem 4.9rem 4.9rem 4.9rem 4.9rem;
+      div:nth-child(1) {
+        grid-column: 1 / 5;
+        grid-row: 1 / 7;
+        // border: 0.5px solid $ciBlue;
+        border-radius: 9px;
+        overflow: hidden;
+        transform: translate(150px, 0);
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        &.active {
+          animation: reset $sec2PicTiming forwards;
+          animation-timing-function: ease-out;
+        }
+      }
+      div:nth-child(2) {
+        grid-column: 7 / 10;
+        grid-row: 1 / 7;
+        border-radius: 9px;
+        overflow: hidden;
+        transform: translate(-150px, 0);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        &.active {
+          animation: reset $sec2PicTiming forwards;
+          animation-timing-function: ease-out;
+          animation-delay: 150ms;
+        }
+      }
+      div:nth-child(3) {
+        grid-column: 1 / 8;
+        grid-row: 7 / 11;
+        border-radius: 9px;
+        overflow: hidden;
+        transform: translate(300px, -80px);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        &.active {
+          animation: reset $sec2PicTiming forwards;
+          animation-timing-function: ease-out;
+          animation-delay: 150ms;
+        }
+      }
+      p:nth-of-type(1) {
+        grid-column: 4 / 7;
+        grid-row: 4 / 6;
+        background-color: white;
+        padding: 1rem;
+        border-radius: $borderRadius;
+        transform: translate(0px, 0px);
+        opacity: 0;
+        transition: $sec2infoTimeing ease-in-out;
+        transition-delay: 250ms;
+        font-size: $textFontSize;
+        &.active {
+          opacity: 1;
+        }
+      }
+      p:nth-of-type(2) {
+        grid-column: 5 / 8;
+        grid-row: 1 / 3;
+        background-color: white;
+        padding: 1rem;
+        border-radius: $borderRadius;
+        transform: translateX(0px);
+        opacity: 0;
+        transition: $sec2infoTimeing ease-in-out;
+        transition-delay: 350ms;
+        font-size: $textFontSize;
+        &.active {
+          opacity: 1;
+        }
+      }
+      p:nth-of-type(3) {
+        grid-column: 5 / 10;
+        grid-row: 8 / 10;
+        background-color: white;
+        padding: 1rem;
+        border-radius: $borderRadius;
+        transform: translateX(0px);
+        opacity: 0;
+        transition: $sec2infoTimeing ease-in-out;
+        transition-delay: 450ms;
+        font-size: $textFontSize;
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 830px) {
+  .sec-2 {
+    > div {
+      width: 79vw;
+      gap: 1.5rem;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem;
+      div:nth-child(1) {
+        grid-column: 1 / 7;
+        grid-row: 1 / 4;
+        // border: 0.5px solid $ciBlue;
+        border-radius: 9px;
+        overflow: hidden;
+        transform: translate(150px, 0);
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        &.active {
+          animation: reset $sec2PicTiming forwards;
+          animation-timing-function: ease-out;
+        }
+      }
+      div:nth-child(2) {
+        grid-column: 1 / 7;
+        grid-row: 4 / 7;
+        border-radius: 9px;
+        overflow: hidden;
+        transform: translate(-150px, 0);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        &.active {
+          animation: reset $sec2PicTiming forwards;
+          animation-timing-function: ease-out;
+          animation-delay: 150ms;
+        }
+      }
+      div:nth-child(3) {
+        grid-column: 1 / 7;
+        grid-row: 7 / 10;
+        border-radius: 9px;
+        overflow: hidden;
+        transform: translate(300px, -80px);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        &.active {
+          animation: reset $sec2PicTiming forwards;
+          animation-timing-function: ease-out;
+          animation-delay: 150ms;
+        }
+      }
+      p:nth-of-type(1) {
+        grid-column: 7 / 10;
+        grid-row: 1 / 4;
+        background-color: white;
+        padding: 1rem;
+        border-radius: $borderRadius;
+        transform: translate(0px, 0px);
+        opacity: 0;
+        transition: $sec2infoTimeing ease-in-out;
+        transition-delay: 250ms;
+        font-size: $textFontSize;
+        &.active {
+          opacity: 1;
+        }
+      }
+      p:nth-of-type(2) {
+        grid-column: 7 / 10;
+        grid-row: 4 / 7;
+        background-color: white;
+        padding: 1rem;
+        border-radius: $borderRadius;
+        transform: translateX(0px);
+        opacity: 0;
+        transition: $sec2infoTimeing ease-in-out;
+        transition-delay: 350ms;
+        font-size: $textFontSize;
+        &.active {
+          opacity: 1;
+        }
+      }
+      p:nth-of-type(3) {
+        grid-column: 7 / 10;
+        grid-row: 7 / 10;
+        background-color: white;
+        padding: 1rem;
+        border-radius: $borderRadius;
+        transform: translateX(0px);
+        opacity: 0;
+        transition: $sec2infoTimeing ease-in-out;
+        transition-delay: 450ms;
+        font-size: $textFontSize;
+        overflow: auto;
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .sec-2 {
+    > div {
+      width: 79vw;
+      gap: 1.5rem;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 7rem;
+      div:nth-child(1) {
+        grid-column: 1 / 7;
+        grid-row: 1 / 4;
+        // border: 0.5px solid $ciBlue;
+        border-radius: 9px;
+        overflow: hidden;
+        transform: translate(150px, 0);
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        &.active {
+          animation: reset $sec2PicTiming forwards;
+          animation-timing-function: ease-out;
+        }
+      }
+      div:nth-child(2) {
+        grid-column: 1 / 7;
+        grid-row: 4 / 7;
+        border-radius: 9px;
+        overflow: hidden;
+        transform: translate(-150px, 0);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        &.active {
+          animation: reset $sec2PicTiming forwards;
+          animation-timing-function: ease-out;
+          animation-delay: 150ms;
+        }
+      }
+      div:nth-child(3) {
+        grid-column: 1 / 10;
+        grid-row: 7 / 10;
+        border-radius: 9px;
+        overflow: hidden;
+        transform: translate(300px, -80px);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        &.active {
+          animation: reset $sec2PicTiming forwards;
+          animation-timing-function: ease-out;
+          animation-delay: 150ms;
+        }
+      }
+      p:nth-of-type(1) {
+        grid-column: 7 / 10;
+        grid-row: 1 / 4;
+        background-color: white;
+        padding: 1rem;
+        border-radius: $borderRadius;
+        transform: translate(0px, 0px);
+        opacity: 0;
+        transition: $sec2infoTimeing ease-in-out;
+        transition-delay: 250ms;
+        font-size: $textFontSize;
+        &.active {
+          opacity: 1;
+        }
+      }
+      p:nth-of-type(2) {
+        grid-column: 7 / 10;
+        grid-row: 4 / 7;
+        background-color: white;
+        padding: 1rem;
+        border-radius: $borderRadius;
+        transform: translateX(0px);
+        opacity: 0;
+        transition: $sec2infoTimeing ease-in-out;
+        transition-delay: 350ms;
+        font-size: $textFontSize;
+        &.active {
+          opacity: 1;
+        }
+      }
+      p:nth-of-type(3) {
+        grid-column: 1 / 10;
+        grid-row: 10 / 12;
+        background-color: white;
+        padding: 1rem;
+        border-radius: $borderRadius;
+        transform: translateX(0px);
+        opacity: 0;
+        transition: $sec2infoTimeing ease-in-out;
+        transition-delay: 450ms;
+        font-size: $textFontSize;
+        overflow: auto;
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

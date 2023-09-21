@@ -24,12 +24,12 @@
   const onScroll = (e) => {
     let top = window.scrollY;
     let height = DOM.sec3El.offsetHeight;
-    let offset = DOM.sec3El.offsetTop - height + 350;
+    let offset = DOM.sec3El.offsetTop - height + 550;
     // console.log(offset);
     getScrollDirection();
     if (top >= offset && top < offset + height) {
       const percent = (top - offset) / 10;
-      DOM.imgGeishaEl.style.setProperty('--yCord', `${10 + percent * 0.5}%`);
+      DOM.imgGeishaEl.style.setProperty('--yCord', `${(percent - 60) * 0.5}%`);
       DOM.imgCherry.style.setProperty('--yCord', `${percent * 0.4}%`);
     }
 

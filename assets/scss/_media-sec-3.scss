@@ -1,0 +1,305 @@
+@media (max-width: 1320px) {
+  .sec-3 {
+    h2 {
+      text-align: center;
+      color: $ciBlue;
+      font-family: Samosa;
+      font-size: $topicFontSize;
+      padding-bottom: $topicPaddingBottom;
+    }
+    .content-wraper {
+      font-family: travel;
+      font-size: 1.2rem;
+      width: 79vw !important;
+      margin: auto;
+      display: grid;
+      // grid-template-columns: repeat(50, 1.58rem);
+      // grid-template-rows: repeat(32, 1.75rem);
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem;
+      gap: 1.5rem;
+      div:nth-child(1) {
+        grid-column: 1 / 4 !important;
+        grid-row: 1 / 11;
+        background-image: url('../img/geisha-3.jpg');
+        background-repeat: no-repeat;
+        background-size: 800px;
+        background-position: 60% var(--yCord, 0%);
+        border-radius: $borderRadius;
+      }
+      div:nth-child(2) {
+        grid-column: 4 / 11 !important;
+        grid-row: 1 / 10;
+        background-image: url('../img/sec-3.webp');
+        background-repeat: no-repeat;
+        background-size: 1800px;
+        // background-position: 10% 20%;
+        background-position: 10% var(--yCord);
+        border-radius: $borderRadius;
+      }
+      p {
+        background-color: white;
+        grid-column: 5 / 10 !important;
+        grid-row: 8 / 11 !important;
+        padding: 1rem;
+        border-radius: $borderRadius;
+        font-size: $textFontSize;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .sec-3 {
+    h2 {
+      text-align: center;
+      color: $ciBlue;
+      font-family: Samosa;
+      font-size: $topicFontSize;
+      padding-bottom: $topicPaddingBottom;
+    }
+    .content-wraper {
+      font-family: travel;
+      font-size: 1.2rem;
+      width: 79vw !important;
+      margin: auto;
+      display: grid;
+      // grid-template-columns: repeat(50, 1.58rem);
+      // grid-template-rows: repeat(32, 1.75rem);
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 7rem !important;
+      gap: 1.5rem;
+      div:nth-child(1) {
+        grid-column: 1 / 4 !important;
+        grid-row: 1 / 11;
+        background-image: url('../img/geisha-3.jpg');
+        background-repeat: no-repeat;
+        background-size: 800px;
+        background-position: 60% var(--yCord, 0%);
+        border-radius: $borderRadius;
+      }
+      div:nth-child(2) {
+        grid-column: 4 / 11 !important;
+        grid-row: 1 / 9 !important;
+        background-image: url('../img/sec-3.webp');
+        background-repeat: no-repeat;
+        background-size: 1800px;
+        // background-position: 10% 20%;
+        background-position: 20% var(--yCord) !important;
+        border-radius: $borderRadius;
+      }
+      p {
+        background-color: white;
+        grid-column: 4 / 11 !important;
+        grid-row: 9 / 11 !important;
+        padding: 1rem;
+        border-radius: $borderRadius;
+        font-size: $textFontSize;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .sec-3 {
+    h2 {
+      text-align: center;
+      color: $ciBlue;
+      font-family: Samosa;
+      font-size: $topicFontSize;
+      padding-bottom: $topicPaddingBottom;
+    }
+    .content-wraper {
+      font-family: travel;
+      font-size: 1.2rem;
+      width: 79vw !important;
+      margin: auto;
+      display: grid;
+      // grid-template-columns: repeat(50, 1.58rem);
+      // grid-template-rows: repeat(32, 1.75rem);
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 7rem !important;
+      gap: 1.5rem;
+      div:nth-child(1) {
+        grid-column: 1 / 4 !important;
+        grid-row: 1 / 9 !important;
+        background-image: url('../img/geisha-3.jpg');
+        background-repeat: no-repeat;
+        background-size: 800px;
+        background-position: 60% var(--yCord, -15%);
+        border-radius: $borderRadius;
+      }
+      div:nth-child(2) {
+        grid-column: 4 / 11 !important;
+        grid-row: 1 / 9 !important;
+        background-image: url('../img/sec-3.webp');
+        background-repeat: no-repeat;
+        background-size: 1800px;
+        // background-position: 10% 20%;
+        background-position: 30% var(--yCord) !important;
+        border-radius: $borderRadius;
+      }
+      p {
+        background-color: white;
+        grid-column: 1 / 11 !important;
+        grid-row: 9 / 11 !important;
+        padding: 1rem;
+        border-radius: $borderRadius;
+        font-size: $textFontSize;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .sec-3 {
+    h2 {
+      text-align: center;
+      color: $ciBlue;
+      font-family: Samosa;
+      font-size: $topicFontSize;
+      padding-bottom: $topicPaddingBottom;
+    }
+    .content-wraper {
+      font-family: travel;
+      font-size: 1.2rem;
+      width: 79vw !important;
+      margin: auto;
+      display: grid;
+      // grid-template-columns: repeat(50, 1.58rem);
+      // grid-template-rows: repeat(32, 1.75rem);
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 7rem 7rem 7rem 7rem 7rem 7rem 7rem 7rem 7rem 12rem !important;
+      gap: 1.5rem;
+      div:nth-child(1) {
+        grid-column: 1 / 11 !important;
+        grid-row: 1 / 6 !important;
+        background-image: url('../img/geisha-3.jpg');
+        background-repeat: no-repeat;
+        background-size: 800px;
+        background-position: 60% var(--yCord, -45%);
+        border-radius: $borderRadius;
+      }
+      div:nth-child(2) {
+        grid-column: 1 / 11 !important;
+        grid-row: 6 / 10 !important;
+        background-image: url('../img/sec-3.webp');
+        background-repeat: no-repeat;
+        background-size: 1800px;
+        // background-position: 10% 20%;
+        background-position: 20% var(--yCord, 30%) !important;
+        border-radius: $borderRadius;
+      }
+      p {
+        background-color: white;
+        grid-column: 1 / 11 !important;
+        grid-row: 10 / 11 !important;
+        padding: 1rem;
+        border-radius: $borderRadius;
+        font-size: $textFontSize;
+      }
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .sec-3 {
+    h2 {
+      text-align: center;
+      color: $ciBlue;
+      font-family: Samosa;
+      font-size: $topicFontSize;
+      padding-bottom: $topicPaddingBottom;
+    }
+    .content-wraper {
+      font-family: travel;
+      font-size: 1.2rem;
+      width: 79vw !important;
+      margin: auto;
+      display: grid;
+      // grid-template-columns: repeat(50, 1.58rem);
+      // grid-template-rows: repeat(32, 1.75rem);
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 7rem 7rem 7rem 7rem 7rem 7rem 7rem 7rem 7rem 15rem !important;
+      gap: 1.5rem;
+      div:nth-child(1) {
+        grid-column: 1 / 11 !important;
+        grid-row: 1 / 6 !important;
+        background-image: url('../img/geisha-3.jpg');
+        background-repeat: no-repeat;
+        background-size: 800px;
+        background-position: 60% var(--yCord, -45%);
+        border-radius: $borderRadius;
+      }
+      div:nth-child(2) {
+        grid-column: 1 / 11 !important;
+        grid-row: 6 / 10 !important;
+        background-image: url('../img/sec-3.webp');
+        background-repeat: no-repeat;
+        background-size: 1800px;
+        // background-position: 10% 20%;
+        background-position: 25% var(--yCord, 30%) !important;
+        border-radius: $borderRadius;
+      }
+      p {
+        background-color: white;
+        grid-column: 1 / 11 !important;
+        grid-row: 10 / 11 !important;
+        padding: 1rem;
+        border-radius: $borderRadius;
+        font-size: $textFontSize;
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .sec-3 {
+    h2 {
+      text-align: center;
+      color: $ciBlue;
+      font-family: Samosa;
+      font-size: $topicFontSize;
+      padding-bottom: $topicPaddingBottom;
+    }
+    .content-wraper {
+      font-family: travel;
+      font-size: 1.2rem;
+      width: 79vw !important;
+      margin: auto;
+      display: grid;
+      // grid-template-columns: repeat(50, 1.58rem);
+      // grid-template-rows: repeat(32, 1.75rem);
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 7rem 7rem 7rem 7rem 7rem 7rem 7rem 7rem 7rem 19rem !important;
+      gap: 1.5rem;
+      div:nth-child(1) {
+        grid-column: 1 / 11 !important;
+        grid-row: 1 / 6 !important;
+        background-image: url('../img/geisha-3.jpg');
+        background-repeat: no-repeat;
+        background-size: 800px;
+        background-position: 60% var(--yCord, -45%);
+        border-radius: $borderRadius;
+      }
+      div:nth-child(2) {
+        grid-column: 1 / 11 !important;
+        grid-row: 6 / 10 !important;
+        background-image: url('../img/sec-3.webp');
+        background-repeat: no-repeat;
+        background-size: 1800px;
+        // background-position: 10% 20%;
+        background-position: 25% var(--yCord, 30%) !important;
+        border-radius: $borderRadius;
+      }
+      p {
+        background-color: white;
+        grid-column: 1 / 11 !important;
+        grid-row: 10 / 11 !important;
+        padding: 1rem;
+        border-radius: $borderRadius;
+        font-size: $textFontSize;
+      }
+    }
+  }
+}

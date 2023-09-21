@@ -36,6 +36,8 @@ header {
     height: 100%;
     align-items: flex-end;
     position: relative;
+    overflow: hidden;
+    // gap: 15vw;
     &::after {
       content: '';
       background-image: url('../img/geisha.png');
@@ -82,26 +84,29 @@ header {
   > .headline > div {
     display: flex;
     justify-content: end;
-
-    .header-pic:first-child img {
-      margin-left: 11rem;
-      // object-position: var(--cordX, 20%) 50%;
-      animation: picOne 1.3s forwards;
-      transform: translate(-20px, 50px);
-      opacity: 0;
-      object-position: 25% 50%;
-      animation-delay: 300ms;
+    transform: translateX(200px);
+    .header-pic:first-child {
+      img {
+        animation: picOne 1.3s forwards;
+        // transform: translate(-20px, 50px);
+        opacity: 0;
+        object-position: 25% 50%;
+        animation-delay: 300ms;
+      }
     }
-
-    .header-pic:last-child img {
-      // object-position: var(--cordX) 50%;
-      object-position: 83% 50%;
-
+    .header-pic:last-child {
+      transform: translateX(-11rem);
+      img {
+        object-position: 83% 50%;
+      // margin-right: -11rem;
       animation: picTwo 1.3s forwards;
-      transform: translate(20px, -50px);
+      // transform: translate(20px, -50px);
       opacity: 0;
       animation-delay: 300ms;
+      }
     }
+
+
     .header-pic {
       width: 450px;
       height: 600px;
@@ -145,6 +150,8 @@ header {
     }
   }
 }
+
+
 
 @keyframes picOne {
   0% {

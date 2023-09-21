@@ -4,6 +4,11 @@
   // === DOM & VARS =======
   const DOM = {};
   DOM.imgSubEls = document.querySelectorAll('.sec-1-img-mini');
+  const mql = window.matchMedia('screen and (max-width:600px)');
+  let offset = -150;
+  if (mql.matches) {
+    offset = -50;
+  }
 
   // === INIT =============
   const init = () => {
@@ -20,7 +25,7 @@
       },
       {
         root: window.document,
-        rootMargin: '-150px',
+        rootMargin: `${offset}px`,
         threshold: generateThresholds(),
       }
     );
