@@ -1,0 +1,238 @@
+@media (max-width: 1320px) {
+  .sec-6 {
+    .content-wraper {
+      width: 79vw;
+      // height: 56rem;
+      margin: auto;
+      position: relative;
+      height: 42rem;
+      border-radius: $borderRadius;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        cursor: pointer;
+        object-position: 69% 0%;
+      }
+
+      &.show {
+        z-index: 10;
+      }
+    }
+
+    .modal {
+      position: absolute;
+      top: 0px;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      backdrop-filter: blur(5px);
+
+      transition: all $sec6ModalTiming ease-in-out;
+      // transform: scale(.2);
+      opacity: 1;
+      // z-index: 10;
+
+      .image-track {
+        .image {
+          border-radius: $borderRadius;
+          cursor: pointer;
+        }
+      }
+
+      &.hide {
+        // display: none;
+        transition: all $sec6ModalTiming ease-in-out;
+
+        opacity: 0;
+        // z-index: -10;
+        // transform: scale(1);
+      }
+
+      .control-slider {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 3rem;
+        z-index: 1;
+        display: flex;
+
+        > div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 3rem;
+        }
+
+        button {
+          margin-bottom: 17rem;
+          -webkit-user-select: none;
+          -webkit-touch-callout: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          cursor: pointer;
+
+          &.escape {
+            padding: 0;
+            border: none;
+            background-color: transparent;
+
+            svg {
+              width: 3rem;
+              height: 3rem;
+              font-size: 4rem;
+              fill: rgb(52, 250, 255);
+            }
+          }
+
+          &[data-btn='backwards'],
+          &[data-btn='forwards'] {
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            i {
+              font-size: 2rem;
+              color: rgb(52, 250, 255);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .sec-6 {
+    .image-track {
+      display: flex;
+      gap: 4vmin;
+      position: absolute;
+      top: 37%;
+      left: 50%;
+      transform: translate(0%, -50%);
+      z-index: 3;
+
+      .image {
+        width: 40vmin;
+        height: 56vmin;
+        object-fit: cover;
+        object-position: 100% 50%;
+      }
+    }
+    .content-wraper {
+      width: 79vw;
+      // height: 56rem;
+      margin: auto;
+      position: relative;
+      height: 42rem;
+      border-radius: $borderRadius;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        cursor: pointer;
+        object-position: 69% 0%;
+      }
+
+      &.show {
+        z-index: 10;
+      }
+    }
+
+    .modal {
+      position: absolute;
+      top: 0px;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      backdrop-filter: blur(5px);
+
+      transition: all $sec6ModalTiming ease-in-out;
+      // transform: scale(.2);
+      opacity: 1;
+      // z-index: 10;
+
+      .image-track {
+        .image {
+          border-radius: $borderRadius;
+          cursor: pointer;
+        }
+      }
+
+      &.hide {
+        // display: none;
+        transition: all $sec6ModalTiming ease-in-out;
+
+        opacity: 0;
+        // z-index: -10;
+        // transform: scale(1);
+      }
+
+      .control-slider {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 3rem;
+        z-index: 1;
+        display: flex;
+
+        > div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 3rem;
+        }
+
+        button {
+          margin-bottom: 17rem;
+          -webkit-user-select: none;
+          -webkit-touch-callout: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          cursor: pointer;
+
+          &.escape {
+            padding: 0;
+            border: none;
+            background-color: transparent;
+
+            svg {
+              width: 3rem;
+              height: 3rem;
+              font-size: 4rem;
+              fill: rgb(52, 250, 255);
+            }
+          }
+
+          &[data-btn='backwards'],
+          &[data-btn='forwards'] {
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            i {
+              font-size: 2rem;
+              color: rgb(52, 250, 255);
+            }
+          }
+        }
+      }
+    }
+  }
+}

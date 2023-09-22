@@ -6,6 +6,22 @@
   position: relative;
   overflow: hidden;
 
+  .image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(0%, -50%);
+    z-index: 3;
+
+    .image {
+      width: 40vmin;
+      height: 56vmin;
+      object-fit: cover;
+      object-position: 100% 50%;
+    }
+  }
 
   h2 {
     text-align: center;
@@ -52,20 +68,17 @@
       .image {
         border-radius: $borderRadius;
         cursor: pointer;
-
       }
     }
 
     &.hide {
       // display: none;
-     transition: all $sec6ModalTiming ease-in-out;
+      transition: all $sec6ModalTiming ease-in-out;
 
       opacity: 0;
       // z-index: -10;
-    // transform: scale(1);
-
+      // transform: scale(1);
     }
-
 
     .control-slider {
       height: 100%;
@@ -100,29 +113,26 @@
           padding: 0;
           border: none;
           background-color: transparent;
-          
+
           svg {
             width: 3rem;
             height: 3rem;
             font-size: 4rem;
             fill: rgb(52, 250, 255);
-          
           }
         }
 
-        &[data-btn="backwards"], &[data-btn="forwards"]{
+        &[data-btn='backwards'],
+        &[data-btn='forwards'] {
           padding: 0;
           border: none;
           background-color: transparent;
           i {
             font-size: 2rem;
-            color: rgb(52, 250, 255);;
+            color: rgb(52, 250, 255);
           }
         }
       }
     }
   }
 }
-
-
-

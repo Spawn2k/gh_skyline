@@ -15,9 +15,9 @@
       display: grid;
       position: sticky;
       top: 0rem;
-      grid-template-columns: repeat(10, 7.9rem);
+      grid-template-columns: repeat(10, 1fr);
       grid-template-rows: repeat(10, 5.6rem);
-      width: 79rem;
+      // width: 79rem;
       img {
         grid-column: 1 / 11;
         grid-row: 3 / 10;

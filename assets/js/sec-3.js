@@ -22,15 +22,26 @@
 
   // === EVENTHANDLER =====
   const onScroll = (e) => {
-    let top = window.scrollY;
-    let height = DOM.sec3El.offsetHeight;
-    let offset = DOM.sec3El.offsetTop - height + 550;
+    // let top = window.scrollY;
+    // let height = DOM.sec3El.offsetHeight;
+    // let offset = DOM.sec3El.offsetTop - height + 550;
     // console.log(offset);
     getScrollDirection();
-    if (top >= offset && top < offset + height) {
-      const percent = (top - offset) / 10;
-      DOM.imgGeishaEl.style.setProperty('--yCord', `${(percent - 60) * 0.5}%`);
-      DOM.imgCherry.style.setProperty('--yCord', `${percent * 0.4}%`);
+
+    // DOM.imgGeishaEl.style.setProperty('--yCord', `${(percent - 60) * 0.5}%`);
+    // moveImg(DOM.imgGeishaEl, 0, 0.5);
+    // DOM.imgCherry.style.setProperty('--yCord', `${percent * 0.4}%`);
+
+    const mql700 = window.matchMedia('screen and (max-width:700px)');
+    const mql1320 = window.matchMedia('screen and (min-width:701px)');
+
+    if (mql1320.matches) {
+      moveImg(DOM.imgGeishaEl, 600, 0.5);
+      moveImg(DOM.imgCherry, 600, 0.5);
+    }
+    if (mql700.matches) {
+      moveImg(DOM.imgGeishaEl, 1350, 0.5);
+      moveImg(DOM.imgCherry, 1900, 0.5);
     }
 
     DOM.sec4ImgEls.forEach((img, idx) => {
@@ -129,6 +140,16 @@
     }
     // Update the old value
     oldValue = newValue;
+  };
+
+  const moveImg = (img, pos = 0, speed) => {
+    let top = window.scrollY;
+    let height = DOM.sec3El.offsetHeight;
+    let offset = DOM.sec3El.offsetTop - height + pos;
+    const percent = (top - offset) / 10;
+    if (top >= offset && top < offset + height) {
+      img.style.setProperty('--yCord', `${percent * speed}%`);
+    }
   };
 
   init();

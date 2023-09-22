@@ -580,9 +580,8 @@ header > .headline > div .header-pic img {
   display: grid;
   position: sticky;
   top: 0rem;
-  grid-template-columns: repeat(10, 7.9rem);
+  grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 5.6rem);
-  width: 79rem;
 }
 .sec-4 .content-wraper .card img {
   grid-column: 1/11;
@@ -765,7 +764,6 @@ header > .headline > div .header-pic img {
   grid-column: 1/2;
   grid-row: 1/6;
   border-radius: 7px;
-  margin: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -776,7 +774,6 @@ header > .headline > div .header-pic img {
   width: 100%;
   height: 100%;
   font-size: 4rem;
-  padding: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -827,7 +824,6 @@ header > .headline > div .header-pic img {
 .sec-5 .content-wraper .card div:nth-of-type(10) p.morph {
   font-family: "Noto Sans JP";
   font-size: 3rem;
-  padding: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -897,6 +893,21 @@ header > .headline > div .header-pic img {
   height: 100%;
   position: relative;
   overflow: hidden;
+}
+.sec-6 .image-track {
+  display: flex;
+  gap: 4vmin;
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  transform: translate(0%, -50%);
+  z-index: 3;
+}
+.sec-6 .image-track .image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: 100% 50%;
 }
 .sec-6 h2 {
   text-align: center;
@@ -1019,22 +1030,6 @@ footer .content-wraper ul li a {
   text-decoration: none;
   color: black;
   font-size: 1.5rem;
-}
-
-.image-track {
-  display: flex;
-  gap: 4vmin;
-  position: absolute;
-  top: 37%;
-  left: 50%;
-  transform: translate(0%, -50%);
-  z-index: 3;
-}
-.image-track .image {
-  width: 40vmin;
-  height: 56vmin;
-  object-fit: cover;
-  object-position: 100% 50%;
 }
 
 @media (max-width: 1660px) {
@@ -1890,7 +1885,7 @@ footer .content-wraper ul li a {
     background-image: url("../img/sec-3.webp");
     background-repeat: no-repeat;
     background-size: 1800px;
-    background-position: 10% var(--yCord);
+    background-position: 20% var(--yCord);
     border-radius: 7px;
   }
   .sec-3 .content-wraper p {
@@ -2124,6 +2119,1410 @@ footer .content-wraper ul li a {
     grid-row: 10/11 !important;
     padding: 1rem;
     border-radius: 7px;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 1320px) {
+  .sec-4 .content-wraper {
+    width: 79vw;
+  }
+}
+@media (max-width: 1320px) {
+  .sec-5 .content-wraper {
+    width: 79vw;
+    margin: auto;
+    position: relative;
+    height: 100%;
+  }
+  .sec-5 .content-wraper .card {
+    display: grid;
+    position: sticky;
+    top: 0rem;
+    grid-template-columns: repeat(7, 14.2857142857%);
+    grid-template-rows: repeat(7, 7rem);
+  }
+  .sec-5 .content-wraper .card div.sec-5-img:nth-child(even).active {
+    animation: mainPicRight 500ms ease-in-out forwards;
+  }
+  .sec-5 .content-wraper .card div.sec-5-img:nth-child(odd).active {
+    animation: mainPicLeft 500ms ease-in-out forwards;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(1) {
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -72px;
+    background-size: cover;
+    grid-column: 1/8;
+    grid-row: 1/2;
+    transform: translateX(-150px);
+    opacity: 0;
+    filter: blur(5px);
+    border-radius: 7px 7px 0 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(2) {
+    grid-column: 1/8;
+    grid-row: 2/3;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -184px;
+    background-size: cover;
+    transform: translateX(150px);
+    opacity: 0;
+    filter: blur(5px);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(3) {
+    grid-column: 1/8;
+    grid-row: 3/4;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -296px;
+    background-size: cover;
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(4) {
+    grid-column: 1/8;
+    grid-row: 4/5;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -408px;
+    background-size: cover;
+    transform: translateX(150px);
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(5) {
+    grid-column: 1/8;
+    grid-row: 5/6;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -520px;
+    background-size: cover;
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(6) {
+    grid-column: 1/3;
+    grid-row: 6/8;
+    background-image: url("../img/samurai-3.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 7px;
+    background-size: cover;
+    margin: 1.5rem 1.5rem 0 0;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(7) {
+    grid-column: 3/5;
+    grid-row: 6/8;
+    background-image: url("../img/samurai-2.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 1.5rem 1.5rem 0 0;
+    border-radius: 7px;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(8) {
+    grid-column: 5/8;
+    grid-row: 6/8;
+    background-color: white;
+    border-radius: 7px;
+    margin: 1.5rem 0rem 0 0;
+    opacity: 0;
+    overflow: auto;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(8) p {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-family: travel;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) {
+    grid-column: 1/2;
+    grid-row: 1/6;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(50px);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph {
+    font-family: "Noto Sans JP";
+    width: 100%;
+    height: 100%;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 700;
+    line-height: 4.4rem;
+    filter: url(#morph) blur(0.5px);
+    position: relative;
+    color: rgb(52, 250, 255);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .jap {
+    position: absolute;
+    top: 100%;
+    height: 100%;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6rem;
+    font-size: 5rem;
+    opacity: 0;
+    transition: all 300ms;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .jap .bushido-jap.hide {
+    animation: old 1000ms forwards;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .bushido-eng {
+    font-family: Samosa;
+    font-size: 3rem;
+    font-weight: 700;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .bushido-eng.show {
+    animation: new 300ms forwards;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) {
+    grid-column: 7/8;
+    grid-row: 1/6;
+    border-radius: 7px;
+    margin: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) p.morph {
+    font-family: "Noto Sans JP";
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4.5rem;
+    font-weight: 700;
+    filter: url(#morph) blur(0.5px);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) p.morph .bushido-eng {
+    font-family: Samosa;
+    font-size: 3rem;
+    color: #00fff1;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) p.morph .bushido-eng.show {
+    animation: new 300ms forwards;
+  }
+}
+@media (max-width: 1120px) {
+  .sec-5 .content-wraper {
+    width: 79vw;
+    margin: auto;
+    position: relative;
+    height: 100%;
+  }
+  .sec-5 .content-wraper .card {
+    display: grid;
+    position: sticky;
+    top: 0rem;
+    grid-template-columns: repeat(7, 14.2857142857%);
+    grid-template-rows: repeat(7, 7rem);
+  }
+  .sec-5 .content-wraper .card div.sec-5-img:nth-child(even).active {
+    animation: mainPicRight 500ms ease-in-out forwards;
+  }
+  .sec-5 .content-wraper .card div.sec-5-img:nth-child(odd).active {
+    animation: mainPicLeft 500ms ease-in-out forwards;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(1) {
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -2px;
+    background-size: cover;
+    grid-column: 1/8;
+    grid-row: 1/2;
+    transform: translateX(-150px);
+    opacity: 0;
+    filter: blur(5px);
+    border-radius: 7px 7px 0 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(2) {
+    grid-column: 1/8;
+    grid-row: 2/3;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -114px;
+    background-size: cover;
+    transform: translateX(150px);
+    opacity: 0;
+    filter: blur(5px);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(3) {
+    grid-column: 1/8;
+    grid-row: 3/4;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -226px;
+    background-size: cover;
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(4) {
+    grid-column: 1/8;
+    grid-row: 4/5;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -338px;
+    background-size: cover;
+    transform: translateX(150px);
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(5) {
+    grid-column: 1/8;
+    grid-row: 5/6;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -450px;
+    background-size: cover;
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(6) {
+    grid-column: 1/3;
+    grid-row: 6/8;
+    background-image: url("../img/samurai-3.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 7px;
+    background-size: cover;
+    margin: 1.5rem 1.5rem 0 0;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(7) {
+    grid-column: 3/5;
+    grid-row: 6/8;
+    background-image: url("../img/samurai-2.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 1.5rem 1.5rem 0 0;
+    border-radius: 7px;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(8) {
+    grid-column: 5/8;
+    grid-row: 6/8;
+    background-color: white;
+    border-radius: 7px;
+    margin: 1.5rem 0rem 0 0;
+    opacity: 0;
+    overflow: auto;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(8) p {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-family: travel;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) {
+    grid-column: 1/2;
+    grid-row: 1/6;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(50px);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph {
+    font-family: "Noto Sans JP";
+    width: 100%;
+    height: 100%;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 700;
+    line-height: 4rem;
+    filter: url(#morph) blur(0.5px);
+    position: relative;
+    color: rgb(52, 250, 255);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .jap {
+    position: absolute;
+    top: 100%;
+    height: 100%;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6rem;
+    font-size: 3rem;
+    opacity: 0;
+    transition: all 300ms;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .jap .bushido-jap.hide {
+    animation: old 1000ms forwards;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .bushido-eng {
+    font-family: Samosa;
+    font-size: 2rem;
+    font-weight: 700;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .bushido-eng.show {
+    animation: new 300ms forwards;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) {
+    grid-column: 7/8;
+    grid-row: 1/6;
+    border-radius: 7px;
+    margin: 0 3rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) p.morph {
+    font-family: "Noto Sans JP";
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4.5rem;
+    font-weight: 700;
+    filter: url(#morph) blur(0.5px);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) p.morph .bushido-eng {
+    font-family: Samosa;
+    font-size: 2rem;
+    color: #00fff1;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) p.morph .bushido-eng.show {
+    animation: new 300ms forwards;
+  }
+}
+@media (max-width: 1000px) {
+  .sec-5 .content-wraper {
+    width: 79vw;
+    margin: auto;
+    position: relative;
+    height: 100%;
+  }
+  .sec-5 .content-wraper .card {
+    display: grid;
+    position: sticky;
+    top: 0rem;
+    grid-template-columns: repeat(7, 14.2857142857%);
+    grid-template-rows: repeat(7, 6rem);
+  }
+  .sec-5 .content-wraper .card div.sec-5-img:nth-child(even).active {
+    animation: mainPicRight 500ms ease-in-out forwards;
+  }
+  .sec-5 .content-wraper .card div.sec-5-img:nth-child(odd).active {
+    animation: mainPicLeft 500ms ease-in-out forwards;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(1) {
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0px;
+    background-size: cover;
+    grid-column: 1/8;
+    grid-row: 1/2;
+    transform: translateX(-150px);
+    opacity: 0;
+    filter: blur(5px);
+    border-radius: 7px 7px 0 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(2) {
+    grid-column: 1/8;
+    grid-row: 2/3;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -96px;
+    background-size: cover;
+    transform: translateX(150px);
+    opacity: 0;
+    filter: blur(5px);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(3) {
+    grid-column: 1/8;
+    grid-row: 3/4;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -192px;
+    background-size: cover;
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(4) {
+    grid-column: 1/8;
+    grid-row: 4/5;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -288px;
+    background-size: cover;
+    transform: translateX(150px);
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(5) {
+    grid-column: 1/8;
+    grid-row: 5/6;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -384px;
+    background-size: cover;
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(6) {
+    grid-column: 1/3;
+    grid-row: 6/8;
+    background-image: url("../img/samurai-3.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 7px;
+    background-size: cover;
+    margin: 1.5rem 1.5rem 0 0;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(7) {
+    grid-column: 3/5;
+    grid-row: 6/8;
+    background-image: url("../img/samurai-2.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 1.5rem 1.5rem 0 0;
+    border-radius: 7px;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(8) {
+    grid-column: 5/8;
+    grid-row: 6/8;
+    background-color: white;
+    border-radius: 7px;
+    margin: 1.5rem 0rem 0 0;
+    opacity: 0;
+    overflow: auto;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(8) p {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-family: travel;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) {
+    grid-column: 1/2;
+    grid-row: 1/6;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(50px);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph {
+    font-family: "Noto Sans JP";
+    width: 100%;
+    height: 100%;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 700;
+    line-height: 3.5rem;
+    filter: url(#morph) blur(0.5px);
+    position: relative;
+    color: rgb(52, 250, 255);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .jap {
+    position: absolute;
+    top: 100%;
+    height: 100%;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6rem;
+    font-size: 3rem;
+    opacity: 0;
+    transition: all 300ms;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .jap .bushido-jap.hide {
+    animation: old 1000ms forwards;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .bushido-eng {
+    font-family: Samosa;
+    font-size: 2rem;
+    font-weight: 700;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .bushido-eng.show {
+    animation: new 300ms forwards;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) {
+    grid-column: 7/8;
+    grid-row: 1/6;
+    border-radius: 7px;
+    margin: 0 3rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) p.morph {
+    font-family: "Noto Sans JP";
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4.5rem;
+    font-weight: 700;
+    filter: url(#morph) blur(0.5px);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) p.morph .bushido-eng {
+    font-family: Samosa;
+    font-size: 2rem;
+    color: #00fff1;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) p.morph .bushido-eng.show {
+    animation: new 300ms forwards;
+  }
+}
+@media (max-width: 850px) {
+  .sec-5 .content-wraper {
+    width: 79vw;
+    margin: auto;
+    position: relative;
+    height: 100%;
+  }
+  .sec-5 .content-wraper .card {
+    display: grid;
+    position: sticky;
+    top: 0rem;
+    grid-template-columns: repeat(8, 12.5%);
+    grid-template-rows: repeat(9, 5rem);
+  }
+  .sec-5 .content-wraper .card div.sec-5-img:nth-child(even).active {
+    animation: mainPicRight 500ms ease-in-out forwards;
+  }
+  .sec-5 .content-wraper .card div.sec-5-img:nth-child(odd).active {
+    animation: mainPicLeft 500ms ease-in-out forwards;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(1) {
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0px;
+    background-size: cover;
+    grid-column: 1/9;
+    grid-row: 1/2;
+    transform: translateX(-150px);
+    opacity: 0;
+    filter: blur(5px);
+    border-radius: 7px 7px 0 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(2) {
+    grid-column: 1/9;
+    grid-row: 2/3;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -80px;
+    background-size: cover;
+    transform: translateX(150px);
+    opacity: 0;
+    filter: blur(5px);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(3) {
+    grid-column: 1/9;
+    grid-row: 3/4;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -160px;
+    background-size: cover;
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(4) {
+    grid-column: 1/9;
+    grid-row: 4/5;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -240px;
+    background-size: cover;
+    transform: translateX(150px);
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(5) {
+    grid-column: 1/9;
+    grid-row: 5/6;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -320px;
+    background-size: cover;
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(6) {
+    grid-column: 1/5;
+    grid-row: 6/8;
+    background-image: url("../img/samurai-3.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 7px;
+    background-size: cover;
+    margin: 1.5rem 0.75rem 0 0;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(7) {
+    grid-column: 5/9;
+    grid-row: 6/8;
+    background-image: url("../img/samurai-2.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 1.5rem 0 0 0.75rem;
+    border-radius: 7px;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(8) {
+    grid-column: 1/9;
+    grid-row: 8/10;
+    background-color: white;
+    border-radius: 7px;
+    margin: 1.5rem 0rem 0 0;
+    opacity: 0;
+    overflow: auto;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(8) p {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-family: travel;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) {
+    grid-column: 1/2;
+    grid-row: 1/6;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(50px);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph {
+    font-family: "Noto Sans JP";
+    width: 100%;
+    height: 100%;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 700;
+    line-height: 3rem;
+    filter: url(#morph) blur(0.5px);
+    position: relative;
+    color: rgb(52, 250, 255);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .jap {
+    position: absolute;
+    top: 100%;
+    height: 100%;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6rem;
+    font-size: 3rem;
+    opacity: 0;
+    transition: all 300ms;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .jap .bushido-jap.hide {
+    animation: old 1000ms forwards;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .bushido-eng {
+    font-family: Samosa;
+    font-size: 1.5rem;
+    font-weight: 700;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .bushido-eng.show {
+    animation: new 300ms forwards;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) {
+    grid-column: 8/9;
+    grid-row: 1/6;
+    border-radius: 7px;
+    margin: 0 3rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) p.morph {
+    font-family: "Noto Sans JP";
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4.5rem;
+    font-weight: 700;
+    filter: url(#morph) blur(0.5px);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) p.morph .bushido-eng {
+    font-family: Samosa;
+    font-size: 1.5rem;
+    color: #00fff1;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) p.morph .bushido-eng.show {
+    animation: new 300ms forwards;
+  }
+}
+@media (max-width: 700px) {
+  .sec-5 .content-wraper {
+    width: 79vw;
+    margin: auto;
+    position: relative;
+    height: 100%;
+  }
+  .sec-5 .content-wraper .card {
+    display: grid;
+    position: sticky;
+    top: 0rem;
+    grid-template-columns: repeat(8, 12.5%);
+    grid-template-rows: repeat(9, 5rem);
+  }
+  .sec-5 .content-wraper .card div.sec-5-img:nth-child(even).active {
+    animation: mainPicRight 500ms ease-in-out forwards;
+  }
+  .sec-5 .content-wraper .card div.sec-5-img:nth-child(odd).active {
+    animation: mainPicLeft 500ms ease-in-out forwards;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(1) {
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% -80px;
+    background-size: 800px;
+    grid-column: 1/9;
+    grid-row: 1/2;
+    transform: translateX(-150px);
+    opacity: 0;
+    filter: blur(5px);
+    border-radius: 7px 7px 0 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(2) {
+    grid-column: 1/9;
+    grid-row: 2/3;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% -160px;
+    background-size: 800px;
+    transform: translateX(150px);
+    opacity: 0;
+    filter: blur(5px);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(3) {
+    grid-column: 1/9;
+    grid-row: 3/4;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% -240px;
+    background-size: 800px;
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(4) {
+    grid-column: 1/9;
+    grid-row: 4/5;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% -320px;
+    background-size: 800px;
+    transform: translateX(150px);
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(5) {
+    grid-column: 1/9;
+    grid-row: 5/6;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% -400px;
+    background-size: 800px;
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(6) {
+    grid-column: 1/5;
+    grid-row: 6/8;
+    background-image: url("../img/samurai-3.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 7px;
+    background-size: cover;
+    margin: 1.5rem 0.75rem 0 0;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(7) {
+    grid-column: 5/9;
+    grid-row: 6/8;
+    background-image: url("../img/samurai-2.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 1.5rem 0 0 0.75rem;
+    border-radius: 7px;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(8) {
+    grid-column: 1/9;
+    grid-row: 8/10;
+    background-color: white;
+    border-radius: 7px;
+    margin: 1.5rem 0rem 0 0;
+    opacity: 0;
+    overflow: auto;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(8) p {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-family: travel;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) {
+    grid-column: 1/2;
+    grid-row: 1/6;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(50px);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph {
+    font-family: "Noto Sans JP";
+    width: 100%;
+    height: 100%;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 700;
+    line-height: 3rem;
+    filter: url(#morph) blur(0.5px);
+    position: relative;
+    color: rgb(52, 250, 255);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .jap {
+    position: absolute;
+    top: 100%;
+    height: 100%;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6rem;
+    font-size: 3rem;
+    opacity: 0;
+    transition: all 300ms;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .jap .bushido-jap.hide {
+    animation: old 1000ms forwards;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .bushido-eng {
+    font-family: Samosa;
+    font-size: 1.5rem;
+    font-weight: 700;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .bushido-eng.show {
+    animation: new 300ms forwards;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) {
+    grid-column: 8/9;
+    grid-row: 1/6;
+    border-radius: 7px;
+    margin: 0 3rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) p.morph {
+    font-family: "Noto Sans JP";
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4.5rem;
+    font-weight: 700;
+    filter: url(#morph) blur(0.5px);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) p.morph .bushido-eng {
+    font-family: Samosa;
+    font-size: 1.5rem;
+    color: #00fff1;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) p.morph .bushido-eng.show {
+    animation: new 300ms forwards;
+  }
+}
+@media (max-width: 600px) {
+  .sec-5 .content-wraper {
+    width: 79vw;
+    margin: auto;
+    position: relative;
+    height: 100%;
+  }
+  .sec-5 .content-wraper .card {
+    display: grid;
+    position: sticky;
+    top: 0rem;
+    grid-template-columns: repeat(8, 12.5%);
+    grid-template-rows: repeat(17, 5rem);
+  }
+  .sec-5 .content-wraper .card div.sec-5-img:nth-child(even).active {
+    animation: mainPicRight 500ms ease-in-out forwards;
+  }
+  .sec-5 .content-wraper .card div.sec-5-img:nth-child(odd).active {
+    animation: mainPicLeft 500ms ease-in-out forwards;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(1) {
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% -80px;
+    background-size: 800px;
+    grid-column: 1/9;
+    grid-row: 1/2;
+    transform: translateX(-150px);
+    opacity: 0;
+    filter: blur(5px);
+    border-radius: 7px 7px 0 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(2) {
+    grid-column: 1/9;
+    grid-row: 2/3;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% -160px;
+    background-size: 800px;
+    transform: translateX(150px);
+    opacity: 0;
+    filter: blur(5px);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(3) {
+    grid-column: 1/9;
+    grid-row: 3/4;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% -240px;
+    background-size: 800px;
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(4) {
+    grid-column: 1/9;
+    grid-row: 4/5;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% -320px;
+    background-size: 800px;
+    transform: translateX(150px);
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(5) {
+    grid-column: 1/9;
+    grid-row: 5/6;
+    background-image: url("../img/samurai-1.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% -400px;
+    background-size: 800px;
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(6) {
+    grid-column: 1/9;
+    grid-row: 6/10;
+    background-image: url("../img/samurai-3.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 7px;
+    background-size: cover;
+    margin: 1.5rem 0rem 0 0;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(7) {
+    grid-column: 1/9;
+    grid-row: 10/14;
+    background-image: url("../img/samurai-2.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 1.5rem 0 0 0rem;
+    border-radius: 7px;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(8) {
+    grid-column: 1/9;
+    grid-row: 14/18;
+    background-color: white;
+    border-radius: 7px;
+    margin: 1.5rem 0rem 0 0;
+    opacity: 0;
+    overflow: auto;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(8) p {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-family: travel;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) {
+    grid-column: 1/2;
+    grid-row: 1/6;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(50px);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph {
+    font-family: "Noto Sans JP";
+    width: 100%;
+    height: 100%;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 700;
+    line-height: 3rem;
+    filter: url(#morph) blur(0.5px);
+    position: relative;
+    color: rgb(52, 250, 255);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .jap {
+    position: absolute;
+    top: 100%;
+    height: 100%;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6rem;
+    font-size: 3rem;
+    opacity: 0;
+    transition: all 300ms;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .jap .bushido-jap.hide {
+    animation: old 1000ms forwards;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .bushido-eng {
+    font-family: Samosa;
+    font-size: 1.5rem;
+    font-weight: 700;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(9) p.morph .bushido-eng.show {
+    animation: new 300ms forwards;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) {
+    grid-column: 8/9;
+    grid-row: 1/6;
+    border-radius: 7px;
+    margin: 0 3rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) p.morph {
+    font-family: "Noto Sans JP";
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4.5rem;
+    font-weight: 700;
+    filter: url(#morph) blur(0.5px);
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) p.morph .bushido-eng {
+    font-family: Samosa;
+    font-size: 1.5rem;
+    color: #00fff1;
+    opacity: 0;
+  }
+  .sec-5 .content-wraper .card div:nth-of-type(10) p.morph .bushido-eng.show {
+    animation: new 300ms forwards;
+  }
+}
+@media (max-width: 1320px) {
+  .sec-6 .content-wraper {
+    width: 79vw;
+    margin: auto;
+    position: relative;
+    height: 42rem;
+    border-radius: 7px;
+    overflow: hidden;
+  }
+  .sec-6 .content-wraper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    object-position: 69% 0%;
+  }
+  .sec-6 .content-wraper.show {
+    z-index: 10;
+  }
+  .sec-6 .modal {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    transition: all 250ms ease-in-out;
+    opacity: 1;
+  }
+  .sec-6 .modal .image-track .image {
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  .sec-6 .modal.hide {
+    transition: all 250ms ease-in-out;
+    opacity: 0;
+  }
+  .sec-6 .modal .control-slider {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 3rem;
+    z-index: 1;
+    display: flex;
+  }
+  .sec-6 .modal .control-slider > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+  .sec-6 .modal .control-slider button {
+    margin-bottom: 17rem;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+  }
+  .sec-6 .modal .control-slider button.escape {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+  .sec-6 .modal .control-slider button.escape svg {
+    width: 3rem;
+    height: 3rem;
+    font-size: 4rem;
+    fill: rgb(52, 250, 255);
+  }
+  .sec-6 .modal .control-slider button[data-btn=backwards], .sec-6 .modal .control-slider button[data-btn=forwards] {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+  .sec-6 .modal .control-slider button[data-btn=backwards] i, .sec-6 .modal .control-slider button[data-btn=forwards] i {
+    font-size: 2rem;
+    color: rgb(52, 250, 255);
+  }
+}
+@media (max-width: 600px) {
+  .sec-6 .image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(0%, -50%);
+    z-index: 3;
+  }
+  .sec-6 .image-track .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% 50%;
+  }
+  .sec-6 .content-wraper {
+    width: 79vw;
+    margin: auto;
+    position: relative;
+    height: 42rem;
+    border-radius: 7px;
+    overflow: hidden;
+  }
+  .sec-6 .content-wraper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    object-position: 69% 0%;
+  }
+  .sec-6 .content-wraper.show {
+    z-index: 10;
+  }
+  .sec-6 .modal {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    transition: all 250ms ease-in-out;
+    opacity: 1;
+  }
+  .sec-6 .modal .image-track .image {
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  .sec-6 .modal.hide {
+    transition: all 250ms ease-in-out;
+    opacity: 0;
+  }
+  .sec-6 .modal .control-slider {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 3rem;
+    z-index: 1;
+    display: flex;
+  }
+  .sec-6 .modal .control-slider > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+  .sec-6 .modal .control-slider button {
+    margin-bottom: 17rem;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+  }
+  .sec-6 .modal .control-slider button.escape {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+  .sec-6 .modal .control-slider button.escape svg {
+    width: 3rem;
+    height: 3rem;
+    font-size: 4rem;
+    fill: rgb(52, 250, 255);
+  }
+  .sec-6 .modal .control-slider button[data-btn=backwards], .sec-6 .modal .control-slider button[data-btn=forwards] {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+  .sec-6 .modal .control-slider button[data-btn=backwards] i, .sec-6 .modal .control-slider button[data-btn=forwards] i {
+    font-size: 2rem;
+    color: rgb(52, 250, 255);
+  }
+}
+@media (max-width: 1320px) {
+  footer {
+    font-family: travel;
+    background-color: #001b2c;
+  }
+  footer .content-wraper {
+    width: 79vw;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    padding: 2rem;
+  }
+  footer .content-wraper ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+  footer .content-wraper ul li.title {
+    font-size: 4rem;
+    border-bottom: 1px solid black;
+    line-height: 4rem;
+    margin-bottom: 1rem;
+  }
+  footer .content-wraper ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 400px) {
+  footer {
+    font-family: travel;
+    background-color: #001b2c;
+  }
+  footer .content-wraper {
+    width: 79vw;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    padding: 0.5rem;
+  }
+  footer .content-wraper ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+  footer .content-wraper ul li.title {
+    font-size: 4rem;
+    border-bottom: 1px solid black;
+    line-height: 4rem;
+    margin-bottom: 1rem;
+  }
+  footer .content-wraper ul li a {
+    text-decoration: none;
+    color: black;
     font-size: 1.5rem;
   }
 }
