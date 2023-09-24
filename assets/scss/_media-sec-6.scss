@@ -112,7 +112,7 @@
 @media (max-width: 600px) {
   .sec-6 {
     h2 {
-      font-size: 3rem;
+      font-size: $mediaSmallFontSizeHeadline;
     }
     .content-wraper {
       height: 42rem;
@@ -134,7 +134,7 @@
       }
     }
     .content-wraper {
-      width: 79vw;
+      width: $mediaSmallWidth;
       // height: 56rem;
       margin: auto;
       position: relative;

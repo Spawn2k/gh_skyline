@@ -1029,8 +1029,11 @@
 }
 @media (max-width: 600px) {
   .sec-5 {
+    h2 {
+      font-size: $mediaSmallFontSizeHeadline;
+    }
     .content-wraper {
-      width: 79vw;
+      width: $mediaSmallWidth;
       margin: auto;
       position: relative;
       height: 100%;
@@ -1040,7 +1043,7 @@
         position: sticky;
         top: 0rem;
         grid-template-columns: repeat(8, calc(100% / 8));
-        grid-template-rows: repeat(17, 5rem);
+        grid-template-rows: repeat(16, 5rem);
 
         div.sec-5-img:nth-child(even) {
           &.active {
@@ -1106,7 +1109,7 @@
 
           border-radius: $borderRadius;
           background-size: cover;
-          margin: 1.5rem 0rem 0 0;
+          margin: 1rem 0rem 0 0;
 
           opacity: 0;
         }
@@ -1115,23 +1118,23 @@
           grid-row: 10 / 14;
 
           background-size: cover;
-          margin: 1.5rem 0 0 0rem;
+          margin: 1rem 0 0 0rem;
           border-radius: $borderRadius;
 
           opacity: 0;
         }
         div:nth-of-type(8) {
           grid-column: 1 / 9;
-          grid-row: 14 / 18;
+          grid-row: 14 / 17;
           background-color: white;
           border-radius: $borderRadius;
-          margin: 1.5rem 0rem 0 0;
+          margin: 1rem 0rem 0 0;
           opacity: 0;
           overflow: auto;
 
           p {
-            padding: 1.5rem;
-            font-size: $textFontSize;
+            padding: 1rem;
+            font-size: $mediaSmallFontSizeInfo;
             font-family: travel;
           }
         }
@@ -1145,7 +1148,7 @@
             font-family: 'Noto Sans JP';
             width: 100%;
             height: 100%;
-            font-size: 4rem;
+            font-size: 2rem;
             // padding: 1.5rem;
             display: flex;
             justify-content: center;
@@ -1171,7 +1174,7 @@
               align-items: center;
               flex-direction: column;
               gap: 6rem;
-              font-size: 3rem;
+              font-size: 2rem;
               opacity: 0;
               transition: all 300ms;
               .bushido-jap {
@@ -1208,7 +1211,7 @@
           p.morph {
             font-family: 'Noto Sans JP';
 
-            font-size: 3rem;
+            font-size: 2rem;
             // padding: 1.5rem;
             display: flex;
             justify-content: center;

@@ -1,0 +1,15 @@
+@media (max-width: 600px) {
+  .sec-travel-list {
+    .cards {
+      width: $mediaSmallWidth;
+      gap: 1rem;
+      .card {
+        width: 100%;
+      }
+    }
+    h2 {
+      color: $ciBlue;
+      font-size: $mediaSmallFontSizeHeadline;
+    }
+  }
+}

@@ -328,7 +328,7 @@
 @media (max-width: 700px) {
   .sec-2 {
     > div {
-      width: 79vw;
+      width: $mediaSmallWidth;
       gap: 1.5rem;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-rows: 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 7rem;
@@ -422,14 +422,31 @@
         padding: 1rem;
         border-radius: $borderRadius;
         transform: translateX(0px);
-        opacity: 0;
-        transition: $sec2infoTimeing ease-in-out;
-        transition-delay: 450ms;
-        font-size: $textFontSize;
-        overflow: auto;
+
         &.active {
           opacity: 1;
         }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .sec-2 {
+    h2 {
+      font-size: $mediaSmallFontSizeHeadline;
+    }
+    > div {
+      width: $mediaSmallWidth;
+      gap: 1rem;
+
+      p:nth-of-type(1) {
+        font-size: $mediaSmallFontSizeInfo;
+      }
+      p:nth-of-type(2) {
+        font-size: $mediaSmallFontSizeInfo;
+      }
+      p:nth-of-type(3) {
+        font-size: $mediaSmallFontSizeInfo;
       }
     }
   }

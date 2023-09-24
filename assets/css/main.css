@@ -553,6 +553,7 @@ header .headline::after {
   padding: 1rem;
   border-radius: 7px;
   font-size: 1.5rem;
+  overflow: auto;
 }
 
 .sec-4 {
@@ -1326,6 +1327,19 @@ footer .content-wraper ul li a {
     height: 100%;
   }
 }
+@media (max-width: 600px) {
+  .sec-travel-list .cards {
+    width: 90vw;
+    gap: 1rem;
+  }
+  .sec-travel-list .cards .card {
+    width: 100%;
+  }
+  .sec-travel-list h2 {
+    color: #00fff1;
+    font-size: 2rem;
+  }
+}
 @media (max-width: 1320px) {
   .sec-1 > div {
     width: 79vw;
@@ -1386,11 +1400,12 @@ footer .content-wraper ul li a {
   }
 }
 @media (max-width: 600px) {
+  .sec-1 h2 {
+    font-size: 2rem;
+  }
   .sec-1 > div {
-    width: 79vw;
-    gap: 1.5rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 7rem 7rem 7rem 7rem 7rem 7rem 7rem 7rem 7rem;
+    width: 90vw;
+    gap: 1rem;
   }
   .sec-1 > div div:nth-of-type(2) {
     grid-column: 1/8;
@@ -1432,7 +1447,7 @@ footer .content-wraper ul li a {
   }
   .sec-1 > div p {
     font-family: travel;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 0.5rem 1rem;
     background-color: white;
     grid-column: 1/8;
@@ -1755,7 +1770,7 @@ footer .content-wraper ul li a {
 }
 @media (max-width: 700px) {
   .sec-2 > div {
-    width: 79vw;
+    width: 90vw;
     gap: 1.5rem;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 7rem;
@@ -1847,14 +1862,27 @@ footer .content-wraper ul li a {
     padding: 1rem;
     border-radius: 7px;
     transform: translateX(0px);
-    opacity: 0;
-    transition: 250ms ease-in-out;
-    transition-delay: 450ms;
-    font-size: 1.5rem;
-    overflow: auto;
   }
   .sec-2 > div p:nth-of-type(3).active {
     opacity: 1;
+  }
+}
+@media (max-width: 600px) {
+  .sec-2 h2 {
+    font-size: 2rem;
+  }
+  .sec-2 > div {
+    width: 90vw;
+    gap: 1rem;
+  }
+  .sec-2 > div p:nth-of-type(1) {
+    font-size: 1.2rem;
+  }
+  .sec-2 > div p:nth-of-type(2) {
+    font-size: 1.2rem;
+  }
+  .sec-2 > div p:nth-of-type(3) {
+    font-size: 1.2rem;
   }
 }
 @media (max-width: 1320px) {
@@ -2042,18 +2070,17 @@ footer .content-wraper ul li a {
     text-align: center;
     color: #00fff1;
     font-family: Samosa;
-    font-size: 4rem;
-    padding-bottom: 2rem;
+    font-size: 2rem;
   }
   .sec-3 .content-wraper {
     font-family: travel;
     font-size: 1.2rem;
-    width: 79vw !important;
+    width: 90vw !important;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 7rem 7rem 7rem 7rem 7rem 7rem 7rem 7rem 7rem 15rem !important;
-    gap: 1.5rem;
+    grid-template-rows: 7rem 7rem 7rem 7rem 7rem 7rem 7rem 7rem 7rem 1fr !important;
+    gap: 1rem;
   }
   .sec-3 .content-wraper div:nth-child(1) {
     grid-column: 1/11 !important;
@@ -2079,26 +2106,15 @@ footer .content-wraper ul li a {
     grid-row: 10/11 !important;
     padding: 1rem;
     border-radius: 7px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 @media (max-width: 440px) {
-  .sec-3 h2 {
-    text-align: center;
-    color: #00fff1;
-    font-family: Samosa;
-    font-size: 4rem;
-    padding-bottom: 2rem;
-  }
   .sec-3 .content-wraper {
     font-family: travel;
     font-size: 1.2rem;
-    width: 79vw !important;
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 7rem 7rem 7rem 7rem 7rem 7rem 7rem 7rem 7rem 19rem !important;
-    gap: 1.5rem;
   }
   .sec-3 .content-wraper div:nth-child(1) {
     grid-column: 1/11 !important;
@@ -2117,19 +2133,19 @@ footer .content-wraper ul li a {
     background-size: 1800px;
     background-position: 25% var(--yCord, 30%) !important;
     border-radius: 7px;
-  }
-  .sec-3 .content-wraper p {
-    background-color: white;
-    grid-column: 1/11 !important;
-    grid-row: 10/11 !important;
-    padding: 1rem;
-    border-radius: 7px;
-    font-size: 1.5rem;
   }
 }
 @media (max-width: 1320px) {
   .sec-4 .content-wraper {
     width: 79vw;
+  }
+}
+@media (max-width: 600px) {
+  .sec-4 .content-wraper {
+    width: 90vw;
+  }
+  .sec-4 .content-wraper .card p.sec-4-city-text {
+    font-size: 2rem;
   }
 }
 @media (max-width: 1320px) {
@@ -2989,8 +3005,11 @@ footer .content-wraper ul li a {
   }
 }
 @media (max-width: 600px) {
+  .sec-5 h2 {
+    font-size: 2rem;
+  }
   .sec-5 .content-wraper {
-    width: 79vw;
+    width: 90vw;
     margin: auto;
     position: relative;
     height: 100%;
@@ -3000,7 +3019,7 @@ footer .content-wraper ul li a {
     position: sticky;
     top: 0rem;
     grid-template-columns: repeat(8, 12.5%);
-    grid-template-rows: repeat(17, 5rem);
+    grid-template-rows: repeat(16, 5rem);
   }
   .sec-5 .content-wraper .card div.sec-5-img:nth-child(even).active {
     animation: mainPicRight 500ms ease-in-out forwards;
@@ -3056,29 +3075,29 @@ footer .content-wraper ul li a {
     grid-row: 6/10;
     border-radius: 7px;
     background-size: cover;
-    margin: 1.5rem 0rem 0 0;
+    margin: 1rem 0rem 0 0;
     opacity: 0;
   }
   .sec-5 .content-wraper .card div:nth-of-type(7) {
     grid-column: 1/9;
     grid-row: 10/14;
     background-size: cover;
-    margin: 1.5rem 0 0 0rem;
+    margin: 1rem 0 0 0rem;
     border-radius: 7px;
     opacity: 0;
   }
   .sec-5 .content-wraper .card div:nth-of-type(8) {
     grid-column: 1/9;
-    grid-row: 14/18;
+    grid-row: 14/17;
     background-color: white;
     border-radius: 7px;
-    margin: 1.5rem 0rem 0 0;
+    margin: 1rem 0rem 0 0;
     opacity: 0;
     overflow: auto;
   }
   .sec-5 .content-wraper .card div:nth-of-type(8) p {
-    padding: 1.5rem;
-    font-size: 1.5rem;
+    padding: 1rem;
+    font-size: 1.2rem;
     font-family: travel;
   }
   .sec-5 .content-wraper .card div:nth-of-type(9) {
@@ -3090,7 +3109,7 @@ footer .content-wraper ul li a {
     font-family: "Noto Sans JP";
     width: 100%;
     height: 100%;
-    font-size: 4rem;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3113,7 +3132,7 @@ footer .content-wraper ul li a {
     align-items: center;
     flex-direction: column;
     gap: 6rem;
-    font-size: 3rem;
+    font-size: 2rem;
     opacity: 0;
     transition: all 300ms;
   }
@@ -3140,7 +3159,7 @@ footer .content-wraper ul li a {
   }
   .sec-5 .content-wraper .card div:nth-of-type(10) p.morph {
     font-family: "Noto Sans JP";
-    font-size: 3rem;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3248,7 +3267,7 @@ footer .content-wraper ul li a {
 }
 @media (max-width: 600px) {
   .sec-6 h2 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .sec-6 .content-wraper {
     height: 42rem;
@@ -3269,7 +3288,7 @@ footer .content-wraper ul li a {
     object-position: 100% 50%;
   }
   .sec-6 .content-wraper {
-    width: 79vw;
+    width: 90vw;
     margin: auto;
     position: relative;
     height: 42rem;

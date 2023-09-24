@@ -5,3 +5,17 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .sec-4 {
+    .content-wraper {
+      width: $mediaSmallWidth;
+
+      .card {
+        p.sec-4-city-text {
+          font-size: $mediaSmallFontSizeHeadline;
+        }
+      }
+    }
+  }
+}
