@@ -41,10 +41,6 @@
       });
     }
 
-    // console.log(nextPercentage)
-
-    // DOM.headerPicEl[0].dataset.percent = nextPercentage;
-
     DOM.headerPicEl.forEach((img) => (img.dataset.percent = nextPercentage));
   };
 

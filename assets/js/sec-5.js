@@ -22,11 +22,6 @@
 
           if (element.isIntersecting) {
             element.target.classList.add('active');
-
-            // if (DOM.imgEls[DOM.imgEls.length - 1] === element.target) {
-            //   showEl(DOM.japEl, ratio);
-            // }
-            // console.log(elements[elements.length - 1]);
           }
         });
       },
@@ -48,11 +43,9 @@
 
           if (element.isIntersecting) {
             if (element.target === DOM.fadeInEls[0]) {
-              console.log('first');
               showEl(DOM.japEl, ratio);
             }
 
-            // console.log(element.target);
             showEl(element.target, ratio);
 
             if (ratio >= 1) {

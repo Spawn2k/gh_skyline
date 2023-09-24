@@ -22,15 +22,7 @@
 
   // === EVENTHANDLER =====
   const onScroll = (e) => {
-    // let top = window.scrollY;
-    // let height = DOM.sec3El.offsetHeight;
-    // let offset = DOM.sec3El.offsetTop - height + 550;
-    // console.log(offset);
     getScrollDirection();
-
-    // DOM.imgGeishaEl.style.setProperty('--yCord', `${(percent - 60) * 0.5}%`);
-    // moveImg(DOM.imgGeishaEl, 0, 0.5);
-    // DOM.imgCherry.style.setProperty('--yCord', `${percent * 0.4}%`);
 
     const mql700 = window.matchMedia('screen and (max-width:700px)');
     const mql1320 = window.matchMedia('screen and (min-width:701px)');
@@ -45,10 +37,6 @@
     }
 
     DOM.sec4ImgEls.forEach((img, idx) => {
-      // let top = window.scrollY;
-      // let height = img.offsetHeight;
-      // let offset = img.offsetTop - height;
-
       const city = img.dataset.city;
       const cord = img.getBoundingClientRect();
       const offsetTop = cord.top;
@@ -107,11 +95,10 @@
     const prevCity = DOM.sec4ImgEls[idx - 1].dataset.city;
     const cord = el.getBoundingClientRect();
     const offsetTop = cord.top;
-    // console.log(cord.height);
+
     if (up !== 'down') return;
 
     if (offsetTop > 150 && offsetTop < cord.height) {
-      // if (DOM.cityEl.textContent === prevCity) return;
       DOM.cityEl.classList.add('hide');
     }
 

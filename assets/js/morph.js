@@ -15,11 +15,6 @@
   const init = () => {
     DOM.oldWord.textContent = words[currentWord];
     DOM.newWord.textContent = words[currentWord + 1];
-
-    // setInterval(() => {
-    //   startMorph();
-    //   currentWord++;
-    // }, 1000);
   };
 
   // === EVENTHANDLER =====

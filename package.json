@@ -14,5 +14,8 @@
   "dependencies": {
     "rollup": "^3.29.0",
     "sass": "^1.66.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.4"
   }
 }

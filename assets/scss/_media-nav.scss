@@ -2,10 +2,8 @@
   header {
     width: 100%;
     height: 100vh;
-    position: relative;
 
     .headline {
-      display: flex;
       padding: 3.5rem 5rem 0 0;
       align-items: self-end;
       flex-direction: column;
@@ -29,7 +27,7 @@
         div:first-child {
           width: 20rem;
           height: 25rem;
-          position: relative;
+
           margin: 3rem 0 0 37em;
           img {
             object-position: 23% 50%;
@@ -52,7 +50,7 @@
         left: 5rem;
         width: 25rem;
         height: 33rem;
-        opacity: 0;
+
         animation: geisha 700ms 650ms forwards;
       }
     }
@@ -64,52 +62,20 @@
     width: 100%;
     height: 100vh;
 
-    position: relative;
-    a {
-      color: white;
-      text-decoration: none;
-    }
-    .m-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: #001b2c;
-      color: white;
-      font-size: 1.5rem;
-      transform: translate(0, -50px);
-      animation: navBar 1s forwards;
-      animation-delay: 300ms;
-      opacity: 0;
-      font-family: travel;
-      ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        li {
-          margin-right: 1rem;
-        }
-      }
-    }
-
     .headline {
-      display: flex;
       padding: 3.5rem 5rem 0 0;
       justify-content: space-between;
       height: 100%;
       align-items: self-end;
-      position: relative;
+
       overflow: hidden;
-      // gap: 15vw;
+
       width: 100%;
       flex-direction: column;
 
       h1 {
         flex-basis: initial;
         font-size: 4.5rem;
-        font-family: 'Samosa';
-        color: $mainColor;
-
         p:first-child {
           margin-left: 0;
           display: inline-block;
@@ -121,20 +87,14 @@
         }
       }
       > div {
-        position: relative;
-        // width: 100%;
-        // height: 100%;
-        // flex-basis: 70%;
-        // flex-basis: 70rem;
         flex-grow: 1;
         div:first-child {
           width: 20rem;
           height: 25rem;
-          position: relative;
+
           margin: 3rem 0 0 37em;
 
           div {
-            position: absolute;
             top: 0;
             left: -61.5%;
             width: 20rem;
@@ -143,20 +103,11 @@
         }
       }
       &::after {
-        content: '';
-        background-image: url('../img/geisha.png');
-        position: absolute;
         background-size: cover;
-        background-repeat: no-repeat;
-        // bottom: 14vh;
         top: 3.5rem;
-        // transform: translateY(-50%);
-
         left: 5rem;
         width: 25rem;
         height: 33rem;
-        opacity: 0;
-        // animation: geisha 700ms 650ms forwards;
       }
     }
   }
@@ -167,51 +118,19 @@
     width: 100%;
     height: 100vh;
 
-    position: relative;
-    a {
-      color: white;
-      text-decoration: none;
-    }
-    .m-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: #001b2c;
-      color: white;
-      font-size: 1.5rem;
-      transform: translate(0, -50px);
-      animation: navBar 1s forwards;
-      animation-delay: 300ms;
-      opacity: 0;
-      font-family: travel;
-      ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        li {
-          margin-right: 1rem;
-        }
-      }
-    }
-
     .headline {
-      display: flex;
       padding: 3.5rem 5rem 0 0;
       justify-content: space-between;
       height: 100%;
       align-items: self-end;
-      position: relative;
       overflow: hidden;
-      // gap: 15vw;
+
       width: 100%;
       flex-direction: column;
 
       h1 {
         flex-basis: initial;
         font-size: 4rem;
-        font-family: 'Samosa';
-        color: $mainColor;
         margin-top: 3rem;
 
         p:first-child {
@@ -225,20 +144,14 @@
         }
       }
       > div {
-        position: relative;
-        // width: 100%;
-        // height: 100%;
-        // flex-basis: 70%;
-        // flex-basis: 70rem;
         flex-grow: 1;
         div:first-child {
           width: 20rem;
           height: 25rem;
-          position: relative;
+
           margin: 3rem 0 0 37em;
 
           div {
-            position: absolute;
             top: 0;
             left: -61.5%;
             width: 20rem;
@@ -247,20 +160,11 @@
         }
       }
       &::after {
-        content: '';
-        background-image: url('../img/geisha.png');
-        position: absolute;
         background-size: contain;
-        background-repeat: no-repeat;
-        // bottom: 14vh;
         top: 3.5rem;
-        // transform: translateY(-50%);
-
         left: 5rem;
         width: 19rem;
         height: 100%;
-        opacity: 0;
-        // animation: geisha 700ms 650ms forwards;
       }
     }
   }
@@ -269,22 +173,19 @@
 @media (max-width: 850px) {
   header {
     .headline {
-      display: flex;
       padding: 11.5rem 5rem 0 0;
       justify-content: space-between;
       height: 100%;
       align-items: self-end;
-      position: relative;
+
       overflow: hidden;
-      // gap: 15vw;
+
       width: 100%;
       flex-direction: column;
 
       h1 {
         flex-basis: initial;
         font-size: 3rem;
-        font-family: 'Samosa';
-        color: $mainColor;
         margin-top: 2rem;
 
         p:first-child {
@@ -298,17 +199,13 @@
         }
       }
       > div {
-        position: relative;
-
         flex-grow: 1;
         div:first-child {
           width: 15rem;
           height: 20rem;
-          position: relative;
           margin: 1rem 0 0 37em;
 
           div {
-            position: absolute;
             top: 0;
             left: -61.5%;
             width: 15rem;
@@ -317,20 +214,11 @@
         }
       }
       &::after {
-        content: '';
-        background-image: url('../img/geisha.png');
-        position: absolute;
         background-size: contain;
-        background-repeat: no-repeat;
-        // bottom: 14vh;
         top: 10.5rem;
-        // transform: translateY(-50%);
-
         left: 5rem;
         width: 13rem;
         height: 100%;
-        opacity: 0;
-        // animation: geisha 700ms 650ms forwards;
       }
     }
   }
@@ -339,23 +227,17 @@
 @media (max-width: 660px) {
   header {
     .headline {
-      display: flex;
       padding: 11.5rem 1rem 0 0;
-
       justify-content: space-between;
       height: 100%;
       align-items: self-end;
-      position: relative;
       overflow: hidden;
-      // gap: 15vw;
       width: 100%;
       flex-direction: column;
 
       h1 {
         flex-basis: initial;
         font-size: 3rem;
-        font-family: 'Samosa';
-        color: $mainColor;
         margin-top: 2rem;
 
         p:first-child {
@@ -369,20 +251,12 @@
         }
       }
       > div {
-        position: relative;
-        // width: 100%;
-        // height: 100%;
-        // flex-basis: 70%;
-        // flex-basis: 70rem;
         flex-grow: 1;
         div:first-child {
           width: 15rem;
           height: 20rem;
-          position: relative;
           margin: 1rem 0 0 37em;
-
           div {
-            position: absolute;
             top: 0;
             left: -61.5%;
             width: 15rem;
@@ -391,20 +265,12 @@
         }
       }
       &::after {
-        content: '';
-        background-image: url('../img/geisha.png');
-        position: absolute;
         background-size: contain;
-        background-repeat: no-repeat;
-        // bottom: 14vh;
         top: 10.5rem;
-        // transform: translateY(-50%);
 
         left: 1rem;
         width: 13rem;
         height: 100%;
-        opacity: 0;
-        // animation: geisha 700ms 650ms forwards;
       }
     }
   }
@@ -417,21 +283,17 @@
 
       h1 {
         font-size: 2rem;
-
         margin-top: 2rem;
       }
       > div {
         div:first-child {
           width: 13rem;
           height: 13rem;
-          position: relative;
           margin: 1rem 0 0 37em;
           img {
             object-position: 100% 50%;
           }
-
           div {
-            position: absolute;
             top: 0;
             left: -61.5%;
             width: 13rem;
@@ -447,8 +309,6 @@
         left: 1rem;
         width: 11rem;
         height: 100%;
-        opacity: 0;
-        // animation: geisha 700ms 650ms forwards;
       }
     }
   }
@@ -458,21 +318,16 @@
   header {
     .headline {
       padding: 11.5rem 1rem 0 0;
-
       h1 {
         font-size: 2rem;
-
         margin-top: 2rem;
       }
       > div {
         div:first-child {
           width: 10rem;
           height: 10rem;
-          position: relative;
           margin: 1rem 0 0 37em;
-
           div {
-            position: absolute;
             top: 0;
             left: -61.5%;
             width: 10rem;
@@ -485,8 +340,6 @@
         left: 1rem;
         width: 8rem;
         height: 100%;
-        opacity: 0;
-        // animation: geisha 700ms 650ms forwards;
       }
     }
   }

@@ -45,18 +45,6 @@ figcaption {
   padding: 0;
 }
 
-#three-container {
-  height: 49rem;
-  width: 79rem;
-  position: relative;
-  margin: 0 auto;
-}
-#three-container canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 header {
   width: 100%;
   position: relative;
@@ -343,6 +331,7 @@ header .headline::after {
   width: calc(100% - 0.1rem);
   position: relative;
   backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
   transition: all 150ms ease-in-out;
   overflow: hidden;
 }
@@ -354,6 +343,7 @@ header .headline::after {
   width: 100%;
   height: 100%;
   backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
   border-radius: inherit;
   z-index: 1;
   transition: all 150ms ease-in-out;
@@ -378,6 +368,7 @@ header .headline::after {
 .cards .card .card-content:hover::before,
 .cards .card .card-content :focus::before {
   backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(9px);
 }
 .cards .card .card-content:hover::after,
 .cards .card .card-content :focus::after {
@@ -390,6 +381,7 @@ header .headline::after {
   object-fit: cover;
   border-radius: inherit;
   backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
 }
 
 .sec-2 {
@@ -539,7 +531,7 @@ header .headline::after {
 .sec-3 .content-wraper div:nth-child(1) {
   grid-column: 1/3;
   grid-row: 1/11;
-  background-image: url("../img/geisha-3.jpg");
+  background-image: url("../img/geisha-3.webp");
   background-repeat: no-repeat;
   background-size: 800px;
   background-position: 60% var(--yCord, -15%);
@@ -639,6 +631,7 @@ header .headline::after {
   padding: 8rem 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 .sec-5 h2 {
   text-align: center;
@@ -674,7 +667,7 @@ header .headline::after {
   animation: mainPicLeft 500ms ease-in-out forwards;
 }
 .sec-5 .content-wraper .card div:nth-of-type(1) {
-  background-image: url("../img/samurai-1.jpg");
+  background-image: url("../img/samurai-1.webp");
   background-repeat: no-repeat;
   background-position: 0 -172px;
   background-size: cover;
@@ -688,7 +681,7 @@ header .headline::after {
 .sec-5 .content-wraper .card div:nth-of-type(2) {
   grid-column: 1/8;
   grid-row: 2/3;
-  background-image: url("../img/samurai-1.jpg");
+  background-image: url("../img/samurai-1.webp");
   background-repeat: no-repeat;
   background-position: 0 -284px;
   background-size: cover;
@@ -699,7 +692,7 @@ header .headline::after {
 .sec-5 .content-wraper .card div:nth-of-type(3) {
   grid-column: 1/8;
   grid-row: 3/4;
-  background-image: url("../img/samurai-1.jpg");
+  background-image: url("../img/samurai-1.webp");
   background-repeat: no-repeat;
   background-position: 0 -396px;
   background-size: cover;
@@ -709,7 +702,7 @@ header .headline::after {
 .sec-5 .content-wraper .card div:nth-of-type(4) {
   grid-column: 1/8;
   grid-row: 4/5;
-  background-image: url("../img/samurai-1.jpg");
+  background-image: url("../img/samurai-1.webp");
   background-repeat: no-repeat;
   background-position: 0 -508px;
   background-size: cover;
@@ -719,7 +712,7 @@ header .headline::after {
 .sec-5 .content-wraper .card div:nth-of-type(5) {
   grid-column: 1/8;
   grid-row: 5/6;
-  background-image: url("../img/samurai-1.jpg");
+  background-image: url("../img/samurai-1.webp");
   background-repeat: no-repeat;
   background-position: 0 -620px;
   background-size: cover;
@@ -729,7 +722,7 @@ header .headline::after {
 .sec-5 .content-wraper .card div:nth-of-type(6) {
   grid-column: 1/3;
   grid-row: 6/8;
-  background-image: url("../img/samurai-3.jpg");
+  background-image: url("../img/samurai-3.webp");
   background-repeat: no-repeat;
   background-position: center center;
   border-radius: 7px;
@@ -740,7 +733,7 @@ header .headline::after {
 .sec-5 .content-wraper .card div:nth-of-type(7) {
   grid-column: 3/5;
   grid-row: 6/8;
-  background-image: url("../img/samurai-2.jpg");
+  background-image: url("../img/samurai-2.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1037,10 +1030,8 @@ footer .content-wraper ul li a {
   header {
     width: 100%;
     height: 100vh;
-    position: relative;
   }
   header .headline {
-    display: flex;
     padding: 3.5rem 5rem 0 0;
     align-items: self-end;
     flex-direction: column;
@@ -1064,7 +1055,6 @@ footer .content-wraper ul li a {
   header .headline > div div:first-child {
     width: 20rem;
     height: 25rem;
-    position: relative;
     margin: 3rem 0 0 37em;
   }
   header .headline > div div:first-child img {
@@ -1084,7 +1074,6 @@ footer .content-wraper ul li a {
     left: 5rem;
     width: 25rem;
     height: 33rem;
-    opacity: 0;
     animation: geisha 700ms 650ms forwards;
   }
 }
@@ -1092,41 +1081,12 @@ footer .content-wraper ul li a {
   header {
     width: 100%;
     height: 100vh;
-    position: relative;
-  }
-  header a {
-    color: white;
-    text-decoration: none;
-  }
-  header .m-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #001b2c;
-    color: white;
-    font-size: 1.5rem;
-    transform: translate(0, -50px);
-    animation: navBar 1s forwards;
-    animation-delay: 300ms;
-    opacity: 0;
-    font-family: travel;
-  }
-  header .m-nav ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  header .m-nav ul li {
-    margin-right: 1rem;
   }
   header .headline {
-    display: flex;
     padding: 3.5rem 5rem 0 0;
     justify-content: space-between;
     height: 100%;
     align-items: self-end;
-    position: relative;
     overflow: hidden;
     width: 100%;
     flex-direction: column;
@@ -1134,8 +1094,6 @@ footer .content-wraper ul li a {
   header .headline h1 {
     flex-basis: initial;
     font-size: 4.5rem;
-    font-family: "Samosa";
-    color: #001b2c;
   }
   header .headline h1 p:first-child {
     margin-left: 0;
@@ -1147,74 +1105,37 @@ footer .content-wraper ul li a {
     display: inline-block;
   }
   header .headline > div {
-    position: relative;
     flex-grow: 1;
   }
   header .headline > div div:first-child {
     width: 20rem;
     height: 25rem;
-    position: relative;
     margin: 3rem 0 0 37em;
   }
   header .headline > div div:first-child div {
-    position: absolute;
     top: 0;
     left: -61.5%;
     width: 20rem;
     height: 25rem;
   }
   header .headline::after {
-    content: "";
-    background-image: url("../img/geisha.png");
-    position: absolute;
     background-size: cover;
-    background-repeat: no-repeat;
     top: 3.5rem;
     left: 5rem;
     width: 25rem;
     height: 33rem;
-    opacity: 0;
   }
 }
 @media (max-width: 980px) {
   header {
     width: 100%;
     height: 100vh;
-    position: relative;
-  }
-  header a {
-    color: white;
-    text-decoration: none;
-  }
-  header .m-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #001b2c;
-    color: white;
-    font-size: 1.5rem;
-    transform: translate(0, -50px);
-    animation: navBar 1s forwards;
-    animation-delay: 300ms;
-    opacity: 0;
-    font-family: travel;
-  }
-  header .m-nav ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  header .m-nav ul li {
-    margin-right: 1rem;
   }
   header .headline {
-    display: flex;
     padding: 3.5rem 5rem 0 0;
     justify-content: space-between;
     height: 100%;
     align-items: self-end;
-    position: relative;
     overflow: hidden;
     width: 100%;
     flex-direction: column;
@@ -1222,8 +1143,6 @@ footer .content-wraper ul li a {
   header .headline h1 {
     flex-basis: initial;
     font-size: 4rem;
-    font-family: "Samosa";
-    color: #001b2c;
     margin-top: 3rem;
   }
   header .headline h1 p:first-child {
@@ -1236,43 +1155,33 @@ footer .content-wraper ul li a {
     display: inline-block;
   }
   header .headline > div {
-    position: relative;
     flex-grow: 1;
   }
   header .headline > div div:first-child {
     width: 20rem;
     height: 25rem;
-    position: relative;
     margin: 3rem 0 0 37em;
   }
   header .headline > div div:first-child div {
-    position: absolute;
     top: 0;
     left: -61.5%;
     width: 20rem;
     height: 25rem;
   }
   header .headline::after {
-    content: "";
-    background-image: url("../img/geisha.png");
-    position: absolute;
     background-size: contain;
-    background-repeat: no-repeat;
     top: 3.5rem;
     left: 5rem;
     width: 19rem;
     height: 100%;
-    opacity: 0;
   }
 }
 @media (max-width: 850px) {
   header .headline {
-    display: flex;
     padding: 11.5rem 5rem 0 0;
     justify-content: space-between;
     height: 100%;
     align-items: self-end;
-    position: relative;
     overflow: hidden;
     width: 100%;
     flex-direction: column;
@@ -1280,8 +1189,6 @@ footer .content-wraper ul li a {
   header .headline h1 {
     flex-basis: initial;
     font-size: 3rem;
-    font-family: "Samosa";
-    color: #001b2c;
     margin-top: 2rem;
   }
   header .headline h1 p:first-child {
@@ -1294,43 +1201,33 @@ footer .content-wraper ul li a {
     display: inline-block;
   }
   header .headline > div {
-    position: relative;
     flex-grow: 1;
   }
   header .headline > div div:first-child {
     width: 15rem;
     height: 20rem;
-    position: relative;
     margin: 1rem 0 0 37em;
   }
   header .headline > div div:first-child div {
-    position: absolute;
     top: 0;
     left: -61.5%;
     width: 15rem;
     height: 20rem;
   }
   header .headline::after {
-    content: "";
-    background-image: url("../img/geisha.png");
-    position: absolute;
     background-size: contain;
-    background-repeat: no-repeat;
     top: 10.5rem;
     left: 5rem;
     width: 13rem;
     height: 100%;
-    opacity: 0;
   }
 }
 @media (max-width: 660px) {
   header .headline {
-    display: flex;
     padding: 11.5rem 1rem 0 0;
     justify-content: space-between;
     height: 100%;
     align-items: self-end;
-    position: relative;
     overflow: hidden;
     width: 100%;
     flex-direction: column;
@@ -1338,8 +1235,6 @@ footer .content-wraper ul li a {
   header .headline h1 {
     flex-basis: initial;
     font-size: 3rem;
-    font-family: "Samosa";
-    color: #001b2c;
     margin-top: 2rem;
   }
   header .headline h1 p:first-child {
@@ -1352,33 +1247,25 @@ footer .content-wraper ul li a {
     display: inline-block;
   }
   header .headline > div {
-    position: relative;
     flex-grow: 1;
   }
   header .headline > div div:first-child {
     width: 15rem;
     height: 20rem;
-    position: relative;
     margin: 1rem 0 0 37em;
   }
   header .headline > div div:first-child div {
-    position: absolute;
     top: 0;
     left: -61.5%;
     width: 15rem;
     height: 20rem;
   }
   header .headline::after {
-    content: "";
-    background-image: url("../img/geisha.png");
-    position: absolute;
     background-size: contain;
-    background-repeat: no-repeat;
     top: 10.5rem;
     left: 1rem;
     width: 13rem;
     height: 100%;
-    opacity: 0;
   }
 }
 @media (max-width: 590px) {
@@ -1392,14 +1279,12 @@ footer .content-wraper ul li a {
   header .headline > div div:first-child {
     width: 13rem;
     height: 13rem;
-    position: relative;
     margin: 1rem 0 0 37em;
   }
   header .headline > div div:first-child img {
     object-position: 100% 50%;
   }
   header .headline > div div:first-child div {
-    position: absolute;
     top: 0;
     left: -61.5%;
     width: 13rem;
@@ -1413,7 +1298,6 @@ footer .content-wraper ul li a {
     left: 1rem;
     width: 11rem;
     height: 100%;
-    opacity: 0;
   }
 }
 @media (max-width: 460px) {
@@ -1427,11 +1311,9 @@ footer .content-wraper ul li a {
   header .headline > div div:first-child {
     width: 10rem;
     height: 10rem;
-    position: relative;
     margin: 1rem 0 0 37em;
   }
   header .headline > div div:first-child div {
-    position: absolute;
     top: 0;
     left: -61.5%;
     width: 10rem;
@@ -1442,7 +1324,6 @@ footer .content-wraper ul li a {
     left: 1rem;
     width: 8rem;
     height: 100%;
-    opacity: 0;
   }
 }
 @media (max-width: 1320px) {
@@ -1997,7 +1878,7 @@ footer .content-wraper ul li a {
   .sec-3 .content-wraper div:nth-child(1) {
     grid-column: 1/4 !important;
     grid-row: 1/11;
-    background-image: url("../img/geisha-3.jpg");
+    background-image: url("../img/geisha-3.webp");
     background-repeat: no-repeat;
     background-size: 800px;
     background-position: 60% var(--yCord, 0%);
@@ -2042,7 +1923,7 @@ footer .content-wraper ul li a {
   .sec-3 .content-wraper div:nth-child(1) {
     grid-column: 1/4 !important;
     grid-row: 1/11;
-    background-image: url("../img/geisha-3.jpg");
+    background-image: url("../img/geisha-3.webp");
     background-repeat: no-repeat;
     background-size: 800px;
     background-position: 60% var(--yCord, 0%);
@@ -2087,7 +1968,7 @@ footer .content-wraper ul li a {
   .sec-3 .content-wraper div:nth-child(1) {
     grid-column: 1/4 !important;
     grid-row: 1/9 !important;
-    background-image: url("../img/geisha-3.jpg");
+    background-image: url("../img/geisha-3.webp");
     background-repeat: no-repeat;
     background-size: 800px;
     background-position: 60% var(--yCord, -15%);
@@ -2132,7 +2013,7 @@ footer .content-wraper ul li a {
   .sec-3 .content-wraper div:nth-child(1) {
     grid-column: 1/11 !important;
     grid-row: 1/6 !important;
-    background-image: url("../img/geisha-3.jpg");
+    background-image: url("../img/geisha-3.webp");
     background-repeat: no-repeat;
     background-size: 800px;
     background-position: 60% var(--yCord, 0%);
@@ -2177,7 +2058,7 @@ footer .content-wraper ul li a {
   .sec-3 .content-wraper div:nth-child(1) {
     grid-column: 1/11 !important;
     grid-row: 1/6 !important;
-    background-image: url("../img/geisha-3.jpg");
+    background-image: url("../img/geisha-3.webp");
     background-repeat: no-repeat;
     background-size: 800px;
     background-position: 60% var(--yCord, -45%);
@@ -2222,7 +2103,7 @@ footer .content-wraper ul li a {
   .sec-3 .content-wraper div:nth-child(1) {
     grid-column: 1/11 !important;
     grid-row: 1/6 !important;
-    background-image: url("../img/geisha-3.jpg");
+    background-image: url("../img/geisha-3.webp");
     background-repeat: no-repeat;
     background-size: 800px;
     background-position: 60% var(--yCord, -45%);
@@ -2273,8 +2154,6 @@ footer .content-wraper ul li a {
     animation: mainPicLeft 500ms ease-in-out forwards;
   }
   .sec-5 .content-wraper .card div:nth-of-type(1) {
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 0 -72px;
     background-size: cover;
     grid-column: 1/8;
@@ -2287,8 +2166,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(2) {
     grid-column: 1/8;
     grid-row: 2/3;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 0 -184px;
     background-size: cover;
     transform: translateX(150px);
@@ -2298,8 +2175,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(3) {
     grid-column: 1/8;
     grid-row: 3/4;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 0 -296px;
     background-size: cover;
     transform: translateX(-150px);
@@ -2308,8 +2183,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(4) {
     grid-column: 1/8;
     grid-row: 4/5;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 0 -408px;
     background-size: cover;
     transform: translateX(150px);
@@ -2318,8 +2191,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(5) {
     grid-column: 1/8;
     grid-row: 5/6;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 0 -520px;
     background-size: cover;
     transform: translateX(-150px);
@@ -2328,9 +2199,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(6) {
     grid-column: 1/3;
     grid-row: 6/8;
-    background-image: url("../img/samurai-3.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
     border-radius: 7px;
     background-size: cover;
     margin: 1.5rem 1.5rem 0 0;
@@ -2339,9 +2207,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(7) {
     grid-column: 3/5;
     grid-row: 6/8;
-    background-image: url("../img/samurai-2.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
     background-size: cover;
     margin: 1.5rem 1.5rem 0 0;
     border-radius: 7px;
@@ -2364,10 +2229,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(9) {
     grid-column: 1/2;
     grid-row: 1/6;
-    border-radius: 7px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transform: translateX(50px);
   }
   .sec-5 .content-wraper .card div:nth-of-type(9) p.morph {
@@ -2464,8 +2325,6 @@ footer .content-wraper ul li a {
     animation: mainPicLeft 500ms ease-in-out forwards;
   }
   .sec-5 .content-wraper .card div:nth-of-type(1) {
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 0 -2px;
     background-size: cover;
     grid-column: 1/8;
@@ -2478,8 +2337,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(2) {
     grid-column: 1/8;
     grid-row: 2/3;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 0 -114px;
     background-size: cover;
     transform: translateX(150px);
@@ -2489,8 +2346,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(3) {
     grid-column: 1/8;
     grid-row: 3/4;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 0 -226px;
     background-size: cover;
     transform: translateX(-150px);
@@ -2499,8 +2354,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(4) {
     grid-column: 1/8;
     grid-row: 4/5;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 0 -338px;
     background-size: cover;
     transform: translateX(150px);
@@ -2509,8 +2362,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(5) {
     grid-column: 1/8;
     grid-row: 5/6;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 0 -450px;
     background-size: cover;
     transform: translateX(-150px);
@@ -2519,9 +2370,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(6) {
     grid-column: 1/3;
     grid-row: 6/8;
-    background-image: url("../img/samurai-3.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
     border-radius: 7px;
     background-size: cover;
     margin: 1.5rem 1.5rem 0 0;
@@ -2530,9 +2378,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(7) {
     grid-column: 3/5;
     grid-row: 6/8;
-    background-image: url("../img/samurai-2.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
     background-size: cover;
     margin: 1.5rem 1.5rem 0 0;
     border-radius: 7px;
@@ -2555,10 +2400,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(9) {
     grid-column: 1/2;
     grid-row: 1/6;
-    border-radius: 7px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transform: translateX(50px);
   }
   .sec-5 .content-wraper .card div:nth-of-type(9) p.morph {
@@ -2655,8 +2496,6 @@ footer .content-wraper ul li a {
     animation: mainPicLeft 500ms ease-in-out forwards;
   }
   .sec-5 .content-wraper .card div:nth-of-type(1) {
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 0 0px;
     background-size: cover;
     grid-column: 1/8;
@@ -2669,8 +2508,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(2) {
     grid-column: 1/8;
     grid-row: 2/3;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 0 -96px;
     background-size: cover;
     transform: translateX(150px);
@@ -2680,8 +2517,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(3) {
     grid-column: 1/8;
     grid-row: 3/4;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 0 -192px;
     background-size: cover;
     transform: translateX(-150px);
@@ -2690,8 +2525,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(4) {
     grid-column: 1/8;
     grid-row: 4/5;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 0 -288px;
     background-size: cover;
     transform: translateX(150px);
@@ -2700,8 +2533,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(5) {
     grid-column: 1/8;
     grid-row: 5/6;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 0 -384px;
     background-size: cover;
     transform: translateX(-150px);
@@ -2710,9 +2541,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(6) {
     grid-column: 1/3;
     grid-row: 6/8;
-    background-image: url("../img/samurai-3.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
     border-radius: 7px;
     background-size: cover;
     margin: 1.5rem 1.5rem 0 0;
@@ -2721,9 +2549,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(7) {
     grid-column: 3/5;
     grid-row: 6/8;
-    background-image: url("../img/samurai-2.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
     background-size: cover;
     margin: 1.5rem 1.5rem 0 0;
     border-radius: 7px;
@@ -2746,10 +2571,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(9) {
     grid-column: 1/2;
     grid-row: 1/6;
-    border-radius: 7px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transform: translateX(50px);
   }
   .sec-5 .content-wraper .card div:nth-of-type(9) p.morph {
@@ -2846,8 +2667,6 @@ footer .content-wraper ul li a {
     animation: mainPicLeft 500ms ease-in-out forwards;
   }
   .sec-5 .content-wraper .card div:nth-of-type(1) {
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 0 0px;
     background-size: cover;
     grid-column: 1/9;
@@ -2860,8 +2679,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(2) {
     grid-column: 1/9;
     grid-row: 2/3;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 0 -80px;
     background-size: cover;
     transform: translateX(150px);
@@ -2871,8 +2688,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(3) {
     grid-column: 1/9;
     grid-row: 3/4;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 0 -160px;
     background-size: cover;
     transform: translateX(-150px);
@@ -2881,8 +2696,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(4) {
     grid-column: 1/9;
     grid-row: 4/5;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 0 -240px;
     background-size: cover;
     transform: translateX(150px);
@@ -2891,8 +2704,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(5) {
     grid-column: 1/9;
     grid-row: 5/6;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 0 -320px;
     background-size: cover;
     transform: translateX(-150px);
@@ -2901,9 +2712,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(6) {
     grid-column: 1/5;
     grid-row: 6/8;
-    background-image: url("../img/samurai-3.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
     border-radius: 7px;
     background-size: cover;
     margin: 1.5rem 0.75rem 0 0;
@@ -2912,9 +2720,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(7) {
     grid-column: 5/9;
     grid-row: 6/8;
-    background-image: url("../img/samurai-2.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
     background-size: cover;
     margin: 1.5rem 0 0 0.75rem;
     border-radius: 7px;
@@ -2937,10 +2742,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(9) {
     grid-column: 1/2;
     grid-row: 1/6;
-    border-radius: 7px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transform: translateX(50px);
   }
   .sec-5 .content-wraper .card div:nth-of-type(9) p.morph {
@@ -3037,8 +2838,6 @@ footer .content-wraper ul li a {
     animation: mainPicLeft 500ms ease-in-out forwards;
   }
   .sec-5 .content-wraper .card div:nth-of-type(1) {
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 50% -80px;
     background-size: 800px;
     grid-column: 1/9;
@@ -3051,8 +2850,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(2) {
     grid-column: 1/9;
     grid-row: 2/3;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 50% -160px;
     background-size: 800px;
     transform: translateX(150px);
@@ -3062,8 +2859,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(3) {
     grid-column: 1/9;
     grid-row: 3/4;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 50% -240px;
     background-size: 800px;
     transform: translateX(-150px);
@@ -3072,8 +2867,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(4) {
     grid-column: 1/9;
     grid-row: 4/5;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 50% -320px;
     background-size: 800px;
     transform: translateX(150px);
@@ -3082,8 +2875,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(5) {
     grid-column: 1/9;
     grid-row: 5/6;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 50% -400px;
     background-size: 800px;
     transform: translateX(-150px);
@@ -3092,9 +2883,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(6) {
     grid-column: 1/5;
     grid-row: 6/8;
-    background-image: url("../img/samurai-3.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
     border-radius: 7px;
     background-size: cover;
     margin: 1.5rem 0.75rem 0 0;
@@ -3103,9 +2891,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(7) {
     grid-column: 5/9;
     grid-row: 6/8;
-    background-image: url("../img/samurai-2.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
     background-size: cover;
     margin: 1.5rem 0 0 0.75rem;
     border-radius: 7px;
@@ -3128,10 +2913,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(9) {
     grid-column: 1/2;
     grid-row: 1/6;
-    border-radius: 7px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transform: translateX(50px);
   }
   .sec-5 .content-wraper .card div:nth-of-type(9) p.morph {
@@ -3228,8 +3009,6 @@ footer .content-wraper ul li a {
     animation: mainPicLeft 500ms ease-in-out forwards;
   }
   .sec-5 .content-wraper .card div:nth-of-type(1) {
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 50% -80px;
     background-size: 800px;
     grid-column: 1/9;
@@ -3242,8 +3021,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(2) {
     grid-column: 1/9;
     grid-row: 2/3;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 50% -160px;
     background-size: 800px;
     transform: translateX(150px);
@@ -3253,8 +3030,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(3) {
     grid-column: 1/9;
     grid-row: 3/4;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 50% -240px;
     background-size: 800px;
     transform: translateX(-150px);
@@ -3263,8 +3038,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(4) {
     grid-column: 1/9;
     grid-row: 4/5;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 50% -320px;
     background-size: 800px;
     transform: translateX(150px);
@@ -3273,8 +3046,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(5) {
     grid-column: 1/9;
     grid-row: 5/6;
-    background-image: url("../img/samurai-1.jpg");
-    background-repeat: no-repeat;
     background-position: 50% -400px;
     background-size: 800px;
     transform: translateX(-150px);
@@ -3283,9 +3054,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(6) {
     grid-column: 1/9;
     grid-row: 6/10;
-    background-image: url("../img/samurai-3.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
     border-radius: 7px;
     background-size: cover;
     margin: 1.5rem 0rem 0 0;
@@ -3294,9 +3062,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(7) {
     grid-column: 1/9;
     grid-row: 10/14;
-    background-image: url("../img/samurai-2.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
     background-size: cover;
     margin: 1.5rem 0 0 0rem;
     border-radius: 7px;
@@ -3319,10 +3084,6 @@ footer .content-wraper ul li a {
   .sec-5 .content-wraper .card div:nth-of-type(9) {
     grid-column: 1/2;
     grid-row: 1/6;
-    border-radius: 7px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transform: translateX(50px);
   }
   .sec-5 .content-wraper .card div:nth-of-type(9) p.morph {
