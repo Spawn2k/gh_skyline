@@ -23,9 +23,10 @@
           if (element.isIntersecting) {
             element.target.classList.add('active');
 
-            if (ratio >= 1) {
-              myObserver.unobserve(element.target);
-            }
+            // if (DOM.imgEls[DOM.imgEls.length - 1] === element.target) {
+            //   showEl(DOM.japEl, ratio);
+            // }
+            // console.log(elements[elements.length - 1]);
           }
         });
       },
@@ -44,13 +45,18 @@
       (elements) => {
         elements.forEach((element, idx) => {
           let ratio = element.intersectionRatio;
+
           if (element.isIntersecting) {
+            if (element.target === DOM.fadeInEls[0]) {
+              console.log('first');
+              showEl(DOM.japEl, ratio);
+            }
+
+            // console.log(element.target);
             showEl(element.target, ratio);
-            showEl(DOM.japEl, ratio);
 
             if (ratio >= 1) {
               if (idx === 0) {
-                console.log('log');
                 DOM.sec5ContentEl.addEventListener('mouseover', onMouseOver);
               }
               myObserverInfoText.unobserve(element.target);

@@ -23,6 +23,7 @@ body {
   background-color: white;
   font-size: 1rem;
   line-height: 1.6;
+  height: 3000px;
 }
 
 ul {
@@ -94,6 +95,60 @@ header .headline {
   align-items: flex-end;
   position: relative;
   overflow: hidden;
+  width: 100%;
+}
+header .headline h1 {
+  flex-basis: 55%;
+  font-size: 6rem;
+  font-family: "Samosa";
+  color: #001b2c;
+}
+header .headline h1 p:first-child {
+  margin-left: 25rem;
+  animation: headerTitle 700ms forwards;
+  opacity: 0;
+  filter: blur(3px);
+  transform: translateX(-50px);
+  animation-delay: 450ms;
+}
+header .headline h1 p:last-child {
+  margin-left: 21rem;
+  animation: headerTitle 700ms forwards;
+  opacity: 0;
+  filter: blur(3px);
+  transform: translateX(-50px);
+  animation-delay: 550ms;
+}
+header .headline > div {
+  position: relative;
+}
+header .headline > div > div {
+  width: 24rem;
+  height: 38rem;
+  position: relative;
+}
+header .headline > div > div > div {
+  position: absolute;
+  top: 0;
+  left: -61.5%;
+  width: 24rem;
+  height: 38rem;
+}
+header .headline > div > div > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 23% 50%;
+  animation: picOne 1.3s forwards;
+  clip-path: polygon(52.511% 99.853%, 0.229% 99.853%, 40.982% 4.303%, 40.982% 4.303%, 41.347% 3.576%, 41.795% 2.906%, 42.318% 2.297%, 42.91% 1.755%, 43.563% 1.283%, 44.27% 0.886%, 45.023% 0.57%, 45.816% 0.338%, 46.64% 0.195%, 47.489% 0.147%, 99.771% 0.147%, 59.018% 95.697%, 59.018% 95.697%, 58.653% 96.424%, 58.205% 97.094%, 57.682% 97.703%, 57.09% 98.245%, 56.437% 98.717%, 55.73% 99.114%, 54.977% 99.43%, 54.184% 99.662%, 53.36% 99.805%, 52.511% 99.853%);
+}
+header .headline > div > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 65% 50%;
+  animation: picTwo 1.3s forwards;
+  clip-path: polygon(52.511% 99.853%, 0.229% 99.853%, 40.982% 4.303%, 40.982% 4.303%, 41.347% 3.576%, 41.795% 2.906%, 42.318% 2.297%, 42.91% 1.755%, 43.563% 1.283%, 44.27% 0.886%, 45.023% 0.57%, 45.816% 0.338%, 46.64% 0.195%, 47.489% 0.147%, 99.771% 0.147%, 59.018% 95.697%, 59.018% 95.697%, 58.653% 96.424%, 58.205% 97.094%, 57.682% 97.703%, 57.09% 98.245%, 56.437% 98.717%, 55.73% 99.114%, 54.977% 99.43%, 54.184% 99.662%, 53.36% 99.805%, 52.511% 99.853%);
 }
 header .headline::after {
   content: "";
@@ -107,60 +162,6 @@ header .headline::after {
   height: 33rem;
   opacity: 0;
   animation: geisha 700ms 650ms forwards;
-}
-header .headline h1 {
-  margin-left: 20rem;
-  margin-top: 3rem;
-  font-size: 6rem;
-  font-family: "Samosa";
-  color: #001b2c;
-}
-header .headline h1 p:first-child {
-  margin: 0 0 2rem 5rem;
-  animation: headerTitle 700ms forwards;
-  opacity: 0;
-  filter: blur(3px);
-  transform: translateX(-50px);
-  animation-delay: 450ms;
-}
-header .headline h1 p:last-child {
-  margin-right: 3vh;
-  animation: headerTitle 700ms forwards;
-  opacity: 0;
-  filter: blur(3px);
-  transform: translateX(-50px);
-  animation-delay: 550ms;
-}
-header > .headline > div {
-  display: flex;
-  justify-content: end;
-  transform: translateX(200px);
-}
-header > .headline > div .header-pic:first-child img {
-  animation: picOne 1.3s forwards;
-  opacity: 0;
-  object-position: 25% 50%;
-  animation-delay: 300ms;
-}
-header > .headline > div .header-pic:last-child {
-  transform: translateX(-11rem);
-}
-header > .headline > div .header-pic:last-child img {
-  object-position: 83% 50%;
-  animation: picTwo 1.3s forwards;
-  opacity: 0;
-  animation-delay: 300ms;
-}
-header > .headline > div .header-pic {
-  width: 450px;
-  height: 600px;
-}
-header > .headline > div .header-pic img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: all 200ms linear;
-  clip-path: polygon(52.511% 99.853%, 0.229% 99.853%, 40.982% 4.303%, 40.982% 4.303%, 41.347% 3.576%, 41.795% 2.906%, 42.318% 2.297%, 42.91% 1.755%, 43.563% 1.283%, 44.27% 0.886%, 45.023% 0.57%, 45.816% 0.338%, 46.64% 0.195%, 47.489% 0.147%, 99.771% 0.147%, 59.018% 95.697%, 59.018% 95.697%, 58.653% 96.424%, 58.205% 97.094%, 57.682% 97.703%, 57.09% 98.245%, 56.437% 98.717%, 55.73% 99.114%, 54.977% 99.43%, 54.184% 99.662%, 53.36% 99.805%, 52.511% 99.853%);
 }
 
 @keyframes picOne {
@@ -1032,296 +1033,416 @@ footer .content-wraper ul li a {
   font-size: 1.5rem;
 }
 
-@media (max-width: 1660px) {
-  .headline > div {
-    overflow: hidden;
-  }
-  .headline > div .header-pic:first-child img {
-    width: 400px;
-  }
-  .headline > div .header-pic:last-child img {
-    width: 400px;
-  }
-}
-@media (max-width: 1585px) {
-  .headline > div .header-pic:first-child img {
-    width: 350px;
-  }
-  .headline > div .header-pic:last-child img {
-    width: 350px;
-  }
-}
-@media (max-width: 1555px) {
-  .headline > div .header-pic:first-child img {
-    width: 350px;
-  }
-  .headline > div .header-pic:last-child {
-    transform: translateX(-9rem) !important;
-  }
-  .headline > div .header-pic:last-child img {
-    width: 350px;
-  }
-}
-@media (max-width: 1485px) {
-  .headline h1 {
-    width: 21rem;
-  }
-  .headline > div .header-pic:first-child img {
-    width: 300px;
-  }
-  .headline > div .header-pic:last-child {
-    transform: translateX(-9rem) !important;
-  }
-  .headline > div .header-pic:last-child img {
-    width: 300px;
-  }
-}
-@media (max-width: 1428px) {
-  .headline h1 {
-    width: 19rem;
-  }
-}
-@media (max-width: 1398px) {
-  .headline h1 {
-    width: 17rem;
-  }
-}
-@media (max-width: 1365px) {
-  .headline h1 {
-    width: 15rem;
-  }
-}
-@media (max-width: 1325px) {
-  .headline h1 {
-    width: 13rem;
-  }
-}
-@media (max-width: 1295px) {
-  .headline h1 {
-    width: 11rem;
-  }
-}
-@media (max-width: 1265px) {
-  .headline h1 {
-    width: 9rem;
-  }
-}
-@media (max-width: 1235px) {
-  .headline h1 {
-    width: 7rem;
-  }
-  header .headline h1 {
-    width: 9rem;
-    font-size: 4rem !important;
-    margin-left: 16rem;
-  }
-  header .headline:after {
-    background-size: contain;
-    height: 100%;
-    bottom: -32vh;
-    width: 20rem;
-  }
-}
-@media (max-width: 1185px) {
-  header .headline h1 {
-    width: 10rem;
-    font-size: 3rem !important;
-    margin-left: 12rem;
-  }
-  header .headline:after {
-    background-size: contain;
-    height: 100%;
-    bottom: -22vh;
-    width: 15rem;
-  }
-  header .headline div .header-pic {
-    height: 400px;
-  }
-  header .headline div .header-pic img {
+@media (max-width: 1380px) {
+  header {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    position: relative;
   }
-}
-@media (max-width: 1125px) {
-  .headline h1 {
-    width: 8rem !important;
+  header .headline {
+    display: flex;
+    padding: 3.5rem 5rem 0 0;
+    align-items: self-end;
+    flex-direction: column;
   }
-}
-@media (max-width: 1095px) {
-  .headline h1 {
-    width: 6rem !important;
-  }
-}
-@media (max-width: 1065px) {
-  .headline h1 {
-    width: 4rem !important;
-  }
-}
-@media (max-width: 1035px) {
-  .headline h1 {
-    width: 2rem !important;
-  }
-}
-@media (max-width: 1005px) {
-  .headline h1 {
-    width: 0rem !important;
-  }
-}
-@media (max-width: 965px) {
   header .headline h1 {
-    width: 3rem !important;
-    font-size: 2.5rem !important;
-    margin-left: 10rem;
+    flex-basis: initial;
+    font-size: 6rem;
   }
   header .headline h1 p:first-child {
-    margin: 0 0 1rem 2rem;
+    margin-left: 0;
+    display: inline-block;
+    padding-left: 0rem;
   }
-  header .headline:after {
-    background-size: contain;
-    height: 100%;
-    bottom: -22vh;
-    width: 12rem;
+  header .headline h1 p:last-child {
+    margin-left: 0;
+    display: inline-block;
   }
-  header .headline div .header-pic {
-    height: 300px;
+  header .headline > div {
+    flex-grow: 1;
   }
-  header .headline div .header-pic img {
-    width: 250px !important;
-    height: 100%;
+  header .headline > div div:first-child {
+    width: 20rem;
+    height: 25rem;
+    position: relative;
+    margin: 3rem 0 0 37em;
   }
-}
-@media (max-width: 925px) {
-  header .headline h1 {
-    width: 1rem !important;
+  header .headline > div div:first-child img {
+    object-position: 23% 50%;
   }
-}
-@media (max-width: 895px) {
-  header .headline div {
-    transform: translateX(80px);
+  header .headline > div div:first-child div {
+    top: 0;
+    left: -61.5%;
+    width: 20rem;
+    height: 25rem;
   }
-  header .headline h1 {
-    width: 0rem !important;
+  header .headline > div div:first-child > img {
+    object-position: 89% 50%;
   }
-  header .headline:after {
-    background-size: contain;
-    height: 100%;
-    bottom: -32vh;
-    width: 12rem;
-  }
-  header .headline div .header-pic:first-child {
-    height: 400px;
-  }
-  header .headline div .header-pic:first-child img {
-    width: 300px !important;
-  }
-  header .headline div .header-pic:last-child {
-    display: none;
+  header .headline::after {
+    top: 3.5rem;
+    left: 5rem;
+    width: 25rem;
+    height: 33rem;
+    opacity: 0;
+    animation: geisha 700ms 650ms forwards;
   }
 }
-@media (max-width: 700px) {
-  header .headline div {
-    transform: translateX(100px);
+@media (max-width: 1120px) {
+  header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
   }
-  header .headline h1 {
-    width: 0rem !important;
-    font-size: 2rem !important;
-    margin-left: 8rem !important;
+  header a {
+    color: white;
+    text-decoration: none;
   }
-  header .headline:after {
-    background-size: contain;
-    height: 100%;
-    bottom: -22vh;
-    width: 10rem;
+  header .m-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #001b2c;
+    color: white;
+    font-size: 1.5rem;
+    transform: translate(0, -50px);
+    animation: navBar 1s forwards;
+    animation-delay: 300ms;
+    opacity: 0;
+    font-family: travel;
   }
-  header .headline div .header-pic:first-child {
-    height: 270px;
+  header .m-nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  header .headline div .header-pic:first-child img {
-    width: 230px !important;
+  header .m-nav ul li {
+    margin-right: 1rem;
   }
-  header .headline div .header-pic:last-child {
-    display: none;
-  }
-}
-@media (max-width: 630px) {
-  header .headline div {
-    transform: translateX(70px);
-  }
-  header .headline h1 {
-    width: 0rem !important;
-    font-size: 2rem !important;
-    margin-left: 8rem !important;
-  }
-  header .headline:after {
-    background-size: contain;
-    height: 100%;
-    bottom: -22vh;
-    width: 10rem;
-  }
-  header .headline div .header-pic:first-child {
-    height: 270px;
-  }
-  header .headline div .header-pic:first-child img {
-    width: 230px !important;
-  }
-  header .headline div .header-pic:last-child {
-    display: none;
-  }
-}
-@media (max-width: 570px) {
-  header .headline div {
-    transform: translateX(50px);
-  }
-  header .headline h1 {
-    width: 0rem !important;
-    font-size: 2rem !important;
-    margin-left: 8rem !important;
-  }
-  header .headline:after {
-    background-size: contain;
-    height: 100%;
-    bottom: -22vh;
-    width: 10rem;
-  }
-  header .headline div .header-pic:first-child {
-    height: 270px;
-  }
-  header .headline div .header-pic:first-child img {
-    width: 230px !important;
-  }
-  header .headline div .header-pic:last-child {
-    display: none;
-  }
-}
-@media (max-width: 530px) {
   header .headline {
+    display: flex;
+    padding: 3.5rem 5rem 0 0;
+    justify-content: space-between;
+    height: 100%;
+    align-items: self-end;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
     flex-direction: column;
-    gap: 2rem;
-  }
-  header .headline div {
-    transform: translateX(0px);
   }
   header .headline h1 {
-    width: 100% !important;
-    font-size: 2rem !important;
-    margin-left: 0rem !important;
-    margin-top: 8rem;
-    padding-left: 8rem;
+    flex-basis: initial;
+    font-size: 4.5rem;
+    font-family: "Samosa";
+    color: #001b2c;
   }
-  header .headline:after {
-    background-size: contain;
+  header .headline h1 p:first-child {
+    margin-left: 0;
+    display: inline-block;
+    padding-left: 0rem;
+  }
+  header .headline h1 p:last-child {
+    margin-left: 0;
+    display: inline-block;
+  }
+  header .headline > div {
+    position: relative;
+    flex-grow: 1;
+  }
+  header .headline > div div:first-child {
+    width: 20rem;
+    height: 25rem;
+    position: relative;
+    margin: 3rem 0 0 37em;
+  }
+  header .headline > div div:first-child div {
+    position: absolute;
+    top: 0;
+    left: -61.5%;
+    width: 20rem;
+    height: 25rem;
+  }
+  header .headline::after {
+    content: "";
+    background-image: url("../img/geisha.png");
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 3.5rem;
+    left: 5rem;
+    width: 25rem;
+    height: 33rem;
+    opacity: 0;
+  }
+}
+@media (max-width: 980px) {
+  header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  header a {
+    color: white;
+    text-decoration: none;
+  }
+  header .m-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #001b2c;
+    color: white;
+    font-size: 1.5rem;
+    transform: translate(0, -50px);
+    animation: navBar 1s forwards;
+    animation-delay: 300ms;
+    opacity: 0;
+    font-family: travel;
+  }
+  header .m-nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .m-nav ul li {
+    margin-right: 1rem;
+  }
+  header .headline {
+    display: flex;
+    padding: 3.5rem 5rem 0 0;
+    justify-content: space-between;
     height: 100%;
-    bottom: -25vh;
+    align-items: self-end;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    flex-direction: column;
+  }
+  header .headline h1 {
+    flex-basis: initial;
+    font-size: 4rem;
+    font-family: "Samosa";
+    color: #001b2c;
+    margin-top: 3rem;
+  }
+  header .headline h1 p:first-child {
+    margin-left: 0;
+    display: inline-block;
+    padding-left: 0rem;
+  }
+  header .headline h1 p:last-child {
+    margin-left: 0;
+    display: inline-block;
+  }
+  header .headline > div {
+    position: relative;
+    flex-grow: 1;
+  }
+  header .headline > div div:first-child {
+    width: 20rem;
+    height: 25rem;
+    position: relative;
+    margin: 3rem 0 0 37em;
+  }
+  header .headline > div div:first-child div {
+    position: absolute;
+    top: 0;
+    left: -61.5%;
+    width: 20rem;
+    height: 25rem;
+  }
+  header .headline::after {
+    content: "";
+    background-image: url("../img/geisha.png");
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 3.5rem;
+    left: 5rem;
+    width: 19rem;
+    height: 100%;
+    opacity: 0;
+  }
+}
+@media (max-width: 850px) {
+  header .headline {
+    display: flex;
+    padding: 11.5rem 5rem 0 0;
+    justify-content: space-between;
+    height: 100%;
+    align-items: self-end;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    flex-direction: column;
+  }
+  header .headline h1 {
+    flex-basis: initial;
+    font-size: 3rem;
+    font-family: "Samosa";
+    color: #001b2c;
+    margin-top: 2rem;
+  }
+  header .headline h1 p:first-child {
+    margin-left: 0;
+    display: inline-block;
+    padding-left: 0rem;
+  }
+  header .headline h1 p:last-child {
+    margin-left: 0;
+    display: inline-block;
+  }
+  header .headline > div {
+    position: relative;
+    flex-grow: 1;
+  }
+  header .headline > div div:first-child {
+    width: 15rem;
+    height: 20rem;
+    position: relative;
+    margin: 1rem 0 0 37em;
+  }
+  header .headline > div div:first-child div {
+    position: absolute;
+    top: 0;
+    left: -61.5%;
+    width: 15rem;
+    height: 20rem;
+  }
+  header .headline::after {
+    content: "";
+    background-image: url("../img/geisha.png");
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 10.5rem;
+    left: 5rem;
+    width: 13rem;
+    height: 100%;
+    opacity: 0;
+  }
+}
+@media (max-width: 660px) {
+  header .headline {
+    display: flex;
+    padding: 11.5rem 1rem 0 0;
+    justify-content: space-between;
+    height: 100%;
+    align-items: self-end;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    flex-direction: column;
+  }
+  header .headline h1 {
+    flex-basis: initial;
+    font-size: 3rem;
+    font-family: "Samosa";
+    color: #001b2c;
+    margin-top: 2rem;
+  }
+  header .headline h1 p:first-child {
+    margin-left: 0;
+    display: inline-block;
+    padding-left: 0rem;
+  }
+  header .headline h1 p:last-child {
+    margin-left: 0;
+    display: inline-block;
+  }
+  header .headline > div {
+    position: relative;
+    flex-grow: 1;
+  }
+  header .headline > div div:first-child {
+    width: 15rem;
+    height: 20rem;
+    position: relative;
+    margin: 1rem 0 0 37em;
+  }
+  header .headline > div div:first-child div {
+    position: absolute;
+    top: 0;
+    left: -61.5%;
+    width: 15rem;
+    height: 20rem;
+  }
+  header .headline::after {
+    content: "";
+    background-image: url("../img/geisha.png");
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 10.5rem;
+    left: 1rem;
+    width: 13rem;
+    height: 100%;
+    opacity: 0;
+  }
+}
+@media (max-width: 590px) {
+  header .headline {
+    padding: 11.5rem 1rem 0 0;
+  }
+  header .headline h1 {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+  header .headline > div div:first-child {
+    width: 13rem;
+    height: 13rem;
+    position: relative;
+    margin: 1rem 0 0 37em;
+  }
+  header .headline > div div:first-child img {
+    object-position: 100% 50%;
+  }
+  header .headline > div div:first-child div {
+    position: absolute;
+    top: 0;
+    left: -61.5%;
+    width: 13rem;
+    height: 13rem;
+  }
+  header .headline > div div:first-child div > img {
+    object-position: 0% 50%;
+  }
+  header .headline::after {
+    top: 10.5rem;
+    left: 1rem;
+    width: 11rem;
+    height: 100%;
+    opacity: 0;
+  }
+}
+@media (max-width: 460px) {
+  header .headline {
+    padding: 11.5rem 1rem 0 0;
+  }
+  header .headline h1 {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+  header .headline > div div:first-child {
     width: 10rem;
+    height: 10rem;
+    position: relative;
+    margin: 1rem 0 0 37em;
   }
-  header .headline div .header-pic:first-child {
-    height: 270px;
+  header .headline > div div:first-child div {
+    position: absolute;
+    top: 0;
+    left: -61.5%;
+    width: 10rem;
+    height: 10rem;
   }
-  header .headline div .header-pic:first-child img {
-    width: 430px !important;
-  }
-  header .headline div .header-pic:last-child {
-    display: none;
+  header .headline::after {
+    top: 10.5rem;
+    left: 1rem;
+    width: 8rem;
+    height: 100%;
+    opacity: 0;
   }
 }
 @media (max-width: 1320px) {
@@ -1440,6 +1561,9 @@ footer .content-wraper ul li a {
   }
 }
 @media (max-width: 1320px) {
+  .sec-2 {
+    overflow: hidden;
+  }
   .sec-2 > div {
     width: 79vw;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -2011,7 +2135,7 @@ footer .content-wraper ul li a {
     background-image: url("../img/geisha-3.jpg");
     background-repeat: no-repeat;
     background-size: 800px;
-    background-position: 60% var(--yCord, -45%);
+    background-position: 60% var(--yCord, 0%);
     border-radius: 7px;
   }
   .sec-3 .content-wraper div:nth-child(2) {
@@ -2133,6 +2257,7 @@ footer .content-wraper ul li a {
     margin: auto;
     position: relative;
     height: 100%;
+    overflow: hidden;
   }
   .sec-5 .content-wraper .card {
     display: grid;

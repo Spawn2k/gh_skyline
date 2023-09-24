@@ -177,7 +177,7 @@
         background-image: url('../img/geisha-3.jpg');
         background-repeat: no-repeat;
         background-size: 800px;
-        background-position: 60% var(--yCord, -45%);
+        background-position: 60% var(--yCord, 0%);
         border-radius: $borderRadius;
       }
       div:nth-child(2) {

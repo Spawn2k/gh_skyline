@@ -38,6 +38,129 @@ header {
     position: relative;
     overflow: hidden;
     // gap: 15vw;
+    width: 100%;
+
+    h1 {
+      flex-basis: 55%;
+      font-size: 6rem;
+      font-family: 'Samosa';
+      color: $mainColor;
+      p:first-child {
+        margin-left: 25rem;
+        animation: headerTitle 700ms forwards;
+        opacity: 0;
+        filter: blur(3px);
+        transform: translateX(-50px);
+        animation-delay: 450ms;
+      }
+      p:last-child {
+        margin-left: 21rem;
+        animation: headerTitle 700ms forwards;
+        opacity: 0;
+        filter: blur(3px);
+        transform: translateX(-50px);
+        animation-delay: 550ms;
+      }
+    }
+    > div {
+      position: relative;
+      // width: 100%;
+      // height: 100%;
+      // flex-basis: 70%;
+      // flex-basis: 70rem;
+      // animation: picOne 1.3s forwards;
+
+      > div {
+        width: 24rem;
+        height: 38rem;
+        position: relative;
+        // opacity: 1;
+
+        > div {
+          position: absolute;
+          top: 0;
+          left: -61.5%;
+          width: 24rem;
+          height: 38rem;
+          // opacity: 0;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 23% 50%;
+            animation: picOne 1.3s forwards;
+
+            clip-path: polygon(
+              52.511% 99.853%,
+              0.229% 99.853%,
+              40.982% 4.303%,
+              40.982% 4.303%,
+              41.347% 3.576%,
+              41.795% 2.906%,
+              42.318% 2.297%,
+              42.91% 1.755%,
+              43.563% 1.283%,
+              44.27% 0.886%,
+              45.023% 0.57%,
+              45.816% 0.338%,
+              46.64% 0.195%,
+              47.489% 0.147%,
+              99.771% 0.147%,
+              59.018% 95.697%,
+              59.018% 95.697%,
+              58.653% 96.424%,
+              58.205% 97.094%,
+              57.682% 97.703%,
+              57.09% 98.245%,
+              56.437% 98.717%,
+              55.73% 99.114%,
+              54.977% 99.43%,
+              54.184% 99.662%,
+              53.36% 99.805%,
+              52.511% 99.853%
+            );
+          }
+        }
+        > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: 65% 50%;
+          animation: picTwo 1.3s forwards;
+
+          clip-path: polygon(
+            52.511% 99.853%,
+            0.229% 99.853%,
+            40.982% 4.303%,
+            40.982% 4.303%,
+            41.347% 3.576%,
+            41.795% 2.906%,
+            42.318% 2.297%,
+            42.91% 1.755%,
+            43.563% 1.283%,
+            44.27% 0.886%,
+            45.023% 0.57%,
+            45.816% 0.338%,
+            46.64% 0.195%,
+            47.489% 0.147%,
+            99.771% 0.147%,
+            59.018% 95.697%,
+            59.018% 95.697%,
+            58.653% 96.424%,
+            58.205% 97.094%,
+            57.682% 97.703%,
+            57.09% 98.245%,
+            56.437% 98.717%,
+            55.73% 99.114%,
+            54.977% 99.43%,
+            54.184% 99.662%,
+            53.36% 99.805%,
+            52.511% 99.853%
+          );
+        }
+      }
+    }
     &::after {
       content: '';
       background-image: url('../img/geisha.png');
@@ -51,107 +174,8 @@ header {
       opacity: 0;
       animation: geisha 700ms 650ms forwards;
     }
-
-    h1 {
-      margin-left: 20rem;
-      margin-top: 3rem;
-      font-size: 6rem;
-      font-family: 'Samosa';
-      color: $mainColor;
-      // text-shadow: 2px 2px 3px rgba($mainColor, 0.6);
-      
-      p:first-child {
-        margin: 0 0 2rem 5rem;
-        animation: headerTitle 700ms forwards;
-        opacity: 0;
-        filter: blur(3px);
-        transform: translateX(-50px);
-        animation-delay: 450ms;
-
-      }
-      p:last-child {
-        margin-right: 3vh;
-        animation: headerTitle 700ms forwards;
-        opacity: 0;
-        filter: blur(3px);
-        transform: translateX(-50px);
-        animation-delay: 550ms;
-
-      }
-    }
-  }
-
-  > .headline > div {
-    display: flex;
-    justify-content: end;
-    transform: translateX(200px);
-    .header-pic:first-child {
-      img {
-        animation: picOne 1.3s forwards;
-        // transform: translate(-20px, 50px);
-        opacity: 0;
-        object-position: 25% 50%;
-        animation-delay: 300ms;
-      }
-    }
-    .header-pic:last-child {
-      transform: translateX(-11rem);
-      img {
-        object-position: 83% 50%;
-      // margin-right: -11rem;
-      animation: picTwo 1.3s forwards;
-      // transform: translate(20px, -50px);
-      opacity: 0;
-      animation-delay: 300ms;
-      }
-    }
-
-
-    .header-pic {
-      width: 450px;
-      height: 600px;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        // object-position: 50% 50%;
-        transition: all 200ms linear;
-        clip-path: polygon(
-          52.511% 99.853%,
-          0.229% 99.853%,
-          40.982% 4.303%,
-          40.982% 4.303%,
-          41.347% 3.576%,
-          41.795% 2.906%,
-          42.318% 2.297%,
-          42.91% 1.755%,
-          43.563% 1.283%,
-          44.27% 0.886%,
-          45.023% 0.57%,
-          45.816% 0.338%,
-          46.64% 0.195%,
-          47.489% 0.147%,
-          99.771% 0.147%,
-          59.018% 95.697%,
-          59.018% 95.697%,
-          58.653% 96.424%,
-          58.205% 97.094%,
-          57.682% 97.703%,
-          57.09% 98.245%,
-          56.437% 98.717%,
-          55.73% 99.114%,
-          54.977% 99.43%,
-          54.184% 99.662%,
-          53.36% 99.805%,
-          52.511% 99.853%
-        );
-      }
-    }
   }
 }
-
-
 
 @keyframes picOne {
   0% {
@@ -195,13 +219,13 @@ header {
 }
 
 @keyframes headerTitle {
-  0%{
+  0% {
     opacity: 0;
     filter: blur(3px);
     transform: translateX(-50px);
   }
 
-  100%{
+  100% {
     opacity: 1;
     filter: blur(0px);
     transform: translateX(0px);
@@ -209,10 +233,10 @@ header {
 }
 
 @keyframes geisha {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }

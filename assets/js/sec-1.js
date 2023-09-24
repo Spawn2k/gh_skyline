@@ -8,6 +8,8 @@
   let offset = -150;
   if (mql.matches) {
     offset = -50;
+  } else {
+    offset = 0;
   }
 
   // === INIT =============

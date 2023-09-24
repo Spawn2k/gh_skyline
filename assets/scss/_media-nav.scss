@@ -1,423 +1,492 @@
-@media (max-width: 1660px) {
-  .headline > div {
-    overflow: hidden;
-    .header-pic:first-child img {
-      width: 400px;
-      // height: 600px;
-    }
-
-    .header-pic:last-child {
-      // transform: translateX(-12.5rem) !important;
-      img {
-        width: 400px;
-        // height: 600px;
-      }
-    }
-  }
-}
-@media (max-width: 1585px) {
-  .headline > div {
-    // transform: translateX(100px) !important;
-    .header-pic:first-child {
-      // overflow: hidden;
-      // transform: translateX(10rem) !important;
-
-      img {
-        width: 350px;
-        // height: 600px;
-      }
-    }
-
-    .header-pic:last-child {
-      // transform: translateX(0rem) !important;
-      // overflow: hidden;
-      img {
-        width: 350px;
-        // height: 600px;
-      }
-    }
-  }
-}
-@media (max-width: 1555px) {
-  .headline > div {
-    // transform: translateX(100px) !important;
-    .header-pic:first-child {
-      // overflow: hidden;
-      // transform: translateX(10rem) !important;
-
-      img {
-        width: 350px;
-        // height: 600px;
-      }
-    }
-
-    .header-pic:last-child {
-      transform: translateX(-9rem) !important;
-      // overflow: hidden;
-      img {
-        width: 350px;
-        // height: 600px;
-      }
-    }
-  }
-}
-@media (max-width: 1485px) {
-  .headline h1 {
-    width: 21rem;
-  }
-  .headline > div {
-    // transform: translateX(130px) !important;
-
-    // transform: translateX(100px) !important;
-    .header-pic:first-child {
-      // overflow: hidden;
-      // transform: translateX(10rem) !important;
-
-      img {
-        width: 300px;
-        // height: 600px;
-      }
-    }
-
-    .header-pic:last-child {
-      transform: translateX(-9rem) !important;
-      // overflow: hidden;
-      img {
-        width: 300px;
-        // height: 600px;
-      }
-    }
-  }
-}
-@media (max-width: 1428px) {
-  .headline h1 {
-    width: 19rem;
-  }
-}
-@media (max-width: 1398px) {
-  .headline h1 {
-    width: 17rem;
-  }
-}
-@media (max-width: 1365px) {
-  .headline h1 {
-    width: 15rem;
-  }
-}
-@media (max-width: 1325px) {
-  .headline h1 {
-    width: 13rem;
-  }
-}
-@media (max-width: 1295px) {
-  .headline h1 {
-    width: 11rem;
-  }
-}
-@media (max-width: 1265px) {
-  .headline h1 {
-    width: 9rem;
-  }
-}
-@media (max-width: 1235px) {
-  .headline h1 {
-    width: 7rem;
-  }
-
+@media (max-width: 1380px) {
   header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
     .headline {
-      h1 {
-        width: 9rem;
-        font-size: 4rem !important;
-        margin-left: 16rem;
-      }
-      &:after {
-        background-size: contain;
-        height: 100%;
-        bottom: -32vh;
-        width: 20rem;
-      }
-      div {
-      }
-    }
-  }
-}
-
-@media (max-width: 1185px) {
-  header {
-    .headline {
-      h1 {
-        width: 10rem;
-        font-size: 3rem !important;
-        margin-left: 12rem;
-      }
-      &:after {
-        background-size: contain;
-        height: 100%;
-        bottom: -22vh;
-        width: 15rem;
-      }
-      div {
-        .header-pic {
-          height: 400px;
-          img {
-            width: 100%;
-            height: 100%;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 1125px) {
-  .headline h1 {
-    width: 8rem !important;
-  }
-}
-@media (max-width: 1095px) {
-  .headline h1 {
-    width: 6rem !important;
-  }
-}
-@media (max-width: 1065px) {
-  .headline h1 {
-    width: 4rem !important;
-  }
-}
-@media (max-width: 1035px) {
-  .headline h1 {
-    width: 2rem !important;
-  }
-}
-@media (max-width: 1005px) {
-  .headline h1 {
-    width: 0rem !important;
-  }
-}
-@media (max-width: 965px) {
-  header {
-    .headline {
-      h1 {
-        width: 3rem !important;
-        font-size: 2.5rem !important;
-        margin-left: 10rem;
-        p:first-child {
-          margin: 0 0 1rem 2rem;
-        }
-
-        p:last-child {
-          // margin-right: 2vh;
-        }
-      }
-      &:after {
-        background-size: contain;
-        height: 100%;
-        bottom: -22vh;
-        width: 12rem;
-      }
-      div {
-        .header-pic {
-          height: 300px;
-          // width: 200px;
-          img {
-            width: 250px !important;
-            height: 100%;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 925px) {
-  header {
-    .headline h1 {
-      width: 1rem !important;
-    }
-  }
-}
-@media (max-width: 895px) {
-  header {
-    .headline {
-      div {
-        transform: translateX(80px);
-      }
-      h1 {
-        width: 0rem !important;
-      }
-
-      &:after {
-        background-size: contain;
-        height: 100%;
-        bottom: -32vh;
-        width: 12rem;
-      }
-
-      div {
-        .header-pic {
-          &:first-child {
-            // width: 80rem !important;
-            height: 400px;
-            img {
-              width: 300px !important;
-            }
-          }
-          &:last-child {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 700px) {
-  header {
-    .headline {
-      div {
-        transform: translateX(100px);
-      }
-      h1 {
-        width: 0rem !important;
-        font-size: 2rem !important;
-        margin-left: 8rem !important;
-      }
-
-      &:after {
-        background-size: contain;
-        height: 100%;
-        bottom: -22vh;
-        width: 10rem;
-      }
-
-      div {
-        .header-pic {
-          &:first-child {
-            // width: 80rem !important;
-            height: 270px;
-            img {
-              width: 230px !important;
-            }
-          }
-          &:last-child {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-}
-@media (max-width: 630px) {
-  header {
-    .headline {
-      div {
-        transform: translateX(70px);
-      }
-      h1 {
-        width: 0rem !important;
-        font-size: 2rem !important;
-        margin-left: 8rem !important;
-      }
-
-      &:after {
-        background-size: contain;
-        height: 100%;
-        bottom: -22vh;
-
-        width: 10rem;
-      }
-
-      div {
-        .header-pic {
-          &:first-child {
-            // width: 80rem !important;
-            height: 270px;
-            img {
-              width: 230px !important;
-            }
-          }
-          &:last-child {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-}
-@media (max-width: 570px) {
-  header {
-    .headline {
-      div {
-        transform: translateX(50px);
-      }
-      h1 {
-        width: 0rem !important;
-        font-size: 2rem !important;
-        margin-left: 8rem !important;
-      }
-
-      &:after {
-        background-size: contain;
-        height: 100%;
-        bottom: -22vh;
-
-        width: 10rem;
-      }
-
-      div {
-        .header-pic {
-          &:first-child {
-            // width: 80rem !important;
-            height: 270px;
-            img {
-              width: 230px !important;
-            }
-          }
-          &:last-child {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-}
-@media (max-width: 530px) {
-  header {
-    .headline {
+      display: flex;
+      padding: 3.5rem 5rem 0 0;
+      align-items: self-end;
       flex-direction: column;
-      gap: 2rem;
-      div {
-        transform: translateX(0px);
-      }
+
       h1 {
-        width: 100% !important;
-        font-size: 2rem !important;
-        margin-left: 0rem !important;
-        margin-top: 8rem;
-        padding-left: 8rem;
-      }
+        flex-basis: initial;
+        font-size: 6rem;
 
-      &:after {
-        background-size: contain;
-        height: 100%;
-        bottom: -25vh;
-        width: 10rem;
+        p:first-child {
+          margin-left: 0;
+          display: inline-block;
+          padding-left: 0rem;
+        }
+        p:last-child {
+          margin-left: 0;
+          display: inline-block;
+        }
       }
-
-      div {
-        .header-pic {
-          &:first-child {
-            // width: 80rem !important;
-            height: 270px;
-            img {
-              width: 430px !important;
-            }
+      > div {
+        flex-grow: 1;
+        div:first-child {
+          width: 20rem;
+          height: 25rem;
+          position: relative;
+          margin: 3rem 0 0 37em;
+          img {
+            object-position: 23% 50%;
           }
-          &:last-child {
-            display: none;
+
+          div {
+            top: 0;
+            left: -61.5%;
+            width: 20rem;
+            height: 25rem;
+          }
+
+          > img {
+            object-position: 89% 50%;
           }
         }
+      }
+      &::after {
+        top: 3.5rem;
+        left: 5rem;
+        width: 25rem;
+        height: 33rem;
+        opacity: 0;
+        animation: geisha 700ms 650ms forwards;
+      }
+    }
+  }
+}
+
+@media (max-width: 1120px) {
+  header {
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    .m-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #001b2c;
+      color: white;
+      font-size: 1.5rem;
+      transform: translate(0, -50px);
+      animation: navBar 1s forwards;
+      animation-delay: 300ms;
+      opacity: 0;
+      font-family: travel;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li {
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    .headline {
+      display: flex;
+      padding: 3.5rem 5rem 0 0;
+      justify-content: space-between;
+      height: 100%;
+      align-items: self-end;
+      position: relative;
+      overflow: hidden;
+      // gap: 15vw;
+      width: 100%;
+      flex-direction: column;
+
+      h1 {
+        flex-basis: initial;
+        font-size: 4.5rem;
+        font-family: 'Samosa';
+        color: $mainColor;
+
+        p:first-child {
+          margin-left: 0;
+          display: inline-block;
+          padding-left: 0rem;
+        }
+        p:last-child {
+          margin-left: 0;
+          display: inline-block;
+        }
+      }
+      > div {
+        position: relative;
+        // width: 100%;
+        // height: 100%;
+        // flex-basis: 70%;
+        // flex-basis: 70rem;
+        flex-grow: 1;
+        div:first-child {
+          width: 20rem;
+          height: 25rem;
+          position: relative;
+          margin: 3rem 0 0 37em;
+
+          div {
+            position: absolute;
+            top: 0;
+            left: -61.5%;
+            width: 20rem;
+            height: 25rem;
+          }
+        }
+      }
+      &::after {
+        content: '';
+        background-image: url('../img/geisha.png');
+        position: absolute;
+        background-size: cover;
+        background-repeat: no-repeat;
+        // bottom: 14vh;
+        top: 3.5rem;
+        // transform: translateY(-50%);
+
+        left: 5rem;
+        width: 25rem;
+        height: 33rem;
+        opacity: 0;
+        // animation: geisha 700ms 650ms forwards;
+      }
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  header {
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    .m-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #001b2c;
+      color: white;
+      font-size: 1.5rem;
+      transform: translate(0, -50px);
+      animation: navBar 1s forwards;
+      animation-delay: 300ms;
+      opacity: 0;
+      font-family: travel;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li {
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    .headline {
+      display: flex;
+      padding: 3.5rem 5rem 0 0;
+      justify-content: space-between;
+      height: 100%;
+      align-items: self-end;
+      position: relative;
+      overflow: hidden;
+      // gap: 15vw;
+      width: 100%;
+      flex-direction: column;
+
+      h1 {
+        flex-basis: initial;
+        font-size: 4rem;
+        font-family: 'Samosa';
+        color: $mainColor;
+        margin-top: 3rem;
+
+        p:first-child {
+          margin-left: 0;
+          display: inline-block;
+          padding-left: 0rem;
+        }
+        p:last-child {
+          margin-left: 0;
+          display: inline-block;
+        }
+      }
+      > div {
+        position: relative;
+        // width: 100%;
+        // height: 100%;
+        // flex-basis: 70%;
+        // flex-basis: 70rem;
+        flex-grow: 1;
+        div:first-child {
+          width: 20rem;
+          height: 25rem;
+          position: relative;
+          margin: 3rem 0 0 37em;
+
+          div {
+            position: absolute;
+            top: 0;
+            left: -61.5%;
+            width: 20rem;
+            height: 25rem;
+          }
+        }
+      }
+      &::after {
+        content: '';
+        background-image: url('../img/geisha.png');
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        // bottom: 14vh;
+        top: 3.5rem;
+        // transform: translateY(-50%);
+
+        left: 5rem;
+        width: 19rem;
+        height: 100%;
+        opacity: 0;
+        // animation: geisha 700ms 650ms forwards;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  header {
+    .headline {
+      display: flex;
+      padding: 11.5rem 5rem 0 0;
+      justify-content: space-between;
+      height: 100%;
+      align-items: self-end;
+      position: relative;
+      overflow: hidden;
+      // gap: 15vw;
+      width: 100%;
+      flex-direction: column;
+
+      h1 {
+        flex-basis: initial;
+        font-size: 3rem;
+        font-family: 'Samosa';
+        color: $mainColor;
+        margin-top: 2rem;
+
+        p:first-child {
+          margin-left: 0;
+          display: inline-block;
+          padding-left: 0rem;
+        }
+        p:last-child {
+          margin-left: 0;
+          display: inline-block;
+        }
+      }
+      > div {
+        position: relative;
+
+        flex-grow: 1;
+        div:first-child {
+          width: 15rem;
+          height: 20rem;
+          position: relative;
+          margin: 1rem 0 0 37em;
+
+          div {
+            position: absolute;
+            top: 0;
+            left: -61.5%;
+            width: 15rem;
+            height: 20rem;
+          }
+        }
+      }
+      &::after {
+        content: '';
+        background-image: url('../img/geisha.png');
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        // bottom: 14vh;
+        top: 10.5rem;
+        // transform: translateY(-50%);
+
+        left: 5rem;
+        width: 13rem;
+        height: 100%;
+        opacity: 0;
+        // animation: geisha 700ms 650ms forwards;
+      }
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  header {
+    .headline {
+      display: flex;
+      padding: 11.5rem 1rem 0 0;
+
+      justify-content: space-between;
+      height: 100%;
+      align-items: self-end;
+      position: relative;
+      overflow: hidden;
+      // gap: 15vw;
+      width: 100%;
+      flex-direction: column;
+
+      h1 {
+        flex-basis: initial;
+        font-size: 3rem;
+        font-family: 'Samosa';
+        color: $mainColor;
+        margin-top: 2rem;
+
+        p:first-child {
+          margin-left: 0;
+          display: inline-block;
+          padding-left: 0rem;
+        }
+        p:last-child {
+          margin-left: 0;
+          display: inline-block;
+        }
+      }
+      > div {
+        position: relative;
+        // width: 100%;
+        // height: 100%;
+        // flex-basis: 70%;
+        // flex-basis: 70rem;
+        flex-grow: 1;
+        div:first-child {
+          width: 15rem;
+          height: 20rem;
+          position: relative;
+          margin: 1rem 0 0 37em;
+
+          div {
+            position: absolute;
+            top: 0;
+            left: -61.5%;
+            width: 15rem;
+            height: 20rem;
+          }
+        }
+      }
+      &::after {
+        content: '';
+        background-image: url('../img/geisha.png');
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        // bottom: 14vh;
+        top: 10.5rem;
+        // transform: translateY(-50%);
+
+        left: 1rem;
+        width: 13rem;
+        height: 100%;
+        opacity: 0;
+        // animation: geisha 700ms 650ms forwards;
+      }
+    }
+  }
+}
+
+@media (max-width: 590px) {
+  header {
+    .headline {
+      padding: 11.5rem 1rem 0 0;
+
+      h1 {
+        font-size: 2rem;
+
+        margin-top: 2rem;
+      }
+      > div {
+        div:first-child {
+          width: 13rem;
+          height: 13rem;
+          position: relative;
+          margin: 1rem 0 0 37em;
+          img {
+            object-position: 100% 50%;
+          }
+
+          div {
+            position: absolute;
+            top: 0;
+            left: -61.5%;
+            width: 13rem;
+            height: 13rem;
+            > img {
+              object-position: 0% 50%;
+            }
+          }
+        }
+      }
+      &::after {
+        top: 10.5rem;
+        left: 1rem;
+        width: 11rem;
+        height: 100%;
+        opacity: 0;
+        // animation: geisha 700ms 650ms forwards;
+      }
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  header {
+    .headline {
+      padding: 11.5rem 1rem 0 0;
+
+      h1 {
+        font-size: 2rem;
+
+        margin-top: 2rem;
+      }
+      > div {
+        div:first-child {
+          width: 10rem;
+          height: 10rem;
+          position: relative;
+          margin: 1rem 0 0 37em;
+
+          div {
+            position: absolute;
+            top: 0;
+            left: -61.5%;
+            width: 10rem;
+            height: 10rem;
+          }
+        }
+      }
+      &::after {
+        top: 10.5rem;
+        left: 1rem;
+        width: 8rem;
+        height: 100%;
+        opacity: 0;
+        // animation: geisha 700ms 650ms forwards;
       }
     }
   }

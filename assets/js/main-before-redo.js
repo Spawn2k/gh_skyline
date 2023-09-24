@@ -8,9 +8,6 @@
   DOM.headerPicEl = document.querySelectorAll('.header-pic');
 
   console.log();
-  const mql1380 = window.matchMedia('screen and (max-width:1380px)');
-  const mql1381 = window.matchMedia('screen and (min-width:1381px)');
-  const mql590 = window.matchMedia('screen and (min-width:590px)');
   // === INIT =============
   const init = () => {
     DOM.headerEl.addEventListener('mousemove', onMouseMove);
@@ -24,23 +21,22 @@
     const mouseDelter = parseFloat(DOM.headerPicEl[0].dataset.mouseEnter) - e.clientX;
 
     const maxDelta = window.innerWidth / 2;
-    let percent = (mouseDelter / maxDelta) * -100;
+    const percent = (mouseDelter / maxDelta) * -100;
 
     let nextPercentage = parseFloat(DOM.headerPicEl[0].dataset.prevPercent) + percent;
-    if (mql1380.matches && mql590.matches) {
-      nextPercentage = Math.min(nextPercentage, 11);
-      nextPercentage = Math.max(nextPercentage, -20);
-      DOM.headerPicEl.forEach((img) => {
-        moveImage(img, nextPercentage);
-      });
-    } else if (mql1381.matches) {
-      nextPercentage = Math.min(nextPercentage, 35);
-      nextPercentage = Math.max(nextPercentage, -20);
-      DOM.headerPicEl.forEach((img) => {
-        moveImage(img, nextPercentage);
-      });
+
+    const mql2 = window.matchMedia('screen and (max-width:895px)');
+    if (mql2.matches) {
+      nextPercentage = Math.min(nextPercentage, 55);
+      nextPercentage = Math.max(nextPercentage, -25);
+    } else {
+      nextPercentage = Math.min(nextPercentage, 17);
+      nextPercentage = Math.max(nextPercentage, -25);
     }
 
+    DOM.headerPicEl.forEach((img) => {
+      moveImage(img, nextPercentage);
+    });
     // console.log(nextPercentage)
 
     // DOM.headerPicEl[0].dataset.percent = nextPercentage;
@@ -64,12 +60,12 @@
 
   const moveImage = (el, percent) => {
     const image = el.querySelector('img');
-
-    if (mql1380.matches) {
-      DOM.headerPicEl[0].dataset.startPos = 89;
-    }
-
     let startPos = Number(el.dataset.startPos);
+
+    const mql = window.matchMedia('screen and (max-width:1585px)');
+    if (mql.matches) {
+      DOM.headerPicEl[0].dataset.startPos = 45;
+    }
 
     image.animate(
       {

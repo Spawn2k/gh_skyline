@@ -1,0 +1,218 @@
+header {
+  width: 100%;
+  // height: 100vh;
+  position: relative;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  .m-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #001b2c;
+    color: white;
+    font-size: 1.5rem;
+    transform: translate(0, -50px);
+    animation: navBar 1s forwards;
+    animation-delay: 300ms;
+    opacity: 0;
+    font-family: travel;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      li {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .headline {
+    display: flex;
+    padding: 14vh 3rem;
+    justify-content: space-between;
+    height: 100%;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+    // gap: 15vw;
+    &::after {
+      content: '';
+      background-image: url('../img/geisha.png');
+      position: absolute;
+      background-size: cover;
+      background-repeat: no-repeat;
+      bottom: 14vh;
+      left: 3rem;
+      width: 25rem;
+      height: 33rem;
+      opacity: 0;
+      animation: geisha 700ms 650ms forwards;
+    }
+
+    h1 {
+      margin-left: 20rem;
+      margin-top: 3rem;
+      font-size: 6rem;
+      font-family: 'Samosa';
+      color: $mainColor;
+      // text-shadow: 2px 2px 3px rgba($mainColor, 0.6);
+      
+      p:first-child {
+        margin: 0 0 2rem 5rem;
+        animation: headerTitle 700ms forwards;
+        opacity: 0;
+        filter: blur(3px);
+        transform: translateX(-50px);
+        animation-delay: 450ms;
+
+      }
+      p:last-child {
+        margin-right: 3vh;
+        animation: headerTitle 700ms forwards;
+        opacity: 0;
+        filter: blur(3px);
+        transform: translateX(-50px);
+        animation-delay: 550ms;
+
+      }
+    }
+  }
+
+  > .headline > div {
+    display: flex;
+    justify-content: end;
+    transform: translateX(200px);
+    .header-pic:first-child {
+      img {
+        animation: picOne 1.3s forwards;
+        // transform: translate(-20px, 50px);
+        opacity: 0;
+        object-position: 25% 50%;
+        animation-delay: 300ms;
+      }
+    }
+    .header-pic:last-child {
+      transform: translateX(-11rem);
+      img {
+        object-position: 83% 50%;
+      // margin-right: -11rem;
+      animation: picTwo 1.3s forwards;
+      // transform: translate(20px, -50px);
+      opacity: 0;
+      animation-delay: 300ms;
+      }
+    }
+
+
+    .header-pic {
+      width: 450px;
+      height: 600px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        // object-position: 50% 50%;
+        transition: all 200ms linear;
+        clip-path: polygon(
+          52.511% 99.853%,
+          0.229% 99.853%,
+          40.982% 4.303%,
+          40.982% 4.303%,
+          41.347% 3.576%,
+          41.795% 2.906%,
+          42.318% 2.297%,
+          42.91% 1.755%,
+          43.563% 1.283%,
+          44.27% 0.886%,
+          45.023% 0.57%,
+          45.816% 0.338%,
+          46.64% 0.195%,
+          47.489% 0.147%,
+          99.771% 0.147%,
+          59.018% 95.697%,
+          59.018% 95.697%,
+          58.653% 96.424%,
+          58.205% 97.094%,
+          57.682% 97.703%,
+          57.09% 98.245%,
+          56.437% 98.717%,
+          55.73% 99.114%,
+          54.977% 99.43%,
+          54.184% 99.662%,
+          53.36% 99.805%,
+          52.511% 99.853%
+        );
+      }
+    }
+  }
+}
+
+
+
+@keyframes picOne {
+  0% {
+    transform: translate(-20px, 50px);
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+@keyframes picTwo {
+  0% {
+    transform: translate(20px, -50px);
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes navBar {
+  0% {
+    opacity: 0;
+    transform: translate(0, -50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0px);
+  }
+}
+
+@keyframes headerTitle {
+  0%{
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateX(-50px);
+  }
+
+  100%{
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0px);
+  }
+}
+
+@keyframes geisha {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

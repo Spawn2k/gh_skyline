@@ -6,6 +6,8 @@
       position: relative;
       height: 100%;
 
+      overflow: hidden;
+
       .card {
         display: grid;
         position: sticky;
