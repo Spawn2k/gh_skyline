@@ -81,8 +81,6 @@
   const onClickBtn = (e) => {
     let prevPercentage = Math.ceil(Number(DOM.imgContainerEl.dataset.prevPercentage));
     const btnDataset = e.currentTarget.dataset.btn;
-    const btnBackwards = document.querySelector('[data-btn="backwards"]');
-    const btnForwards = document.querySelector('[data-btn="forwards"]');
     let offset = 0;
 
     if (btnDataset === 'forwards') {
@@ -133,7 +131,11 @@
     const imgTitle = e.currentTarget.dataset.title;
 
     if (imgNumber !== 1 && imgNumber !== 2) {
-      setImgPosition();
+      setImgPosition(50);
+    }
+
+    if (imgNumber === 1 || imgNumber === 2) {
+      setImgPosition(69);
     }
 
     setTimeout(() => {
@@ -213,8 +215,8 @@
     DOM.imgContainerEl.dataset.percentage = +Number(percent + offset);
   };
 
-  const setImgPosition = () => {
-    DOM.mainImgEl.style.objectPosition = `50% 50%`;
+  const setImgPosition = (offset) => {
+    DOM.mainImgEl.style.objectPosition = `${offset}% 50%`;
   };
 
   init();
