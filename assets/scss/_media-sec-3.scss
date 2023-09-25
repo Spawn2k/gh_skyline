@@ -262,8 +262,6 @@
       font-size: 1.2rem;
       margin: auto;
       display: grid;
-      // grid-template-columns: repeat(50, 1.58rem);
-      // grid-template-rows: repeat(32, 1.75rem);
 
       div:nth-child(1) {
         grid-column: 1 / 11 !important;
