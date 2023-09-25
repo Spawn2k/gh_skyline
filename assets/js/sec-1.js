@@ -7,7 +7,7 @@
   const mql = window.matchMedia('screen and (max-width:600px)');
   let offset = -150;
   if (mql.matches) {
-    offset = -50;
+    offset = -20;
   } else {
     offset = 0;
   }
@@ -18,6 +18,7 @@
       (elements) => {
         elements.forEach((element) => {
           if (element.isIntersecting) {
+            console.log(offset);
             showImg(element.target, element.intersectionRatio);
             if (element.intersectionRatio >= 1) {
               myObserver.unobserve(element.target);

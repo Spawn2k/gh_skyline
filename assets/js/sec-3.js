@@ -26,14 +26,19 @@
 
     const mql700 = window.matchMedia('screen and (max-width:700px)');
     const mql1320 = window.matchMedia('screen and (min-width:701px)');
+    const mql400 = window.matchMedia('screen and (max-width:400px)');
 
     if (mql1320.matches) {
       moveImg(DOM.imgGeishaEl, 600, 0.5);
       moveImg(DOM.imgCherry, 600, 0.5);
     }
     if (mql700.matches) {
-      moveImg(DOM.imgGeishaEl, 1350, 0.5);
-      moveImg(DOM.imgCherry, 1900, 0.5);
+      moveImg(DOM.imgGeishaEl, 1150, 0.5);
+      moveImg(DOM.imgCherry, 1700, 0.5);
+    }
+    if (mql400.matches) {
+      moveImg(DOM.imgGeishaEl, 950, 0.5);
+      moveImg(DOM.imgCherry, 1500, 0.5);
     }
 
     DOM.sec4ImgEls.forEach((img, idx) => {
@@ -130,9 +135,12 @@
   };
 
   const moveImg = (img, pos = 0, speed) => {
+    //pos higher value start early
+    //speed how fast image move
     let top = window.scrollY;
     let height = DOM.sec3El.offsetHeight;
     let offset = DOM.sec3El.offsetTop - height + pos;
+
     const percent = (top - offset) / 10;
     if (top >= offset && top < offset + height) {
       img.style.setProperty('--yCord', `${percent * speed}%`);

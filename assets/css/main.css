@@ -1269,7 +1269,7 @@ footer .content-wraper ul li a {
     height: 100%;
   }
 }
-@media (max-width: 590px) {
+@media (max-width: 600px) {
   header .headline {
     padding: 11.5rem 1rem 0 0;
   }
@@ -1328,6 +1328,9 @@ footer .content-wraper ul li a {
   }
 }
 @media (max-width: 600px) {
+  .sec-travel-list {
+    padding: 4rem 0;
+  }
   .sec-travel-list .cards {
     width: 90vw;
     gap: 1rem;
@@ -1400,6 +1403,9 @@ footer .content-wraper ul li a {
   }
 }
 @media (max-width: 600px) {
+  .sec-1 {
+    padding: 4rem 0;
+  }
   .sec-1 h2 {
     font-size: 2rem;
   }
@@ -1868,6 +1874,9 @@ footer .content-wraper ul li a {
   }
 }
 @media (max-width: 600px) {
+  .sec-2 {
+    padding: 4rem 0;
+  }
   .sec-2 h2 {
     font-size: 2rem;
   }
@@ -2066,6 +2075,9 @@ footer .content-wraper ul li a {
   }
 }
 @media (max-width: 620px) {
+  .sec-3 {
+    padding: 4rem 0;
+  }
   .sec-3 h2 {
     text-align: center;
     color: #00fff1;
@@ -2088,7 +2100,7 @@ footer .content-wraper ul li a {
     background-image: url("../img/geisha-3.webp");
     background-repeat: no-repeat;
     background-size: 800px;
-    background-position: 60% var(--yCord, -45%);
+    background-position: 60% var(--yCord, 0%);
     border-radius: 7px;
   }
   .sec-3 .content-wraper div:nth-child(2) {
@@ -2097,7 +2109,7 @@ footer .content-wraper ul li a {
     background-image: url("../img/sec-3.webp");
     background-repeat: no-repeat;
     background-size: 1800px;
-    background-position: 25% var(--yCord, 30%) !important;
+    background-position: 25% var(--yCord, 0%) !important;
     border-radius: 7px;
   }
   .sec-3 .content-wraper p {
@@ -2122,7 +2134,7 @@ footer .content-wraper ul li a {
     background-image: url("../img/geisha-3.webp");
     background-repeat: no-repeat;
     background-size: 800px;
-    background-position: 60% var(--yCord, -45%);
+    background-position: 60% var(--yCord, 0%);
     border-radius: 7px;
   }
   .sec-3 .content-wraper div:nth-child(2) {
@@ -2131,7 +2143,7 @@ footer .content-wraper ul li a {
     background-image: url("../img/sec-3.webp");
     background-repeat: no-repeat;
     background-size: 1800px;
-    background-position: 25% var(--yCord, 30%) !important;
+    background-position: 25% var(--yCord, 0%) !important;
     border-radius: 7px;
   }
 }
@@ -2141,11 +2153,29 @@ footer .content-wraper ul li a {
   }
 }
 @media (max-width: 600px) {
+  .sec-4 {
+    padding: 4rem 0;
+  }
   .sec-4 .content-wraper {
     width: 90vw;
   }
+  .sec-4 .content-wraper .card {
+    gap: 1rem;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(9, 5.6rem);
+  }
+  .sec-4 .content-wraper .card img {
+    grid-column: 1/11;
+    grid-row: 2/9;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+  }
   .sec-4 .content-wraper .card p.sec-4-city-text {
     font-size: 2rem;
+    grid-column: 1/11;
+    grid-row: 1/2;
   }
 }
 @media (max-width: 1320px) {
@@ -3005,6 +3035,9 @@ footer .content-wraper ul li a {
   }
 }
 @media (max-width: 600px) {
+  .sec-5 {
+    padding: 4rem 0;
+  }
   .sec-5 h2 {
     font-size: 2rem;
   }
@@ -3266,6 +3299,9 @@ footer .content-wraper ul li a {
   }
 }
 @media (max-width: 600px) {
+  .sec-6 {
+    padding: 4rem 0;
+  }
   .sec-6 h2 {
     font-size: 2rem;
   }
@@ -3291,13 +3327,13 @@ footer .content-wraper ul li a {
     width: 90vw;
     margin: auto;
     position: relative;
-    height: 42rem;
+    height: 65vh;
     border-radius: 7px;
     overflow: hidden;
   }
   .sec-6 .content-wraper img {
     width: 100%;
-    height: 80%;
+    height: 100%;
     object-fit: cover;
     cursor: pointer;
     object-position: 69% 0%;

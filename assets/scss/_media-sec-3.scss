@@ -204,6 +204,7 @@
 
 @media (max-width: 620px) {
   .sec-3 {
+    padding: 4rem 0;
     h2 {
       text-align: center;
       color: $ciBlue;
@@ -227,7 +228,7 @@
         background-image: url('../img/geisha-3.webp');
         background-repeat: no-repeat;
         background-size: 800px;
-        background-position: 60% var(--yCord, -45%);
+        background-position: 60% var(--yCord, 0%);
         border-radius: $borderRadius;
       }
       div:nth-child(2) {
@@ -237,7 +238,7 @@
         background-repeat: no-repeat;
         background-size: 1800px;
         // background-position: 10% 20%;
-        background-position: 25% var(--yCord, 30%) !important;
+        background-position: 25% var(--yCord, 0%) !important;
         border-radius: $borderRadius;
       }
       p {
@@ -270,7 +271,7 @@
         background-image: url('../img/geisha-3.webp');
         background-repeat: no-repeat;
         background-size: 800px;
-        background-position: 60% var(--yCord, -45%);
+        background-position: 60% var(--yCord, 0%);
         border-radius: $borderRadius;
       }
       div:nth-child(2) {
@@ -280,7 +281,7 @@
         background-repeat: no-repeat;
         background-size: 1800px;
         // background-position: 10% 20%;
-        background-position: 25% var(--yCord, 30%) !important;
+        background-position: 25% var(--yCord, 0%) !important;
         border-radius: $borderRadius;
       }
     }
