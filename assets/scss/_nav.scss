@@ -74,7 +74,8 @@ header {
         width: 24rem;
         height: 38rem;
         position: relative;
-        // opacity: 1;
+        opacity: 1;
+        z-index: 100;
 
         > div {
           position: absolute;
