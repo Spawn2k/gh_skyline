@@ -372,7 +372,7 @@ header .headline::after {
 .cards .card .card-content:hover::before,
 .cards .card .card-content :focus::before {
   backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(0px);
 }
 .cards .card .card-content:hover::after,
 .cards .card .card-content :focus::after {
